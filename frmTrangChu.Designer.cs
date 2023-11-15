@@ -30,35 +30,35 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panelControl = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lb_SuaChua = new System.Windows.Forms.Label();
+            this.img_SuaChua = new System.Windows.Forms.PictureBox();
+            this.lb_KiemKe = new System.Windows.Forms.Label();
+            this.img_KiemKe = new System.Windows.Forms.PictureBox();
+            this.TTB = new System.Windows.Forms.Label();
+            this.img_TTB = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelControl = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_SuaChua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_KiemKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_TTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,17 @@ namespace CDTTTN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1329, 60);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CDTTTN.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(1046, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -101,12 +112,12 @@ namespace CDTTTN
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.lb_SuaChua);
+            this.panel2.Controls.Add(this.img_SuaChua);
+            this.panel2.Controls.Add(this.lb_KiemKe);
+            this.panel2.Controls.Add(this.img_KiemKe);
+            this.panel2.Controls.Add(this.TTB);
+            this.panel2.Controls.Add(this.img_TTB);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label3);
@@ -116,86 +127,6 @@ namespace CDTTTN
             this.panel2.Size = new System.Drawing.Size(272, 977);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(59, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 30);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Trang thiết bị";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(59, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 30);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Đặt phòng";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(59, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Trang chủ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(59, 232);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 30);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Kiểm kê";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(59, 285);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(255, 30);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Sửa chữa bảo hành";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(59, 339);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 30);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Thanh lý";
             // 
             // label9
             // 
@@ -211,13 +142,6 @@ namespace CDTTTN
             this.label9.Text = "Tài khoản";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // panelControl
-            // 
-            this.panelControl.Location = new System.Drawing.Point(268, 58);
-            this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1057, 872);
-            this.panelControl.TabIndex = 3;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -230,6 +154,19 @@ namespace CDTTTN
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(59, 339);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 30);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Thanh lý";
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -241,38 +178,97 @@ namespace CDTTTN
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox6
+            // lb_SuaChua
             // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::CDTTTN.Properties.Resources.maintenance;
-            this.pictureBox6.Location = new System.Drawing.Point(13, 271);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.lb_SuaChua.AutoSize = true;
+            this.lb_SuaChua.BackColor = System.Drawing.Color.Transparent;
+            this.lb_SuaChua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_SuaChua.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_SuaChua.ForeColor = System.Drawing.Color.White;
+            this.lb_SuaChua.Location = new System.Drawing.Point(59, 285);
+            this.lb_SuaChua.Name = "lb_SuaChua";
+            this.lb_SuaChua.Size = new System.Drawing.Size(255, 30);
+            this.lb_SuaChua.TabIndex = 1;
+            this.lb_SuaChua.Text = "Sửa chữa bảo hành";
+            this.lb_SuaChua.Click += new System.EventHandler(this.lb_SuaChua_Click);
             // 
-            // pictureBox5
+            // img_SuaChua
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::CDTTTN.Properties.Resources.document;
-            this.pictureBox5.Location = new System.Drawing.Point(13, 218);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.img_SuaChua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_SuaChua.Image = global::CDTTTN.Properties.Resources.maintenance;
+            this.img_SuaChua.Location = new System.Drawing.Point(13, 271);
+            this.img_SuaChua.Name = "img_SuaChua";
+            this.img_SuaChua.Size = new System.Drawing.Size(40, 40);
+            this.img_SuaChua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_SuaChua.TabIndex = 0;
+            this.img_SuaChua.TabStop = false;
+            this.img_SuaChua.Click += new System.EventHandler(this.img_SuaChua_Click);
             // 
-            // pictureBox4
+            // lb_KiemKe
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::CDTTTN.Properties.Resources.technology;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 162);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.lb_KiemKe.AutoSize = true;
+            this.lb_KiemKe.BackColor = System.Drawing.Color.Transparent;
+            this.lb_KiemKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_KiemKe.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_KiemKe.ForeColor = System.Drawing.Color.White;
+            this.lb_KiemKe.Location = new System.Drawing.Point(59, 232);
+            this.lb_KiemKe.Name = "lb_KiemKe";
+            this.lb_KiemKe.Size = new System.Drawing.Size(113, 30);
+            this.lb_KiemKe.TabIndex = 1;
+            this.lb_KiemKe.Text = "Kiểm kê";
+            this.lb_KiemKe.Click += new System.EventHandler(this.lb_KiemKe_Click);
+            // 
+            // img_KiemKe
+            // 
+            this.img_KiemKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_KiemKe.Image = global::CDTTTN.Properties.Resources.document;
+            this.img_KiemKe.Location = new System.Drawing.Point(13, 218);
+            this.img_KiemKe.Name = "img_KiemKe";
+            this.img_KiemKe.Size = new System.Drawing.Size(40, 40);
+            this.img_KiemKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_KiemKe.TabIndex = 0;
+            this.img_KiemKe.TabStop = false;
+            this.img_KiemKe.Click += new System.EventHandler(this.img_KiemKe_Click);
+            // 
+            // TTB
+            // 
+            this.TTB.AutoSize = true;
+            this.TTB.BackColor = System.Drawing.Color.Transparent;
+            this.TTB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TTB.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TTB.ForeColor = System.Drawing.Color.White;
+            this.TTB.Location = new System.Drawing.Point(59, 176);
+            this.TTB.Name = "TTB";
+            this.TTB.Size = new System.Drawing.Size(178, 30);
+            this.TTB.TabIndex = 1;
+            this.TTB.Text = "Trang thiết bị";
+            this.TTB.Click += new System.EventHandler(this.TTB_Click);
+            // 
+            // img_TTB
+            // 
+            this.img_TTB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_TTB.Image = global::CDTTTN.Properties.Resources.technology;
+            this.img_TTB.Location = new System.Drawing.Point(13, 162);
+            this.img_TTB.Name = "img_TTB";
+            this.img_TTB.Size = new System.Drawing.Size(40, 40);
+            this.img_TTB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_TTB.TabIndex = 0;
+            this.img_TTB.TabStop = false;
+            this.img_TTB.Click += new System.EventHandler(this.img_TTB_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(59, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 30);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Đặt phòng";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox3
             // 
@@ -286,6 +282,20 @@ namespace CDTTTN
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(59, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Trang chủ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -298,16 +308,13 @@ namespace CDTTTN
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // panelControl
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::CDTTTN.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(1046, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.panelControl.Location = new System.Drawing.Point(268, 58);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1057, 872);
+            this.panelControl.TabIndex = 3;
+            this.panelControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl_Paint);
             // 
             // frmTrangChu
             // 
@@ -325,16 +332,16 @@ namespace CDTTTN
             this.Load += new System.EventHandler(this.frmTrangChu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_SuaChua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_KiemKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_TTB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,14 +355,14 @@ namespace CDTTTN
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label TTB;
+        private System.Windows.Forms.PictureBox img_TTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lb_SuaChua;
+        private System.Windows.Forms.PictureBox img_SuaChua;
+        private System.Windows.Forms.Label lb_KiemKe;
+        private System.Windows.Forms.PictureBox img_KiemKe;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label8;

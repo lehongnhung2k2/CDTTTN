@@ -45,17 +45,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addKiemKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addKiemKe.Designer.cs">
+      <DependentUpon>addKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addSuaChua.Designer.cs">
+      <DependentUpon>addSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addTTB.Designer.cs">
+      <DependentUpon>addTTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="editTTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editTTB.Designer.cs">
+      <DependentUpon>editTTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmEditTTB.Designer.cs">
+      <DependentUpon>frmEditTTB.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -69,25 +99,82 @@
     <Compile Include="frmTrangChu.Designer.cs">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTrangThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTrangThietBi.Designer.cs">
+      <DependentUpon>frmTrangThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemKe.Designer.cs">
+      <DependentUpon>KiemKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchKiemKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchKiemKe.Designer.cs">
+      <DependentUpon>searchKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchSuaChua.Designer.cs">
+      <DependentUpon>searchSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchTTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchTTB.Designer.cs">
+      <DependentUpon>searchTTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SuaChua.Designer.cs">
+      <DependentUpon>SuaChua.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoanCuaToi.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TaiKhoanCuaToi.Designer.cs">
       <DependentUpon>TaiKhoanCuaToi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addKiemKe.resx">
+      <DependentUpon>addKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSuaChua.resx">
+      <DependentUpon>addSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTTB.resx">
+      <DependentUpon>addTTB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="editTTB.resx">
+      <DependentUpon>editTTB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTTB.resx">
+      <DependentUpon>frmEditTTB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrangThietBi.resx">
+      <DependentUpon>frmTrangThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemKe.resx">
+      <DependentUpon>KiemKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +186,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="searchKiemKe.resx">
+      <DependentUpon>searchKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSuaChua.resx">
+      <DependentUpon>searchSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchTTB.resx">
+      <DependentUpon>searchTTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaChua.resx">
+      <DependentUpon>SuaChua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoanCuaToi.resx">
       <DependentUpon>TaiKhoanCuaToi.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +288,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

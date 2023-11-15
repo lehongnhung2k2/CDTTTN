@@ -140,9 +140,9 @@ namespace CDTTTN
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(108, 576);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(147, 24);
+            this.checkBox1.Size = new System.Drawing.Size(159, 24);
             this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Show password";
+            this.checkBox1.Text = "Hiển thị mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

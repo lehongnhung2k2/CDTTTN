@@ -43,12 +43,12 @@ namespace CDTTTN
             this.label4 = new System.Windows.Forms.Label();
             this.tb_GioiTinh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tb_Email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tb_sdt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.btn_edit = new System.Windows.Forms.Button();
+            this.tb_DiaChi = new System.Windows.Forms.TextBox();
+            this.btn_SuaThongTin = new System.Windows.Forms.Button();
             this.btn_DoiMK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -173,15 +173,15 @@ namespace CDTTTN
             this.label5.TabIndex = 3;
             this.label5.Text = "Email";
             // 
-            // textBox5
+            // tb_Email
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(682, 384);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(466, 35);
-            this.textBox5.TabIndex = 4;
+            this.tb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_Email.Location = new System.Drawing.Point(682, 384);
+            this.tb_Email.Multiline = true;
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.ReadOnly = true;
+            this.tb_Email.Size = new System.Drawing.Size(466, 35);
+            this.tb_Email.TabIndex = 4;
             // 
             // label6
             // 
@@ -193,15 +193,15 @@ namespace CDTTTN
             this.label6.TabIndex = 3;
             this.label6.Text = "Số điện thoại";
             // 
-            // textBox6
+            // tb_sdt
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox6.Location = new System.Drawing.Point(682, 481);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(466, 35);
-            this.textBox6.TabIndex = 4;
+            this.tb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_sdt.Location = new System.Drawing.Point(682, 481);
+            this.tb_sdt.Multiline = true;
+            this.tb_sdt.Name = "tb_sdt";
+            this.tb_sdt.ReadOnly = true;
+            this.tb_sdt.Size = new System.Drawing.Size(466, 35);
+            this.tb_sdt.TabIndex = 4;
             // 
             // label7
             // 
@@ -213,28 +213,28 @@ namespace CDTTTN
             this.label7.TabIndex = 3;
             this.label7.Text = "Địa chỉ";
             // 
-            // textBox7
+            // tb_DiaChi
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox7.Location = new System.Drawing.Point(682, 584);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(466, 35);
-            this.textBox7.TabIndex = 4;
+            this.tb_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_DiaChi.Location = new System.Drawing.Point(682, 584);
+            this.tb_DiaChi.Multiline = true;
+            this.tb_DiaChi.Name = "tb_DiaChi";
+            this.tb_DiaChi.ReadOnly = true;
+            this.tb_DiaChi.Size = new System.Drawing.Size(466, 35);
+            this.tb_DiaChi.TabIndex = 4;
             // 
-            // btn_edit
+            // btn_SuaThongTin
             // 
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_edit.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(408, 771);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(181, 50);
-            this.btn_edit.TabIndex = 6;
-            this.btn_edit.Text = "Sửa thông tin";
-            this.btn_edit.UseVisualStyleBackColor = false;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            this.btn_SuaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_SuaThongTin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_SuaThongTin.ForeColor = System.Drawing.Color.White;
+            this.btn_SuaThongTin.Location = new System.Drawing.Point(408, 771);
+            this.btn_SuaThongTin.Name = "btn_SuaThongTin";
+            this.btn_SuaThongTin.Size = new System.Drawing.Size(181, 50);
+            this.btn_SuaThongTin.TabIndex = 6;
+            this.btn_SuaThongTin.Text = "Sửa thông tin";
+            this.btn_SuaThongTin.UseVisualStyleBackColor = false;
+            this.btn_SuaThongTin.Click += new System.EventHandler(this.btn_SuaThongTin_Click);
             // 
             // btn_DoiMK
             // 
@@ -255,17 +255,17 @@ namespace CDTTTN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btn_DoiMK);
-            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_SuaThongTin);
             this.Controls.Add(this.tb_GioiTinh);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tb_DiaChi);
             this.Controls.Add(this.tb_NgaySinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tb_sdt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_HoTen);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tb_Email);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tb_TaiKhoan);
@@ -296,12 +296,12 @@ namespace CDTTTN
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_GioiTinh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tb_sdt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.TextBox tb_DiaChi;
+        private System.Windows.Forms.Button btn_SuaThongTin;
         private System.Windows.Forms.Button btn_DoiMK;
 
         public EventHandler button1_Click { get; private set; }

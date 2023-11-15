@@ -12,9 +12,37 @@ namespace CDTTTN
 {
     public partial class frmTrangChu : Form
     {
+        private TaiKhoanCuaToi taikhoancuatoi;
+        private frmTrangThietBi trangthietbi;
+        private DatPhong datphong;
+        private KiemKe kiemke;
+        private SuaChua suachua;
         public frmTrangChu()
         {
             InitializeComponent();
+            //InitializeUserControls();
+            taikhoancuatoi = new TaiKhoanCuaToi();
+            trangthietbi = new frmTrangThietBi();
+            datphong = new DatPhong();
+            kiemke = new KiemKe();
+            suachua = new SuaChua();
+
+            panelControl.Controls.Add(taikhoancuatoi);
+            panelControl.Controls.Add(trangthietbi);
+            panelControl.Controls.Add(datphong);
+            panelControl.Controls.Add(kiemke);
+            panelControl.Controls.Add(suachua);
+
+            taikhoancuatoi.Hide();
+            trangthietbi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Hide();
+        }
+
+        private void InitializeUserControls()
+        {
+            
         }
 
         private void frmTrangChu_Load(object sender, EventArgs e)
@@ -39,26 +67,97 @@ namespace CDTTTN
 
         private void label4_Click(object sender, EventArgs e)
         {
-            DatPhong userControl = new DatPhong();
-            panelControl.Controls.Add(userControl);
+            datphong.Show();
+            taikhoancuatoi.Hide();
+            trangthietbi.Hide();
+            kiemke.Hide();
+            suachua.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            DatPhong userControl = new DatPhong();
-            panelControl.Controls.Add(userControl);
+            datphong.Show();
+            taikhoancuatoi.Hide();
+            trangthietbi.Hide();
+            kiemke.Hide();
+            suachua.Hide();
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
-            TaiKhoanCuaToi userControl = new TaiKhoanCuaToi();
-            panelControl.Controls.Add(userControl);
+            taikhoancuatoi.Show();
+            trangthietbi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Hide();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            TaiKhoanCuaToi userControl = new TaiKhoanCuaToi();
-            panelControl.Controls.Add(userControl);
+            taikhoancuatoi.Show();
+            trangthietbi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Hide();
+        }
+
+        private void TTB_Click(object sender, EventArgs e)
+        {
+            trangthietbi.Show();
+            taikhoancuatoi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Hide();
+        }
+
+        private void img_TTB_Click(object sender, EventArgs e)
+        {
+            trangthietbi.Show();
+            taikhoancuatoi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Hide();
+        }
+
+        private void panelControl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lb_KiemKe_Click(object sender, EventArgs e)
+        {
+            trangthietbi.Hide();
+            taikhoancuatoi.Hide();
+            datphong.Hide();
+            kiemke.Show();
+            suachua.Hide();
+        }
+
+        private void img_KiemKe_Click(object sender, EventArgs e)
+        {
+            trangthietbi.Hide();
+            taikhoancuatoi.Hide();
+            datphong.Hide();
+            kiemke.Show();
+            suachua.Hide();
+        }
+
+        private void lb_SuaChua_Click(object sender, EventArgs e)
+        {
+            trangthietbi.Hide();
+            taikhoancuatoi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Show();
+        }
+
+        private void img_SuaChua_Click(object sender, EventArgs e)
+        {
+            trangthietbi.Hide();
+            taikhoancuatoi.Hide();
+            datphong.Hide();
+            kiemke.Hide();
+            suachua.Show();
         }
     }
 }

@@ -25,23 +25,27 @@ namespace CDTTTN
             tb_GioiTinh.Text = "Nữ";
         }
 
-        private void btn_edit_Click(object sender, EventArgs e)
+        private void btn_SuaThongTin_Click(object sender, EventArgs e)
         {
-            if (btn_edit.Text == "Sửa thông tin")
+            if (btn_SuaThongTin.Text == "Sửa thông tin")
             {
-                btn_edit.Text = "Lưu";
-                tb_TaiKhoan.ReadOnly = false;
+                btn_SuaThongTin.Text = "Lưu";
                 tb_HoTen.ReadOnly = false;
                 tb_GioiTinh.ReadOnly = false;
                 tb_NgaySinh.ReadOnly = false;
+                tb_Email.ReadOnly = false;
+                tb_sdt.ReadOnly = false;
+                tb_DiaChi.ReadOnly = false;
             }    
             else
             {
-                btn_edit.Text = "Sửa thông tin";
-                tb_TaiKhoan.ReadOnly = true;
+                btn_SuaThongTin.Text = "Sửa thông tin";
                 tb_HoTen.ReadOnly = true;
                 tb_GioiTinh.ReadOnly = true;
                 tb_NgaySinh.ReadOnly = true;
+                tb_Email.ReadOnly = true;
+                tb_sdt.ReadOnly = true;
+                tb_DiaChi.ReadOnly = true;
             }    
             
         }
