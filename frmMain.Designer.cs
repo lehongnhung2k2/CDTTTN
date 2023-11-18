@@ -33,8 +33,8 @@ namespace CDTTTN
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.tbMatKhau = new System.Windows.Forms.TextBox();
-            this.tbDangNhap = new System.Windows.Forms.TextBox();
+            this.tb_MatKhau = new System.Windows.Forms.TextBox();
+            this.tb_TaiKhoan = new System.Windows.Forms.TextBox();
             this.lb_MatKhau = new System.Windows.Forms.Label();
             this.lb_TenDangNhap = new System.Windows.Forms.Label();
             this.lb_DangNhap = new System.Windows.Forms.Label();
@@ -50,8 +50,8 @@ namespace CDTTTN
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnDangNhap);
-            this.panel1.Controls.Add(this.tbMatKhau);
-            this.panel1.Controls.Add(this.tbDangNhap);
+            this.panel1.Controls.Add(this.tb_MatKhau);
+            this.panel1.Controls.Add(this.tb_TaiKhoan);
             this.panel1.Controls.Add(this.lb_MatKhau);
             this.panel1.Controls.Add(this.lb_TenDangNhap);
             this.panel1.Controls.Add(this.lb_DangNhap);
@@ -95,26 +95,26 @@ namespace CDTTTN
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // tbMatKhau
+            // tb_MatKhau
             // 
-            this.tbMatKhau.BackColor = System.Drawing.Color.White;
-            this.tbMatKhau.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbMatKhau.Location = new System.Drawing.Point(117, 438);
-            this.tbMatKhau.Multiline = true;
-            this.tbMatKhau.Name = "tbMatKhau";
-            this.tbMatKhau.PasswordChar = '*';
-            this.tbMatKhau.Size = new System.Drawing.Size(416, 40);
-            this.tbMatKhau.TabIndex = 1;
+            this.tb_MatKhau.BackColor = System.Drawing.Color.White;
+            this.tb_MatKhau.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_MatKhau.Location = new System.Drawing.Point(117, 438);
+            this.tb_MatKhau.Multiline = true;
+            this.tb_MatKhau.Name = "tb_MatKhau";
+            this.tb_MatKhau.PasswordChar = '*';
+            this.tb_MatKhau.Size = new System.Drawing.Size(416, 40);
+            this.tb_MatKhau.TabIndex = 1;
             // 
-            // tbDangNhap
+            // tb_TaiKhoan
             // 
-            this.tbDangNhap.BackColor = System.Drawing.Color.White;
-            this.tbDangNhap.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbDangNhap.Location = new System.Drawing.Point(117, 342);
-            this.tbDangNhap.Multiline = true;
-            this.tbDangNhap.Name = "tbDangNhap";
-            this.tbDangNhap.Size = new System.Drawing.Size(416, 40);
-            this.tbDangNhap.TabIndex = 0;
+            this.tb_TaiKhoan.BackColor = System.Drawing.Color.White;
+            this.tb_TaiKhoan.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_TaiKhoan.Location = new System.Drawing.Point(117, 342);
+            this.tb_TaiKhoan.Multiline = true;
+            this.tb_TaiKhoan.Name = "tb_TaiKhoan";
+            this.tb_TaiKhoan.Size = new System.Drawing.Size(416, 40);
+            this.tb_TaiKhoan.TabIndex = 0;
             // 
             // lb_MatKhau
             // 
@@ -176,8 +176,8 @@ namespace CDTTTN
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lb_DangNhap;
-        private System.Windows.Forms.TextBox tbMatKhau;
-        private System.Windows.Forms.TextBox tbDangNhap;
+        private System.Windows.Forms.TextBox tb_MatKhau;
+        private System.Windows.Forms.TextBox tb_TaiKhoan;
         private System.Windows.Forms.Label lb_MatKhau;
         private System.Windows.Forms.Label lb_TenDangNhap;
         private System.Windows.Forms.Button btnDangNhap;

@@ -270,7 +270,7 @@ namespace CDTTTN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox9);

@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace CDTTTN
 {
-    public partial class searchSuaChua : UserControl
+    public partial class searchThanhLy : UserControl
     {
         SqlConnection conn = new SqlConnection();
         SqlDataAdapter da = new SqlDataAdapter();
@@ -19,29 +19,24 @@ namespace CDTTTN
         DataTable dt = new DataTable();
         string sql, constr;
         int i;
-        public searchSuaChua()
+        public searchThanhLy()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searchSuaChua_Load(object sender, EventArgs e)
+        private void searchThanhLy_Load(object sender, EventArgs e)
         {
             constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
 
-            sql = "select * from SuaChua";
+            sql = "select * from ThanhLy";
             //truyen da cau lenh sql va ket noi toi conn
             da = new SqlDataAdapter(sql, conn);
             dt = new DataTable();
             dt.Clear();
             da.Fill(dt);
-            grdSuaChua.DataSource = dt;
+            grdThanhLy.DataSource = dt;
         }
     }
 }

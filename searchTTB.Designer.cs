@@ -44,6 +44,18 @@ namespace CDTTTN
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.grdTTB = new System.Windows.Forms.DataGridView();
+            this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianTinhKhauHao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NguyenGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTTB)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -199,10 +211,113 @@ namespace CDTTTN
             this.label1.TabIndex = 9;
             this.label1.Text = "THÔNG TIN TÌM KIẾM";
             // 
+            // grdTTB
+            // 
+            this.grdTTB.BackgroundColor = System.Drawing.Color.White;
+            this.grdTTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdTTB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTTB,
+            this.TenTTB,
+            this.NgayNhap,
+            this.ThoiGianTinhKhauHao,
+            this.Thue,
+            this.NguyenGia,
+            this.GhiChu,
+            this.MaTT,
+            this.MaNCC,
+            this.MaNV});
+            this.grdTTB.Location = new System.Drawing.Point(43, 549);
+            this.grdTTB.Name = "grdTTB";
+            this.grdTTB.RowHeadersWidth = 62;
+            this.grdTTB.RowTemplate.Height = 28;
+            this.grdTTB.Size = new System.Drawing.Size(1237, 309);
+            this.grdTTB.TabIndex = 24;
+            // 
+            // MaTTB
+            // 
+            this.MaTTB.DataPropertyName = "MaTTB";
+            this.MaTTB.HeaderText = "Mã TTB";
+            this.MaTTB.MinimumWidth = 8;
+            this.MaTTB.Name = "MaTTB";
+            this.MaTTB.Width = 150;
+            // 
+            // TenTTB
+            // 
+            this.TenTTB.DataPropertyName = "TenTTB";
+            this.TenTTB.HeaderText = "Tên TTB";
+            this.TenTTB.MinimumWidth = 8;
+            this.TenTTB.Name = "TenTTB";
+            this.TenTTB.Width = 150;
+            // 
+            // NgayNhap
+            // 
+            this.NgayNhap.DataPropertyName = "NgayNhap";
+            this.NgayNhap.HeaderText = "Ngày nhập";
+            this.NgayNhap.MinimumWidth = 8;
+            this.NgayNhap.Name = "NgayNhap";
+            this.NgayNhap.Width = 150;
+            // 
+            // ThoiGianTinhKhauHao
+            // 
+            this.ThoiGianTinhKhauHao.DataPropertyName = "ThoiGianTinhKhauHao";
+            this.ThoiGianTinhKhauHao.HeaderText = "Thời gian tính KH";
+            this.ThoiGianTinhKhauHao.MinimumWidth = 8;
+            this.ThoiGianTinhKhauHao.Name = "ThoiGianTinhKhauHao";
+            this.ThoiGianTinhKhauHao.Width = 150;
+            // 
+            // Thue
+            // 
+            this.Thue.DataPropertyName = "Thue";
+            this.Thue.HeaderText = "Thuế";
+            this.Thue.MinimumWidth = 8;
+            this.Thue.Name = "Thue";
+            this.Thue.Width = 150;
+            // 
+            // NguyenGia
+            // 
+            this.NguyenGia.DataPropertyName = "NguyenGia";
+            this.NguyenGia.HeaderText = "Nguyên giá";
+            this.NguyenGia.MinimumWidth = 8;
+            this.NguyenGia.Name = "NguyenGia";
+            this.NguyenGia.Width = 150;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.MinimumWidth = 8;
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Width = 150;
+            // 
+            // MaTT
+            // 
+            this.MaTT.DataPropertyName = "MaTT";
+            this.MaTT.HeaderText = "Mã trạng thái";
+            this.MaTT.MinimumWidth = 8;
+            this.MaTT.Name = "MaTT";
+            this.MaTT.Width = 150;
+            // 
+            // MaNCC
+            // 
+            this.MaNCC.DataPropertyName = "MaNCC";
+            this.MaNCC.HeaderText = "Mã NCC";
+            this.MaNCC.MinimumWidth = 8;
+            this.MaNCC.Name = "MaNCC";
+            this.MaNCC.Width = 150;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 150;
+            // 
             // searchTTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.grdTTB);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.comboBox1);
@@ -220,6 +335,8 @@ namespace CDTTTN
             this.Controls.Add(this.label1);
             this.Name = "searchTTB";
             this.Size = new System.Drawing.Size(1321, 880);
+            this.Load += new System.EventHandler(this.searchTTB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdTTB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +359,16 @@ namespace CDTTTN
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView grdTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianTinhKhauHao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NguyenGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
     }
 }

@@ -36,8 +36,8 @@ namespace CDTTTN
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lb_ThanhLy = new System.Windows.Forms.Label();
+            this.img_ThanhLy = new System.Windows.Forms.PictureBox();
             this.lb_SuaChua = new System.Windows.Forms.Label();
             this.img_SuaChua = new System.Windows.Forms.PictureBox();
             this.lb_KiemKe = new System.Windows.Forms.Label();
@@ -46,19 +46,19 @@ namespace CDTTTN
             this.img_TTB = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lb_TrangChu = new System.Windows.Forms.Label();
+            this.img_TrangChu = new System.Windows.Forms.PictureBox();
             this.panelControl = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ThanhLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_SuaChua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_KiemKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_TTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_TrangChu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,8 +110,8 @@ namespace CDTTTN
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.pictureBox8);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Controls.Add(this.lb_ThanhLy);
+            this.panel2.Controls.Add(this.img_ThanhLy);
             this.panel2.Controls.Add(this.lb_SuaChua);
             this.panel2.Controls.Add(this.img_SuaChua);
             this.panel2.Controls.Add(this.lb_KiemKe);
@@ -120,8 +120,8 @@ namespace CDTTTN
             this.panel2.Controls.Add(this.img_TTB);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.lb_TrangChu);
+            this.panel2.Controls.Add(this.img_TrangChu);
             this.panel2.Location = new System.Drawing.Point(-1, 50);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(272, 977);
@@ -154,29 +154,31 @@ namespace CDTTTN
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // label8
+            // lb_ThanhLy
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(59, 339);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 30);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Thanh lý";
+            this.lb_ThanhLy.AutoSize = true;
+            this.lb_ThanhLy.BackColor = System.Drawing.Color.Transparent;
+            this.lb_ThanhLy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_ThanhLy.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_ThanhLy.ForeColor = System.Drawing.Color.White;
+            this.lb_ThanhLy.Location = new System.Drawing.Point(59, 339);
+            this.lb_ThanhLy.Name = "lb_ThanhLy";
+            this.lb_ThanhLy.Size = new System.Drawing.Size(120, 30);
+            this.lb_ThanhLy.TabIndex = 1;
+            this.lb_ThanhLy.Text = "Thanh lý";
+            this.lb_ThanhLy.Click += new System.EventHandler(this.lb_ThanhLy_Click);
             // 
-            // pictureBox7
+            // img_ThanhLy
             // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::CDTTTN.Properties.Resources.selling;
-            this.pictureBox7.Location = new System.Drawing.Point(13, 325);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
+            this.img_ThanhLy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_ThanhLy.Image = global::CDTTTN.Properties.Resources.selling;
+            this.img_ThanhLy.Location = new System.Drawing.Point(13, 325);
+            this.img_ThanhLy.Name = "img_ThanhLy";
+            this.img_ThanhLy.Size = new System.Drawing.Size(40, 40);
+            this.img_ThanhLy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_ThanhLy.TabIndex = 0;
+            this.img_ThanhLy.TabStop = false;
+            this.img_ThanhLy.Click += new System.EventHandler(this.img_ThanhLy_Click);
             // 
             // lb_SuaChua
             // 
@@ -282,31 +284,31 @@ namespace CDTTTN
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label3
+            // lb_TrangChu
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(59, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Trang chủ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lb_TrangChu.AutoSize = true;
+            this.lb_TrangChu.BackColor = System.Drawing.Color.Transparent;
+            this.lb_TrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_TrangChu.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_TrangChu.ForeColor = System.Drawing.Color.White;
+            this.lb_TrangChu.Location = new System.Drawing.Point(59, 62);
+            this.lb_TrangChu.Name = "lb_TrangChu";
+            this.lb_TrangChu.Size = new System.Drawing.Size(137, 30);
+            this.lb_TrangChu.TabIndex = 1;
+            this.lb_TrangChu.Text = "Trang chủ";
+            this.lb_TrangChu.Click += new System.EventHandler(this.label3_Click);
             // 
-            // pictureBox2
+            // img_TrangChu
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::CDTTTN.Properties.Resources.home1;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.img_TrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.img_TrangChu.Image = global::CDTTTN.Properties.Resources.home1;
+            this.img_TrangChu.Location = new System.Drawing.Point(13, 48);
+            this.img_TrangChu.Name = "img_TrangChu";
+            this.img_TrangChu.Size = new System.Drawing.Size(40, 40);
+            this.img_TrangChu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_TrangChu.TabIndex = 0;
+            this.img_TrangChu.TabStop = false;
+            this.img_TrangChu.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panelControl
             // 
@@ -336,12 +338,12 @@ namespace CDTTTN
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ThanhLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_SuaChua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_KiemKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_TTB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_TrangChu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,8 +355,8 @@ namespace CDTTTN
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox img_TrangChu;
+        private System.Windows.Forms.Label lb_TrangChu;
         private System.Windows.Forms.Label TTB;
         private System.Windows.Forms.PictureBox img_TTB;
         private System.Windows.Forms.Label label4;
@@ -365,8 +367,8 @@ namespace CDTTTN
         private System.Windows.Forms.PictureBox img_KiemKe;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label lb_ThanhLy;
+        private System.Windows.Forms.PictureBox img_ThanhLy;
         private System.Windows.Forms.Panel panelControl;
     }
 }

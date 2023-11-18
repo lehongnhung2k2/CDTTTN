@@ -57,6 +57,12 @@
     <Compile Include="addSuaChua.Designer.cs">
       <DependentUpon>addSuaChua.cs</DependentUpon>
     </Compile>
+    <Compile Include="addThanhLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addThanhLy.Designer.cs">
+      <DependentUpon>addThanhLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="addTTB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     <Compile Include="searchSuaChua.Designer.cs">
       <DependentUpon>searchSuaChua.cs</DependentUpon>
     </Compile>
+    <Compile Include="searchThanhLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchThanhLy.Designer.cs">
+      <DependentUpon>searchThanhLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="searchTTB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,11 +155,26 @@
     <Compile Include="TaiKhoanCuaToi.Designer.cs">
       <DependentUpon>TaiKhoanCuaToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThanhLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThanhLy.Designer.cs">
+      <DependentUpon>ThanhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addKiemKe.resx">
       <DependentUpon>addKiemKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addSuaChua.resx">
       <DependentUpon>addSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addThanhLy.resx">
+      <DependentUpon>addThanhLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addTTB.resx">
       <DependentUpon>addTTB.cs</DependentUpon>
@@ -192,6 +219,9 @@
     <EmbeddedResource Include="searchSuaChua.resx">
       <DependentUpon>searchSuaChua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="searchThanhLy.resx">
+      <DependentUpon>searchThanhLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="searchTTB.resx">
       <DependentUpon>searchTTB.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoanCuaToi.resx">
       <DependentUpon>TaiKhoanCuaToi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhLy.resx">
+      <DependentUpon>ThanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
