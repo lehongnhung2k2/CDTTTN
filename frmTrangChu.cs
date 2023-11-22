@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CDTTTN
 {
     public partial class frmTrangChu : Form
     {
+        SqlConnection conn = new SqlConnection();
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand cmd = new SqlCommand();
+        DataTable dt = new DataTable();
+        string sql, constr;
+        int i, code;
+        string taikhoan, TenNV;
+
         private TaiKhoanCuaToi taikhoancuatoi;
         private frmTrangThietBi trangthietbi;
         private DatPhong datphong;
@@ -48,6 +57,12 @@ namespace CDTTTN
             trangchu.Hide();
         }
 
+        public frmTrangChu(string tk) : this()
+        {
+            taikhoan = tk;
+
+        }
+
         private void InitializeUserControls()
         {
             
@@ -55,7 +70,23 @@ namespace CDTTTN
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
-           // label1.BringToFront();
+        
+            constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
+            conn.ConnectionString = constr;
+            conn.Open();
+
+            //blTK.Text = username;
+            sql = "select TenNV from TaiKhoan, NhanVien where TaiKhoan.MaNV = NhanVien.MaNV and TenTK='" + taikhoan + "'";
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            SqlDataReader dta = cmd.ExecuteReader();
+            while (dta.Read() == true)
+            {
+                TenNV = dta["TenNV"].ToString();
+
+            }
+            lb_TenNV.Text = TenNV;
+            conn.Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

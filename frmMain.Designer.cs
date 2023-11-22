@@ -94,6 +94,8 @@ namespace CDTTTN
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnDangNhap_KeyDown);
+            this.btnDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnDangNhap_KeyPress);
             // 
             // tb_MatKhau
             // 
@@ -105,6 +107,7 @@ namespace CDTTTN
             this.tb_MatKhau.PasswordChar = '*';
             this.tb_MatKhau.Size = new System.Drawing.Size(416, 40);
             this.tb_MatKhau.TabIndex = 1;
+            this.tb_MatKhau.Text = "admin1";
             // 
             // tb_TaiKhoan
             // 
@@ -115,6 +118,7 @@ namespace CDTTTN
             this.tb_TaiKhoan.Name = "tb_TaiKhoan";
             this.tb_TaiKhoan.Size = new System.Drawing.Size(416, 40);
             this.tb_TaiKhoan.TabIndex = 0;
+            this.tb_TaiKhoan.Text = "lehongnhung";
             // 
             // lb_MatKhau
             // 

@@ -30,18 +30,17 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btn_TimKiemTTB = new System.Windows.Forms.Button();
+            this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_TTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_MaNCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_NgayNhap = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MaTTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdTTB = new System.Windows.Forms.DataGridView();
@@ -55,6 +54,7 @@ namespace CDTTTN
             this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_TrangThai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdTTB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,39 +70,27 @@ namespace CDTTTN
             this.button1.Text = "Xóa điều kiện";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // btn_edit
+            // btn_TimKiemTTB
             // 
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_edit.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(702, 446);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(181, 50);
-            this.btn_edit.TabIndex = 22;
-            this.btn_edit.Text = "Tìm kiếm";
-            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_TimKiemTTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_TimKiemTTB.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_TimKiemTTB.ForeColor = System.Drawing.Color.White;
+            this.btn_TimKiemTTB.Location = new System.Drawing.Point(702, 446);
+            this.btn_TimKiemTTB.Name = "btn_TimKiemTTB";
+            this.btn_TimKiemTTB.Size = new System.Drawing.Size(181, 50);
+            this.btn_TimKiemTTB.TabIndex = 22;
+            this.btn_TimKiemTTB.Text = "Tìm kiếm";
+            this.btn_TimKiemTTB.UseVisualStyleBackColor = false;
+            this.btn_TimKiemTTB.Click += new System.EventHandler(this.btn_TimKiemTTB_Click);
             // 
-            // comboBox1
+            // txt_MaNV
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Đang sử dụng",
-            "Sửa chữa",
-            "Thanh lý"});
-            this.comboBox1.Location = new System.Drawing.Point(256, 279);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(339, 28);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(891, 351);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(339, 35);
-            this.textBox5.TabIndex = 16;
+            this.txt_MaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNV.Location = new System.Drawing.Point(891, 351);
+            this.txt_MaNV.Multiline = true;
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaNV.TabIndex = 16;
             // 
             // label7
             // 
@@ -114,14 +102,14 @@ namespace CDTTTN
             this.label7.TabIndex = 10;
             this.label7.Text = "Mã nhân viên";
             // 
-            // textBox3
+            // txt_TTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(891, 193);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(339, 35);
-            this.textBox3.TabIndex = 17;
+            this.txt_TTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TTB.Location = new System.Drawing.Point(891, 193);
+            this.txt_TTB.Multiline = true;
+            this.txt_TTB.Name = "txt_TTB";
+            this.txt_TTB.Size = new System.Drawing.Size(339, 35);
+            this.txt_TTB.TabIndex = 17;
             // 
             // label4
             // 
@@ -133,14 +121,14 @@ namespace CDTTTN
             this.label4.TabIndex = 11;
             this.label4.Text = "Tên trang thiết bị";
             // 
-            // textBox2
+            // txt_MaNCC
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(891, 272);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(339, 35);
-            this.textBox2.TabIndex = 18;
+            this.txt_MaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNCC.Location = new System.Drawing.Point(891, 272);
+            this.txt_MaNCC.Multiline = true;
+            this.txt_MaNCC.Name = "txt_MaNCC";
+            this.txt_MaNCC.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaNCC.TabIndex = 18;
             // 
             // label3
             // 
@@ -152,14 +140,14 @@ namespace CDTTTN
             this.label3.TabIndex = 12;
             this.label3.Text = "Mã nhà cung cấp";
             // 
-            // textBox4
+            // txt_NgayNhap
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(256, 351);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(339, 35);
-            this.textBox4.TabIndex = 19;
+            this.txt_NgayNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NgayNhap.Location = new System.Drawing.Point(256, 351);
+            this.txt_NgayNhap.Multiline = true;
+            this.txt_NgayNhap.Name = "txt_NgayNhap";
+            this.txt_NgayNhap.Size = new System.Drawing.Size(339, 35);
+            this.txt_NgayNhap.TabIndex = 19;
             // 
             // label5
             // 
@@ -181,14 +169,14 @@ namespace CDTTTN
             this.label6.TabIndex = 14;
             this.label6.Text = "Ngày nhập";
             // 
-            // textBox1
+            // txt_MaTTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(256, 193);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 35);
-            this.textBox1.TabIndex = 20;
+            this.txt_MaTTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaTTB.Location = new System.Drawing.Point(256, 193);
+            this.txt_MaTTB.Multiline = true;
+            this.txt_MaTTB.Name = "txt_MaTTB";
+            this.txt_MaTTB.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaTTB.TabIndex = 20;
             // 
             // label2
             // 
@@ -313,24 +301,33 @@ namespace CDTTTN
             this.MaNV.Name = "MaNV";
             this.MaNV.Width = 150;
             // 
+            // txt_TrangThai
+            // 
+            this.txt_TrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TrangThai.Location = new System.Drawing.Point(256, 272);
+            this.txt_TrangThai.Multiline = true;
+            this.txt_TrangThai.Name = "txt_TrangThai";
+            this.txt_TrangThai.Size = new System.Drawing.Size(339, 35);
+            this.txt_TrangThai.TabIndex = 20;
+            // 
             // searchTTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grdTTB);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_edit);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.btn_TimKiemTTB);
+            this.Controls.Add(this.txt_MaNV);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_TTB);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_MaNCC);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_NgayNhap);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_TrangThai);
+            this.Controls.Add(this.txt_MaTTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "searchTTB";
@@ -345,18 +342,17 @@ namespace CDTTTN
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btn_TimKiemTTB;
+        private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_TTB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_MaNCC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_NgayNhap;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaTTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView grdTTB;
@@ -370,5 +366,6 @@ namespace CDTTTN
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.TextBox txt_TrangThai;
     }
 }

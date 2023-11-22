@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CDTTTN.DAO;
 
 namespace CDTTTN
 {
     public partial class frmMain : Form
     {
-        SqlConnection conn = new SqlConnection();
-        SqlDataAdapter da = new SqlDataAdapter();
-        SqlCommand cmd = new SqlCommand();
-        DataTable dt = new DataTable();
-        string sql, constr;
-        int i, code;
+        //SqlConnection conn = new SqlConnection();
+        //SqlDataAdapter da = new SqlDataAdapter();
+        //SqlCommand cmd = new SqlCommand();
+        //DataTable dt = new DataTable();
+        //string sql, constr;
+        //int i, code;
 
         public frmMain()
         {
@@ -32,68 +33,71 @@ namespace CDTTTN
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string tk = tb_TaiKhoan.Text;
-            string mk = tb_MatKhau.Text;
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select count(*) from TaiKhoan "
-                + " where " + "TenTK" + "=N'" + tk + "'"
-                + " and " + " Matkhau" + "=N'" + mk + "'"
-                + " and " + " MaPQ =N'admin'";
-            cmd.Connection = conn;
-            int kq = (int)cmd.ExecuteScalar();
-            if (kq == 1)
-            {
-                frmTrangChu f = new frmTrangChu();
-                this.Hide();
-                f.Show();
-            }
-            else
-            {
-                MessageBox.Show("Đăng nhập thất bại");
-            }
-            //if (kq == 0)
+            //string tk = tb_TaiKhoan.Text;
+            //string mk = tb_MatKhau.Text;
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "select count(*) from TaiKhoan "
+            //    + " where " + "TenTK" + "=N'" + tk + "'"
+            //    + " and " + " Matkhau" + "=N'" + mk + "'"
+            //    + " and " + " MaPQ =N'admin'";
+            //cmd.Connection = conn;
+            //int kq = (int)cmd.ExecuteScalar();
+            //if (kq == 1)
             //{
-            //    SqlCommand cd = new SqlCommand();
-            //    cd.CommandType = CommandType.Text;
-            //    cd.CommandText = "select count(*) from Tai_Khoan "
-            //        + " where " + "TenTK" + "=N'" + tk + "'"
-            //        + " and " + " Matkhau" + "=N'" + mk + "'"
-            //        + " and " + " MaPQ =N'user'";
-            //    cd.Connection = conn;
-            //    int kq1 = (int)cd.ExecuteScalar();
-            //    if (kq1 == 1)
-            //    {
-            //        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        //frmTrangChu f = new frmTrangChu();
-            //        frmTrangChu d = new frmTrangChu(txtTenDN.Text, txtMatKhau.Text);
-            //        this.Hide();
-            //        d.Show();
-
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    frmTrangChuAdmin f = new frmTrangChuAdmin();
+            //    frmTrangChu f = new frmTrangChu(tk);
             //    this.Hide();
             //    f.Show();
             //}
+            //else
+            //{
+            //    MessageBox.Show("Đăng nhập thất bại");
+            //}
 
+            string tk = tb_TaiKhoan.Text;
+            string mk = tb_MatKhau.Text;
+           if (checkDangNhap(tk, mk))
+            {
+                frmTrangChu f = new frmTrangChu(tk);
+                this.Hide();
+                f.Show();
+            }
+           else
+            {
+                MessageBox.Show("Đăng nhập thất bại");
+            }
 
 
 
         }
 
+        bool checkDangNhap(string tk, string mk)
+        {
+            return TaiKhoanDAO.Instance.checkDangNhap(tk, mk);
+        }
+
+        private void btnDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if (e.keychar == (char)keys.enter)
+            //{
+            //    btndangnhap.performclick(); // tự động kích hoạt sự kiện click của button
+            //}
+        }
+
+        private void btnDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+              
+            //    btnDangNhap.PerformClick(); // Tự động kích hoạt sự kiện Click của Button
+            //}
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
-            constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
-            conn.ConnectionString = constr;
-            conn.Open();
+            //constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
+            //conn.ConnectionString = constr;
+            //conn.Open();
 
             tb_MatKhau.UseSystemPasswordChar = false;
 

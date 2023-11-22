@@ -31,7 +31,7 @@ namespace CDTTTN
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_TenNV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@ namespace CDTTTN
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lb_TenNV);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
@@ -83,16 +83,15 @@ namespace CDTTTN
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lb_TenNV
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1096, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lê Hồng Nhung";
+            this.lb_TenNV.AutoSize = true;
+            this.lb_TenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_TenNV.ForeColor = System.Drawing.Color.White;
+            this.lb_TenNV.Location = new System.Drawing.Point(1096, 18);
+            this.lb_TenNV.Name = "lb_TenNV";
+            this.lb_TenNV.Size = new System.Drawing.Size(0, 29);
+            this.lb_TenNV.TabIndex = 1;
             // 
             // label1
             // 
@@ -353,7 +352,7 @@ namespace CDTTTN
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_TenNV;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox img_TrangChu;
         private System.Windows.Forms.Label lb_TrangChu;

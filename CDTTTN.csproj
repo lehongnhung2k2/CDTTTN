@@ -69,12 +69,16 @@
     <Compile Include="addTTB.Designer.cs">
       <DependentUpon>addTTB.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\PhongDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DatPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Phong.cs" />
     <Compile Include="editTTB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -343,5 +347,6 @@
   <ItemGroup>
     <None Include="Resources\printer.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

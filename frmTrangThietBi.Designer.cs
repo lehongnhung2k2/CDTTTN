@@ -31,12 +31,12 @@ namespace CDTTTN
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panelTTB = new System.Windows.Forms.FlowLayoutPanel();
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.điềuChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panelTTB = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +51,43 @@ namespace CDTTTN
             this.xuấtBáoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1321, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1321, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // thêmMớiToolStripMenuItem
+            // 
+            this.thêmMớiToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.thêmMớiToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.add1;
+            this.thêmMớiToolStripMenuItem.Name = "thêmMớiToolStripMenuItem";
+            this.thêmMớiToolStripMenuItem.Size = new System.Drawing.Size(132, 29);
+            this.thêmMớiToolStripMenuItem.Text = "Thêm mới";
+            this.thêmMớiToolStripMenuItem.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem_Click);
+            // 
+            // chỉnhSửaToolStripMenuItem
+            // 
+            this.chỉnhSửaToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.chỉnhSửaToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.edit;
+            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
+            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
+            this.chỉnhSửaToolStripMenuItem.Text = "Hiệu chỉnh";
+            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaToolStripMenuItem_Click);
+            // 
+            // điềuChuyểnToolStripMenuItem
+            // 
+            this.điềuChuyểnToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.điềuChuyểnToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.transfer;
+            this.điềuChuyểnToolStripMenuItem.Name = "điềuChuyểnToolStripMenuItem";
+            this.điềuChuyểnToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
+            this.điềuChuyểnToolStripMenuItem.Text = "Điều chuyển";
+            // 
+            // xuấtBáoCáoToolStripMenuItem
+            // 
+            this.xuấtBáoCáoToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.xuấtBáoCáoToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.export;
+            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
+            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(157, 29);
+            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
             // 
             // contextMenuStrip1
             // 
@@ -67,40 +101,6 @@ namespace CDTTTN
             this.panelTTB.Name = "panelTTB";
             this.panelTTB.Size = new System.Drawing.Size(1321, 880);
             this.panelTTB.TabIndex = 9;
-            // 
-            // thêmMớiToolStripMenuItem
-            // 
-            this.thêmMớiToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.thêmMớiToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.add1;
-            this.thêmMớiToolStripMenuItem.Name = "thêmMớiToolStripMenuItem";
-            this.thêmMớiToolStripMenuItem.Size = new System.Drawing.Size(132, 30);
-            this.thêmMớiToolStripMenuItem.Text = "Thêm mới";
-            this.thêmMớiToolStripMenuItem.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem_Click);
-            // 
-            // chỉnhSửaToolStripMenuItem
-            // 
-            this.chỉnhSửaToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.chỉnhSửaToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.edit;
-            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
-            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
-            this.chỉnhSửaToolStripMenuItem.Text = "Hiệu chỉnh";
-            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaToolStripMenuItem_Click);
-            // 
-            // điềuChuyểnToolStripMenuItem
-            // 
-            this.điềuChuyểnToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.điềuChuyểnToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.transfer;
-            this.điềuChuyểnToolStripMenuItem.Name = "điềuChuyểnToolStripMenuItem";
-            this.điềuChuyểnToolStripMenuItem.Size = new System.Drawing.Size(149, 30);
-            this.điềuChuyểnToolStripMenuItem.Text = "Điều chuyển";
-            // 
-            // xuấtBáoCáoToolStripMenuItem
-            // 
-            this.xuấtBáoCáoToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.xuấtBáoCáoToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.export;
-            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
-            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(157, 30);
-            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
             // 
             // frmTrangThietBi
             // 
