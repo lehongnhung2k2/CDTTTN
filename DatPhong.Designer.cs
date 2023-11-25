@@ -123,6 +123,7 @@ namespace CDTTTN
             // 
             // flp_Phong
             // 
+            this.flp_Phong.AutoScroll = true;
             this.flp_Phong.Location = new System.Drawing.Point(34, 167);
             this.flp_Phong.Name = "flp_Phong";
             this.flp_Phong.Size = new System.Drawing.Size(1267, 780);

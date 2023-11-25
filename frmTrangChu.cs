@@ -28,6 +28,7 @@ namespace CDTTTN
         private SuaChua suachua;
         private ThanhLy thanhly;
         private TrangChu trangchu;
+        private QuanLyPhong quanlyphong;
         public frmTrangChu()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace CDTTTN
             suachua = new SuaChua();
             thanhly = new ThanhLy();
             trangchu = new TrangChu();
+            quanlyphong = new QuanLyPhong();
 
             panelControl.Controls.Add(taikhoancuatoi);
             panelControl.Controls.Add(trangthietbi);
@@ -47,6 +49,7 @@ namespace CDTTTN
             panelControl.Controls.Add(suachua);
             panelControl.Controls.Add(thanhly);
             panelControl.Controls.Add(trangchu);
+            panelControl.Controls.Add(quanlyphong);
 
             taikhoancuatoi.Hide();
             trangthietbi.Hide();
@@ -55,6 +58,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         public frmTrangChu(string tk) : this()
@@ -103,6 +107,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Show();
+            quanlyphong.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -114,6 +119,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Show();
+            quanlyphong.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -125,17 +131,19 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            datphong.Show();
+            datphong.Hide();
             taikhoancuatoi.Hide();
             trangthietbi.Hide();
             kiemke.Hide();
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Show();
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -147,6 +155,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -158,6 +167,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void TTB_Click(object sender, EventArgs e)
@@ -169,6 +179,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void img_TTB_Click(object sender, EventArgs e)
@@ -180,6 +191,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void panelControl_Paint(object sender, PaintEventArgs e)
@@ -196,6 +208,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void img_KiemKe_Click(object sender, EventArgs e)
@@ -207,6 +220,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void lb_SuaChua_Click(object sender, EventArgs e)
@@ -218,6 +232,31 @@ namespace CDTTTN
             suachua.Show();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            datphong.Hide();
+            taikhoancuatoi.Hide();
+            trangthietbi.Hide();
+            kiemke.Hide();
+            suachua.Hide();
+            thanhly.Hide();
+            trangchu.Hide();
+            quanlyphong.Show();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            datphong.Hide();
+            taikhoancuatoi.Hide();
+            trangthietbi.Hide();
+            kiemke.Hide();
+            suachua.Hide();
+            thanhly.Hide();
+            trangchu.Hide();
+            quanlyphong.Show();
         }
 
         private void img_SuaChua_Click(object sender, EventArgs e)
@@ -229,6 +268,7 @@ namespace CDTTTN
             suachua.Show();
             thanhly.Hide();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void lb_ThanhLy_Click(object sender, EventArgs e)
@@ -240,6 +280,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Show();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
 
         private void img_ThanhLy_Click(object sender, EventArgs e)
@@ -251,6 +292,7 @@ namespace CDTTTN
             suachua.Hide();
             thanhly.Show();
             trangchu.Hide();
+            quanlyphong.Hide();
         }
     }
 }

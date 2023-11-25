@@ -51,6 +51,12 @@
     <Compile Include="addKiemKe.Designer.cs">
       <DependentUpon>addKiemKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="addPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addPhong.Designer.cs">
+      <DependentUpon>addPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="addSuaChua.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,11 +85,23 @@
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\Phong.cs" />
+    <Compile Include="editPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editPhong.Designer.cs">
+      <DependentUpon>editPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="editTTB.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="editTTB.Designer.cs">
       <DependentUpon>editTTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editTTBTrongPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editTTBTrongPhong.Designer.cs">
+      <DependentUpon>editTTBTrongPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -123,6 +141,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhong.Designer.cs">
+      <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="searchKiemKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +198,9 @@
     <EmbeddedResource Include="addKiemKe.resx">
       <DependentUpon>addKiemKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addPhong.resx">
+      <DependentUpon>addPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addSuaChua.resx">
       <DependentUpon>addSuaChua.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,8 +213,14 @@
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="editPhong.resx">
+      <DependentUpon>editPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editTTB.resx">
       <DependentUpon>editTTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editTTBTrongPhong.resx">
+      <DependentUpon>editTTBTrongPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
@@ -217,6 +250,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLyPhong.resx">
+      <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="searchKiemKe.resx">
       <DependentUpon>searchKiemKe.cs</DependentUpon>
     </EmbeddedResource>

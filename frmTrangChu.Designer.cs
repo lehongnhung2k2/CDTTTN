@@ -34,6 +34,8 @@ namespace CDTTTN
             this.lb_TenNV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lb_ThanhLy = new System.Windows.Forms.Label();
@@ -52,6 +54,7 @@ namespace CDTTTN
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_ThanhLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_SuaChua)).BeginInit();
@@ -107,6 +110,8 @@ namespace CDTTTN
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.lb_ThanhLy);
@@ -127,6 +132,32 @@ namespace CDTTTN
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::CDTTTN.Properties.Resources.booking1;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 166);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(59, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Quản lý phòng";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -134,7 +165,7 @@ namespace CDTTTN
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(59, 394);
+            this.label9.Location = new System.Drawing.Point(59, 453);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 30);
             this.label9.TabIndex = 1;
@@ -145,7 +176,7 @@ namespace CDTTTN
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::CDTTTN.Properties.Resources.user1;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 380);
+            this.pictureBox8.Location = new System.Drawing.Point(13, 439);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(40, 40);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -160,7 +191,7 @@ namespace CDTTTN
             this.lb_ThanhLy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_ThanhLy.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_ThanhLy.ForeColor = System.Drawing.Color.White;
-            this.lb_ThanhLy.Location = new System.Drawing.Point(59, 339);
+            this.lb_ThanhLy.Location = new System.Drawing.Point(59, 398);
             this.lb_ThanhLy.Name = "lb_ThanhLy";
             this.lb_ThanhLy.Size = new System.Drawing.Size(120, 30);
             this.lb_ThanhLy.TabIndex = 1;
@@ -171,7 +202,7 @@ namespace CDTTTN
             // 
             this.img_ThanhLy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_ThanhLy.Image = global::CDTTTN.Properties.Resources.selling;
-            this.img_ThanhLy.Location = new System.Drawing.Point(13, 325);
+            this.img_ThanhLy.Location = new System.Drawing.Point(13, 384);
             this.img_ThanhLy.Name = "img_ThanhLy";
             this.img_ThanhLy.Size = new System.Drawing.Size(40, 40);
             this.img_ThanhLy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +217,7 @@ namespace CDTTTN
             this.lb_SuaChua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_SuaChua.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_SuaChua.ForeColor = System.Drawing.Color.White;
-            this.lb_SuaChua.Location = new System.Drawing.Point(59, 285);
+            this.lb_SuaChua.Location = new System.Drawing.Point(59, 344);
             this.lb_SuaChua.Name = "lb_SuaChua";
             this.lb_SuaChua.Size = new System.Drawing.Size(255, 30);
             this.lb_SuaChua.TabIndex = 1;
@@ -197,7 +228,7 @@ namespace CDTTTN
             // 
             this.img_SuaChua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_SuaChua.Image = global::CDTTTN.Properties.Resources.maintenance;
-            this.img_SuaChua.Location = new System.Drawing.Point(13, 271);
+            this.img_SuaChua.Location = new System.Drawing.Point(13, 330);
             this.img_SuaChua.Name = "img_SuaChua";
             this.img_SuaChua.Size = new System.Drawing.Size(40, 40);
             this.img_SuaChua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +243,7 @@ namespace CDTTTN
             this.lb_KiemKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_KiemKe.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_KiemKe.ForeColor = System.Drawing.Color.White;
-            this.lb_KiemKe.Location = new System.Drawing.Point(59, 232);
+            this.lb_KiemKe.Location = new System.Drawing.Point(59, 291);
             this.lb_KiemKe.Name = "lb_KiemKe";
             this.lb_KiemKe.Size = new System.Drawing.Size(113, 30);
             this.lb_KiemKe.TabIndex = 1;
@@ -223,7 +254,7 @@ namespace CDTTTN
             // 
             this.img_KiemKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_KiemKe.Image = global::CDTTTN.Properties.Resources.document;
-            this.img_KiemKe.Location = new System.Drawing.Point(13, 218);
+            this.img_KiemKe.Location = new System.Drawing.Point(13, 277);
             this.img_KiemKe.Name = "img_KiemKe";
             this.img_KiemKe.Size = new System.Drawing.Size(40, 40);
             this.img_KiemKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,7 +269,7 @@ namespace CDTTTN
             this.TTB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TTB.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.TTB.ForeColor = System.Drawing.Color.White;
-            this.TTB.Location = new System.Drawing.Point(59, 176);
+            this.TTB.Location = new System.Drawing.Point(59, 235);
             this.TTB.Name = "TTB";
             this.TTB.Size = new System.Drawing.Size(178, 30);
             this.TTB.TabIndex = 1;
@@ -249,7 +280,7 @@ namespace CDTTTN
             // 
             this.img_TTB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_TTB.Image = global::CDTTTN.Properties.Resources.technology;
-            this.img_TTB.Location = new System.Drawing.Point(13, 162);
+            this.img_TTB.Location = new System.Drawing.Point(13, 221);
             this.img_TTB.Name = "img_TTB";
             this.img_TTB.Size = new System.Drawing.Size(40, 40);
             this.img_TTB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -336,6 +367,7 @@ namespace CDTTTN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_ThanhLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_SuaChua)).EndInit();
@@ -369,5 +401,7 @@ namespace CDTTTN
         private System.Windows.Forms.Label lb_ThanhLy;
         private System.Windows.Forms.PictureBox img_ThanhLy;
         private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
