@@ -15,20 +15,24 @@ namespace CDTTTN
         private searchTTB searchttb;
         private addTTB addttb;
         private editTTB editttb;
+        private DieuChuyenTTB dieuchuyenttb;
         public frmTrangThietBi()
         {
             InitializeComponent();
             searchttb = new searchTTB();
             addttb = new addTTB();
             editttb = new editTTB();
+            dieuchuyenttb = new DieuChuyenTTB();
 
             panelTTB.Controls.Add(searchttb);
             panelTTB.Controls.Add(addttb);
             panelTTB.Controls.Add(editttb);
+            panelTTB.Controls.Add(dieuchuyenttb);
 
             searchttb.Show();
             addttb.Hide();
             editttb.Hide();
+            dieuchuyenttb.Hide();
         }
 
         private void thêmMớiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,6 +40,7 @@ namespace CDTTTN
             searchttb.Hide();
             addttb.Show();
             editttb.Hide();
+            dieuchuyenttb.Hide();
         }
 
         private void chỉnhSửaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +48,15 @@ namespace CDTTTN
             searchttb.Hide();
             addttb.Hide();
             editttb.Show();
+            dieuchuyenttb.Hide();
+        }
+
+        private void điềuChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchttb.Hide();
+            addttb.Hide();
+            editttb.Hide();
+            dieuchuyenttb.Show();
         }
     }
 }

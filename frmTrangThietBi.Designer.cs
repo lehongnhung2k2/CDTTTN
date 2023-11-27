@@ -80,6 +80,7 @@ namespace CDTTTN
             this.điềuChuyểnToolStripMenuItem.Name = "điềuChuyểnToolStripMenuItem";
             this.điềuChuyểnToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
             this.điềuChuyểnToolStripMenuItem.Text = "Điều chuyển";
+            this.điềuChuyểnToolStripMenuItem.Click += new System.EventHandler(this.điềuChuyểnToolStripMenuItem_Click);
             // 
             // xuấtBáoCáoToolStripMenuItem
             // 

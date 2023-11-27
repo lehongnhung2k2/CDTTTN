@@ -78,13 +78,23 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\TrangThaiDAO.cs" />
+    <Compile Include="DAO\TTB_DAO.cs" />
     <Compile Include="DatPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="DieuChuyenTTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DieuChuyenTTB.Designer.cs">
+      <DependentUpon>DieuChuyenTTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\Phong.cs" />
+    <Compile Include="DTO\TrangThai.cs" />
+    <Compile Include="DTO\TTB.cs" />
     <Compile Include="editPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieuChuyenTTB.resx">
+      <DependentUpon>DieuChuyenTTB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editPhong.resx">
       <DependentUpon>editPhong.cs</DependentUpon>

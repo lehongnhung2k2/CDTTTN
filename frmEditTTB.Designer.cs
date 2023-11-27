@@ -30,25 +30,25 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.btn_add = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_MaTT = new System.Windows.Forms.ComboBox();
+            this.txt_GhiChu = new System.Windows.Forms.TextBox();
+            this.txt_Thue = new System.Windows.Forms.TextBox();
+            this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_TenTTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_MaNCC = new System.Windows.Forms.TextBox();
+            this.txt_ThoiGianTinhKhauHao = new System.Windows.Forms.TextBox();
+            this.txt_NguyenGia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_NgayNhap = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MaTTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -64,41 +64,41 @@ namespace CDTTTN
             this.btn_add.Text = "Lưu";
             this.btn_add.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // txt_MaTT
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(256, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(339, 28);
-            this.comboBox1.TabIndex = 39;
+            this.txt_MaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaTT.FormattingEnabled = true;
+            this.txt_MaTT.Location = new System.Drawing.Point(256, 131);
+            this.txt_MaTT.Name = "txt_MaTT";
+            this.txt_MaTT.Size = new System.Drawing.Size(339, 28);
+            this.txt_MaTT.TabIndex = 39;
             // 
-            // textBox9
+            // txt_GhiChu
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox9.Location = new System.Drawing.Point(891, 366);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(339, 35);
-            this.textBox9.TabIndex = 30;
+            this.txt_GhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_GhiChu.Location = new System.Drawing.Point(891, 366);
+            this.txt_GhiChu.Multiline = true;
+            this.txt_GhiChu.Name = "txt_GhiChu";
+            this.txt_GhiChu.Size = new System.Drawing.Size(339, 35);
+            this.txt_GhiChu.TabIndex = 30;
             // 
-            // textBox7
+            // txt_Thue
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox7.Location = new System.Drawing.Point(891, 284);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(339, 35);
-            this.textBox7.TabIndex = 31;
+            this.txt_Thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Thue.Location = new System.Drawing.Point(891, 284);
+            this.txt_Thue.Multiline = true;
+            this.txt_Thue.Name = "txt_Thue";
+            this.txt_Thue.Size = new System.Drawing.Size(339, 35);
+            this.txt_Thue.TabIndex = 31;
             // 
-            // textBox5
+            // txt_MaNV
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(891, 203);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(339, 35);
-            this.textBox5.TabIndex = 32;
+            this.txt_MaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNV.Location = new System.Drawing.Point(891, 203);
+            this.txt_MaNV.Multiline = true;
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaNV.TabIndex = 32;
             // 
             // label11
             // 
@@ -130,14 +130,14 @@ namespace CDTTTN
             this.label7.TabIndex = 22;
             this.label7.Text = "Mã nhân viên";
             // 
-            // textBox3
+            // txt_TenTTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(891, 51);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(339, 35);
-            this.textBox3.TabIndex = 33;
+            this.txt_TenTTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenTTB.Location = new System.Drawing.Point(891, 51);
+            this.txt_TenTTB.Multiline = true;
+            this.txt_TenTTB.Name = "txt_TenTTB";
+            this.txt_TenTTB.Size = new System.Drawing.Size(339, 35);
+            this.txt_TenTTB.TabIndex = 33;
             // 
             // label4
             // 
@@ -149,32 +149,32 @@ namespace CDTTTN
             this.label4.TabIndex = 23;
             this.label4.Text = "Tên trang thiết bị";
             // 
-            // textBox2
+            // txt_MaNCC
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(891, 124);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(339, 35);
-            this.textBox2.TabIndex = 34;
+            this.txt_MaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNCC.Location = new System.Drawing.Point(891, 124);
+            this.txt_MaNCC.Multiline = true;
+            this.txt_MaNCC.Name = "txt_MaNCC";
+            this.txt_MaNCC.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaNCC.TabIndex = 34;
             // 
-            // textBox8
+            // txt_ThoiGianTinhKhauHao
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox8.Location = new System.Drawing.Point(256, 366);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(339, 35);
-            this.textBox8.TabIndex = 36;
+            this.txt_ThoiGianTinhKhauHao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_ThoiGianTinhKhauHao.Location = new System.Drawing.Point(256, 366);
+            this.txt_ThoiGianTinhKhauHao.Multiline = true;
+            this.txt_ThoiGianTinhKhauHao.Name = "txt_ThoiGianTinhKhauHao";
+            this.txt_ThoiGianTinhKhauHao.Size = new System.Drawing.Size(339, 35);
+            this.txt_ThoiGianTinhKhauHao.TabIndex = 36;
             // 
-            // textBox6
+            // txt_NguyenGia
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox6.Location = new System.Drawing.Point(256, 284);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(339, 35);
-            this.textBox6.TabIndex = 35;
+            this.txt_NguyenGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NguyenGia.Location = new System.Drawing.Point(256, 284);
+            this.txt_NguyenGia.Multiline = true;
+            this.txt_NguyenGia.Name = "txt_NguyenGia";
+            this.txt_NguyenGia.Size = new System.Drawing.Size(339, 35);
+            this.txt_NguyenGia.TabIndex = 35;
             // 
             // label3
             // 
@@ -196,14 +196,14 @@ namespace CDTTTN
             this.label10.TabIndex = 28;
             this.label10.Text = "Thời gian tính KH";
             // 
-            // textBox4
+            // txt_NgayNhap
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(256, 203);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(339, 35);
-            this.textBox4.TabIndex = 37;
+            this.txt_NgayNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NgayNhap.Location = new System.Drawing.Point(256, 203);
+            this.txt_NgayNhap.Multiline = true;
+            this.txt_NgayNhap.Name = "txt_NgayNhap";
+            this.txt_NgayNhap.Size = new System.Drawing.Size(339, 35);
+            this.txt_NgayNhap.TabIndex = 37;
             // 
             // label8
             // 
@@ -235,15 +235,15 @@ namespace CDTTTN
             this.label6.TabIndex = 26;
             this.label6.Text = "Ngày nhập";
             // 
-            // textBox1
+            // txt_MaTTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(256, 51);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(339, 35);
-            this.textBox1.TabIndex = 38;
+            this.txt_MaTTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaTTB.Location = new System.Drawing.Point(256, 51);
+            this.txt_MaTTB.Multiline = true;
+            this.txt_MaTTB.Name = "txt_MaTTB";
+            this.txt_MaTTB.ReadOnly = true;
+            this.txt_MaTTB.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaTTB.TabIndex = 38;
             // 
             // label2
             // 
@@ -260,28 +260,29 @@ namespace CDTTTN
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txt_MaTT);
+            this.Controls.Add(this.txt_GhiChu);
+            this.Controls.Add(this.txt_Thue);
+            this.Controls.Add(this.txt_MaNV);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_TenTTB);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txt_MaNCC);
+            this.Controls.Add(this.txt_ThoiGianTinhKhauHao);
+            this.Controls.Add(this.txt_NguyenGia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_NgayNhap);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_MaTTB);
             this.Controls.Add(this.label2);
             this.Name = "frmEditTTB";
             this.Size = new System.Drawing.Size(1321, 632);
+            this.Load += new System.EventHandler(this.frmEditTTB_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,25 +291,25 @@ namespace CDTTTN
         #endregion
 
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox txt_MaTT;
+        private System.Windows.Forms.TextBox txt_GhiChu;
+        private System.Windows.Forms.TextBox txt_Thue;
+        private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_TenTTB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_MaNCC;
+        private System.Windows.Forms.TextBox txt_ThoiGianTinhKhauHao;
+        private System.Windows.Forms.TextBox txt_NguyenGia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_NgayNhap;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaTTB;
         private System.Windows.Forms.Label label2;
     }
 }

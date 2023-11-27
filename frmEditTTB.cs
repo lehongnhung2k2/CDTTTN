@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CDTTTN.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,23 @@ namespace CDTTTN
 {
     public partial class frmEditTTB : UserControl
     {
+        string MaTTB;
         public frmEditTTB()
         {
             InitializeComponent();
+            
+         
+        }
+
+        public frmEditTTB(string maTTB) : this()
+        {
+            MaTTB = maTTB;
+
+        }
+
+        private void frmEditTTB_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
