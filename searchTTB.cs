@@ -27,45 +27,32 @@ namespace CDTTTN
 
         private void btn_TimKiemTTB_Click(object sender, EventArgs e)
         {
-            string mattb, trangthai, ngaynhap, tenttb, mancc, manv;
-            if (txt_MaTTB.Text == "")
+            string sql = "select * from TrangThietBi INNER JOIN TrangThai ON TrangThietBi.MaTT = TrangThai.MaTT where ";
+            if (txt_MaTTB.Text != "")
             {
-                mattb = "*";
+                sql += $"MaTTB = '{txt_MaTTB.Text}' ";
             }
-            else mattb = txt_MaTTB.Text;
-            if (txt_TrangThai.Text == "")
+            if (txt_TenTTB.Text != "")
             {
-                trangthai = "*";
+                sql += $"and TenTTB = N'{txt_TenTTB.Text}' ";
             }
-            else trangthai = txt_TrangThai.Text;
-            if (txt_NgayNhap.Text == "")
+            if (txt_TrangThai.Text != "")
             {
-                ngaynhap = "*";
+                sql += $"and TrangThai = '{txt_TrangThai.Text}' ";
             }
-            else ngaynhap = txt_NgayNhap.Text;
-            if (txt_TTB.Text == "")
+            if (txt_MaNCC.Text != "")
             {
-                tenttb = "*";
+                sql += $"and MaNCC = '{txt_MaNCC.Text}' ";
             }
-            else tenttb = txt_TTB.Text;
-            if (txt_MaNCC.Text == "")
-            {
-                mancc = "*";
-            }
-            else mancc = txt_MaNCC.Text;
-            if (txt_MaNV.Text == "")
-            {
-                manv = "*";
-            }
-            else manv = txt_MaNV.Text;
+            grdTTB.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
             //sql = "SELECT * FROM TrangThietBi WHERE "
             //    + "(MaTTB = '" + mattb + "' OR MaTTB IS NOT NULL)"
             //    + "AND(TenTTB = '" + tenttb + "' OR TenTTB IS NOT NULL)";
-                //+ "AND(MaTT = '" + trangthai + "' OR MaTT IS NOT NULL)"
-                //+ "AND(MaNCC = '" + mancc + "' OR MaNCC IS NOT NULL)"
-                //+ "AND(MaNV = '" + manv + "' OR MaNV IS NOT NULL)"
-                //+ "AND(NgayNhap = '" + ngaynhap + "' OR NgayNhap IS NOT NULL)";
+            //+ "AND(MaTT = '" + trangthai + "' OR MaTT IS NOT NULL)"
+            //+ "AND(MaNCC = '" + mancc + "' OR MaNCC IS NOT NULL)"
+            //+ "AND(MaNV = '" + manv + "' OR MaNV IS NOT NULL)"
+            //+ "AND(NgayNhap = '" + ngaynhap + "' OR NgayNhap IS NOT NULL)";
             //sql = "select * from TrangThietBi "
             //    + " where " + "MaTTB" + "=N'" + mattb + "'"
             //    + " and " + "TenTTB" + "=N'" + tenttb + "'"
@@ -87,6 +74,16 @@ namespace CDTTTN
             //DataProvider provider = new DataProvider();
 
             grdTTB.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txt_MaTTB.Text = "";
+            txt_TenTTB.Text = "";
+            txt_TrangThai.Text = "";
+            txt_NgayNhap.Text = "";
+            txt_MaNCC.Text = "";
+            txt_MaNV.Text = "";
         }
     }
 }

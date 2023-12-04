@@ -30,10 +30,9 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panelSuaChua = new System.Windows.Forms.FlowLayoutPanel();
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inPhiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelSuaChua = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,20 +42,12 @@ namespace CDTTTN
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thêmMớiToolStripMenuItem,
-            this.inPhiếuToolStripMenuItem,
             this.xuấtBáoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1321, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // panelSuaChua
-            // 
-            this.panelSuaChua.Location = new System.Drawing.Point(0, 51);
-            this.panelSuaChua.Name = "panelSuaChua";
-            this.panelSuaChua.Size = new System.Drawing.Size(1321, 880);
-            this.panelSuaChua.TabIndex = 11;
             // 
             // thêmMớiToolStripMenuItem
             // 
@@ -67,14 +58,6 @@ namespace CDTTTN
             this.thêmMớiToolStripMenuItem.Text = "Thêm mới";
             this.thêmMớiToolStripMenuItem.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem_Click);
             // 
-            // inPhiếuToolStripMenuItem
-            // 
-            this.inPhiếuToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.inPhiếuToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.printer;
-            this.inPhiếuToolStripMenuItem.Name = "inPhiếuToolStripMenuItem";
-            this.inPhiếuToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
-            this.inPhiếuToolStripMenuItem.Text = "In phiếu";
-            // 
             // xuấtBáoCáoToolStripMenuItem
             // 
             this.xuấtBáoCáoToolStripMenuItem.BackColor = System.Drawing.Color.White;
@@ -82,6 +65,14 @@ namespace CDTTTN
             this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
             this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(157, 29);
             this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.xuấtBáoCáoToolStripMenuItem_Click);
+            // 
+            // panelSuaChua
+            // 
+            this.panelSuaChua.Location = new System.Drawing.Point(0, 51);
+            this.panelSuaChua.Name = "panelSuaChua";
+            this.panelSuaChua.Size = new System.Drawing.Size(1321, 880);
+            this.panelSuaChua.TabIndex = 11;
             // 
             // SuaChua
             // 
@@ -102,7 +93,6 @@ namespace CDTTTN
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmMớiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inPhiếuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuấtBáoCáoToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel panelSuaChua;
     }

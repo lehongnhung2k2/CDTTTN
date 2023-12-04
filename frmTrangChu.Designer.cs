@@ -34,6 +34,8 @@ namespace CDTTTN
             this.lb_TenNV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,6 +56,7 @@ namespace CDTTTN
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_ThanhLy)).BeginInit();
@@ -66,7 +69,7 @@ namespace CDTTTN
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(153)))), ((int)(((byte)(213)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lb_TenNV);
             this.panel1.Controls.Add(this.label1);
@@ -109,7 +112,9 @@ namespace CDTTTN
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(153)))), ((int)(((byte)(213)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label9);
@@ -132,10 +137,36 @@ namespace CDTTTN
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(59, 452);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(229, 30);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Quản lý tài khoản";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::CDTTTN.Properties.Resources.human;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 438);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::CDTTTN.Properties.Resources.booking1;
+            this.pictureBox2.Image = global::CDTTTN.Properties.Resources.room;
             this.pictureBox2.Location = new System.Drawing.Point(13, 166);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
@@ -165,7 +196,7 @@ namespace CDTTTN
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(59, 453);
+            this.label9.Location = new System.Drawing.Point(59, 504);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 30);
             this.label9.TabIndex = 1;
@@ -176,7 +207,7 @@ namespace CDTTTN
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::CDTTTN.Properties.Resources.user1;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 439);
+            this.pictureBox8.Location = new System.Drawing.Point(13, 490);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(40, 40);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -367,6 +398,7 @@ namespace CDTTTN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_ThanhLy)).EndInit();
@@ -403,5 +435,7 @@ namespace CDTTTN
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -89,6 +89,7 @@ namespace CDTTTN
             this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
             this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(157, 29);
             this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.xuấtBáoCáoToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 

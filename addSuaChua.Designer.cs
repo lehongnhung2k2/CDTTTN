@@ -47,7 +47,7 @@ namespace CDTTTN
             // 
             // btn_add
             // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.btn_add.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_add.ForeColor = System.Drawing.Color.White;
             this.btn_add.Location = new System.Drawing.Point(566, 440);
@@ -56,6 +56,7 @@ namespace CDTTTN
             this.btn_add.TabIndex = 40;
             this.btn_add.Text = "Thêm mới";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // comboBox1
             // 
@@ -175,7 +176,7 @@ namespace CDTTTN
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.label1.Location = new System.Drawing.Point(486, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(343, 36);

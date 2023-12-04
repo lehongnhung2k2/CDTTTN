@@ -225,7 +225,7 @@ namespace CDTTTN
             // 
             // btn_SuaThongTin
             // 
-            this.btn_SuaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_SuaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.btn_SuaThongTin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_SuaThongTin.ForeColor = System.Drawing.Color.White;
             this.btn_SuaThongTin.Location = new System.Drawing.Point(408, 771);
@@ -238,7 +238,7 @@ namespace CDTTTN
             // 
             // btn_DoiMK
             // 
-            this.btn_DoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_DoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.btn_DoiMK.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_DoiMK.ForeColor = System.Drawing.Color.White;
             this.btn_DoiMK.Location = new System.Drawing.Point(649, 771);
@@ -274,7 +274,7 @@ namespace CDTTTN
             this.Controls.Add(this.HoTen);
             this.Controls.Add(this.pictureBox1);
             this.Name = "TaiKhoanCuaToi";
-            this.Size = new System.Drawing.Size(1321, 880);
+            this.Size = new System.Drawing.Size(1321, 922);
             this.Load += new System.EventHandler(this.TaiKhoanCuaToi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

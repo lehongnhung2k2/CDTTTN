@@ -31,11 +31,12 @@ namespace CDTTTN
                 btn.Text = item.TenPhong + Environment.NewLine + item.TrangThai;
                 if (item.TrangThai == "Trống")
                 {
-                    btn.BackColor = Color.FromArgb(155, 218, 246);
+                    btn.BackColor = Color.FromArgb(240, 156, 164);
                 }
                 else
                 {
                     btn.BackColor = Color.FromArgb(228, 228, 228);
+                    btn.Enabled = false;
                 }
                 flp_Phong.Controls.Add(btn);
             }

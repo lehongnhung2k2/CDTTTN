@@ -33,7 +33,7 @@ namespace CDTTTN
             this.btn_TimKiemTTB = new System.Windows.Forms.Button();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_TTB = new System.Windows.Forms.TextBox();
+            this.txt_TenTTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_MaNCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,17 +62,18 @@ namespace CDTTTN
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.button1.Location = new System.Drawing.Point(445, 446);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 50);
             this.button1.TabIndex = 23;
             this.button1.Text = "Xóa điều kiện";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_TimKiemTTB
             // 
-            this.btn_TimKiemTTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_TimKiemTTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.btn_TimKiemTTB.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiemTTB.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiemTTB.Location = new System.Drawing.Point(702, 446);
@@ -102,14 +103,14 @@ namespace CDTTTN
             this.label7.TabIndex = 10;
             this.label7.Text = "Mã nhân viên";
             // 
-            // txt_TTB
+            // txt_TenTTB
             // 
-            this.txt_TTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TTB.Location = new System.Drawing.Point(891, 193);
-            this.txt_TTB.Multiline = true;
-            this.txt_TTB.Name = "txt_TTB";
-            this.txt_TTB.Size = new System.Drawing.Size(339, 35);
-            this.txt_TTB.TabIndex = 17;
+            this.txt_TenTTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenTTB.Location = new System.Drawing.Point(891, 193);
+            this.txt_TenTTB.Multiline = true;
+            this.txt_TenTTB.Name = "txt_TenTTB";
+            this.txt_TenTTB.Size = new System.Drawing.Size(339, 35);
+            this.txt_TenTTB.TabIndex = 17;
             // 
             // label4
             // 
@@ -192,7 +193,7 @@ namespace CDTTTN
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.label1.Location = new System.Drawing.Point(532, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 36);
@@ -319,7 +320,7 @@ namespace CDTTTN
             this.Controls.Add(this.btn_TimKiemTTB);
             this.Controls.Add(this.txt_MaNV);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_TTB);
+            this.Controls.Add(this.txt_TenTTB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_MaNCC);
             this.Controls.Add(this.label3);
@@ -345,7 +346,7 @@ namespace CDTTTN
         private System.Windows.Forms.Button btn_TimKiemTTB;
         private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_TTB;
+        private System.Windows.Forms.TextBox txt_TenTTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_MaNCC;
         private System.Windows.Forms.Label label3;

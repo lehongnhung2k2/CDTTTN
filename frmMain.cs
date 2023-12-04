@@ -64,7 +64,7 @@ namespace CDTTTN
             }
            else
             {
-                MessageBox.Show("Đăng nhập thất bại");
+                MessageBox.Show("Đăng nhập không thành công");
             }
 
 

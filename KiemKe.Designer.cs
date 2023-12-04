@@ -30,9 +30,9 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panelKiemKe = new System.Windows.Forms.FlowLayoutPanel();
             this.theeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelKiemKe = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,13 +48,6 @@ namespace CDTTTN
             this.menuStrip1.Size = new System.Drawing.Size(1321, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // panelKiemKe
-            // 
-            this.panelKiemKe.Location = new System.Drawing.Point(0, 51);
-            this.panelKiemKe.Name = "panelKiemKe";
-            this.panelKiemKe.Size = new System.Drawing.Size(1321, 880);
-            this.panelKiemKe.TabIndex = 10;
             // 
             // theeToolStripMenuItem
             // 
@@ -72,6 +65,14 @@ namespace CDTTTN
             this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
             this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(157, 29);
             this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.xuấtBáoCáoToolStripMenuItem_Click);
+            // 
+            // panelKiemKe
+            // 
+            this.panelKiemKe.Location = new System.Drawing.Point(0, 51);
+            this.panelKiemKe.Name = "panelKiemKe";
+            this.panelKiemKe.Size = new System.Drawing.Size(1321, 880);
+            this.panelKiemKe.TabIndex = 10;
             // 
             // KiemKe
             // 

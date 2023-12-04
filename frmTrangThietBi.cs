@@ -16,6 +16,7 @@ namespace CDTTTN
         private addTTB addttb;
         private editTTB editttb;
         private DieuChuyenTTB dieuchuyenttb;
+        private exportTTB exportttb;
         public frmTrangThietBi()
         {
             InitializeComponent();
@@ -23,16 +24,19 @@ namespace CDTTTN
             addttb = new addTTB();
             editttb = new editTTB();
             dieuchuyenttb = new DieuChuyenTTB();
+            exportttb = new exportTTB();
 
             panelTTB.Controls.Add(searchttb);
             panelTTB.Controls.Add(addttb);
             panelTTB.Controls.Add(editttb);
             panelTTB.Controls.Add(dieuchuyenttb);
+            panelTTB.Controls.Add(exportttb);
 
             searchttb.Show();
             addttb.Hide();
             editttb.Hide();
             dieuchuyenttb.Hide();
+            exportttb.Hide();
         }
 
         private void thêmMớiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +45,7 @@ namespace CDTTTN
             addttb.Show();
             editttb.Hide();
             dieuchuyenttb.Hide();
+            exportttb.Hide();
         }
 
         private void chỉnhSửaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +54,7 @@ namespace CDTTTN
             addttb.Hide();
             editttb.Show();
             dieuchuyenttb.Hide();
+            exportttb.Hide();
         }
 
         private void điềuChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +63,16 @@ namespace CDTTTN
             addttb.Hide();
             editttb.Hide();
             dieuchuyenttb.Show();
+            exportttb.Hide();
+        }
+
+        private void xuấtBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchttb.Hide();
+            addttb.Hide();
+            editttb.Hide();
+            dieuchuyenttb.Hide();
+            exportttb.Show();
         }
     }
 }

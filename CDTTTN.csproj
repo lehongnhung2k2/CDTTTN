@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addChietTietKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addChietTietKiemKe.Designer.cs">
+      <DependentUpon>addChietTietKiemKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="addKiemKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +125,30 @@
     <Compile Include="editTTBTrongPhong.Designer.cs">
       <DependentUpon>editTTBTrongPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="exportKiemKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="exportKiemKe.Designer.cs">
+      <DependentUpon>exportKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exportSuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="exportSuaChua.Designer.cs">
+      <DependentUpon>exportSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exportThanhLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="exportThanhLy.Designer.cs">
+      <DependentUpon>exportThanhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exportTTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="exportTTB.Designer.cs">
+      <DependentUpon>exportTTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +166,30 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrptKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrptKiemKe.Designer.cs">
+      <DependentUpon>frmrptKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrptSuaChua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrptSuaChua.Designer.cs">
+      <DependentUpon>frmrptSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrptThanhLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrptThanhLy.Designer.cs">
+      <DependentUpon>frmrptThanhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrptTrangThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrptTrangThietBi.Designer.cs">
+      <DependentUpon>frmrptTrangThietBi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTrangChu.cs">
       <SubType>Form</SubType>
@@ -156,6 +216,36 @@
     </Compile>
     <Compile Include="QuanLyPhong.Designer.cs">
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptKiemKe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptKiemKe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSuaChua.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSuaChua.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptThanhLy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptThanhLy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTrangThietBi1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTrangThietBi.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="searchKiemKe.cs">
       <SubType>UserControl</SubType>
@@ -205,6 +295,9 @@
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addChietTietKiemKe.resx">
+      <DependentUpon>addChietTietKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addKiemKe.resx">
       <DependentUpon>addKiemKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +328,18 @@
     <EmbeddedResource Include="editTTBTrongPhong.resx">
       <DependentUpon>editTTBTrongPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="exportKiemKe.resx">
+      <DependentUpon>exportKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportSuaChua.resx">
+      <DependentUpon>exportSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportThanhLy.resx">
+      <DependentUpon>exportThanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportTTB.resx">
+      <DependentUpon>exportTTB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +348,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrptKiemKe.resx">
+      <DependentUpon>frmrptKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrptSuaChua.resx">
+      <DependentUpon>frmrptSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrptThanhLy.resx">
+      <DependentUpon>frmrptThanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrptTrangThietBi.resx">
+      <DependentUpon>frmrptTrangThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
@@ -265,6 +382,25 @@
     </Compile>
     <EmbeddedResource Include="QuanLyPhong.resx">
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptKiemKe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKiemKe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSuaChua.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSuaChua.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptThanhLy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptThanhLy.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTrangThietBi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTrangThietBi1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="searchKiemKe.resx">
       <DependentUpon>searchKiemKe.cs</DependentUpon>
@@ -396,6 +532,14 @@
   <ItemGroup>
     <None Include="Resources\printer.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
