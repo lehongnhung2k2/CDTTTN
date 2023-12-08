@@ -31,13 +31,15 @@ namespace CDTTTN
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.time_start = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.time_end = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.flp_Phong = new System.Windows.Forms.FlowLayoutPanel();
+            this.grd = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -60,12 +62,12 @@ namespace CDTTTN
             this.label3.TabIndex = 1;
             this.label3.Text = "Ngày";
             // 
-            // dateTimePicker1
+            // date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(296, 26);
-            this.dateTimePicker1.TabIndex = 2;
+            this.date.Location = new System.Drawing.Point(114, 64);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(296, 26);
+            this.date.TabIndex = 2;
             // 
             // label4
             // 
@@ -78,15 +80,15 @@ namespace CDTTTN
             this.label4.Text = "Từ";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // dateTimePicker2
+            // time_start
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(532, 67);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(88, 26);
-            this.dateTimePicker2.TabIndex = 3;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.time_start.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.time_start.Location = new System.Drawing.Point(532, 67);
+            this.time_start.Name = "time_start";
+            this.time_start.ShowUpDown = true;
+            this.time_start.Size = new System.Drawing.Size(88, 26);
+            this.time_start.TabIndex = 3;
+            this.time_start.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label5
             // 
@@ -99,15 +101,15 @@ namespace CDTTTN
             this.label5.Text = "Đến";
             this.label5.Click += new System.EventHandler(this.label4_Click);
             // 
-            // dateTimePicker3
+            // time_end
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker3.Location = new System.Drawing.Point(703, 67);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.ShowUpDown = true;
-            this.dateTimePicker3.Size = new System.Drawing.Size(88, 26);
-            this.dateTimePicker3.TabIndex = 4;
-            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            this.time_end.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.time_end.Location = new System.Drawing.Point(703, 67);
+            this.time_end.Name = "time_end";
+            this.time_end.ShowUpDown = true;
+            this.time_end.Size = new System.Drawing.Size(88, 26);
+            this.time_end.TabIndex = 4;
+            this.time_end.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // button1
             // 
@@ -120,6 +122,7 @@ namespace CDTTTN
             this.button1.TabIndex = 5;
             this.button1.Text = "Tìm phòng trống";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // flp_Phong
             // 
@@ -129,22 +132,35 @@ namespace CDTTTN
             this.flp_Phong.Size = new System.Drawing.Size(1267, 780);
             this.flp_Phong.TabIndex = 6;
             // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(1125, 34);
+            this.grd.Name = "grd";
+            this.grd.RowHeadersWidth = 62;
+            this.grd.RowTemplate.Height = 28;
+            this.grd.Size = new System.Drawing.Size(81, 59);
+            this.grd.TabIndex = 7;
+            // 
             // DatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.grd);
             this.Controls.Add(this.flp_Phong);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.time_end);
+            this.Controls.Add(this.time_start);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "DatPhong";
             this.Size = new System.Drawing.Size(1321, 950);
+            this.Load += new System.EventHandler(this.DatPhong_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,12 +169,13 @@ namespace CDTTTN
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker time_start;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker time_end;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flp_Phong;
+        private System.Windows.Forms.DataGridView grd;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CDTTTN.DAO;
 
 namespace CDTTTN
 {
@@ -68,7 +69,6 @@ namespace CDTTTN
         public frmTrangChu(string tk) : this()
         {
             taikhoan = tk;
-
         }
 
         private void InitializeUserControls()
@@ -78,19 +78,21 @@ namespace CDTTTN
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
-        
+            //Console.WriteLine(classMain.TENTAIKHOAN);
+
             constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
 
             //blTK.Text = username;
-            sql = "select TenNV from TaiKhoan, NhanVien where TaiKhoan.MaNV = NhanVien.MaNV and TenTK='" + taikhoan + "'";
+            sql = "select * from TaiKhoan, NhanVien where TaiKhoan.MaNV = NhanVien.MaNV and TenTK='" + taikhoan + "'";
             cmd.Connection = conn;
             cmd.CommandText = sql;
             SqlDataReader dta = cmd.ExecuteReader();
             while (dta.Read() == true)
             {
                 TenNV = dta["TenNV"].ToString();
+                classMain.MANV = dta["MaNV"].ToString();
 
             }
             lb_TenNV.Text = TenNV;

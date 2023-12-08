@@ -100,6 +100,8 @@ namespace CDTTTN
             //conn.Open();
 
             tb_MatKhau.UseSystemPasswordChar = false;
+            classMain.TENTAIKHOAN = tb_TaiKhoan.Text;
+            //Console.WriteLine(classMain.TENTAIKHOAN);
 
         }
 
