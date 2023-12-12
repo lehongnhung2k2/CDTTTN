@@ -11,5 +11,8 @@ namespace CDTTTN.DAO
     {
         public static string TENTAIKHOAN { get; set; }
         public static string MANV { get; set; }
+
+        public static DateTime TG_Muon { get; set; }
+        public static DateTime TG_Tra { get; set; }
     }
 }

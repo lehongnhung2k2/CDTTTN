@@ -100,6 +100,12 @@
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatPhongHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatPhongHo.Designer.cs">
+      <DependentUpon>DatPhongHo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DieuChuyenTTB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +224,12 @@
     <Compile Include="KiemKe.Designer.cs">
       <DependentUpon>KiemKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="KiemKeTTBTrongPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemKeTTBTrongPhong.Designer.cs">
+      <DependentUpon>KiemKeTTBTrongPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyPhong.cs">
@@ -325,6 +337,9 @@
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatPhongHo.resx">
+      <DependentUpon>DatPhongHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DieuChuyenTTB.resx">
       <DependentUpon>DieuChuyenTTB.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KiemKe.resx">
       <DependentUpon>KiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemKeTTBTrongPhong.resx">
+      <DependentUpon>KiemKeTTBTrongPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

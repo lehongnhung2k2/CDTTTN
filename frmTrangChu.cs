@@ -145,7 +145,7 @@ namespace CDTTTN
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            datphong.Hide();
+            datphong.Show();
             taikhoancuatoi.Hide();
             trangthietbi.Hide();
             kiemke.Hide();

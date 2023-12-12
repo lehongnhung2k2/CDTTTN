@@ -21,7 +21,7 @@ namespace CDTTTN.DTO
 
         public DatPhongDTO (DataRow row)
         {
-            this.MaDatPhong = row["MaDatPhong"].ToString();
+            this.MaDatPhong = row["MaDP"].ToString();
             this.ThoiGianDat = Convert.ToDateTime(row["ThoiGianDat"]);
             this.ThoiGianMuon = Convert.ToDateTime(row["ThoiGianMuon"]);
             this.ThoiGianTra = Convert.ToDateTime(row["ThoiGianTra"]);

@@ -15,10 +15,9 @@ namespace CDTTTN
     public partial class GiaoDienDatPhong : Form
     {
         string MaPhong, TenPhong, taikhoan, MaNV, MaDP = "MDP";
-        DateTime TG_Muon, TG_Tra;
         int SL;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đặt phòng này?", "Xác nhận đặt phòng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -42,11 +41,22 @@ namespace CDTTTN
                 }
 
                 DateTime TG_Dat = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
-                string sql = $"INSERT INTO DatPhong (MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV) VALUES('{MaDP}', '{TG_Dat}', '{TG_Muon}', '{TG_Tra}', '{MaPhong}', '{classMain.MANV}')";
+                string sql = $"INSERT INTO DatPhong (MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV) VALUES('{MaDP}', '{TG_Dat}', '{classMain.TG_Muon}', '{classMain.TG_Tra}', '{MaPhong}', '{classMain.MANV}')";
                 grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
                 MessageBox.Show("Đặt phòng thành công");
-                this.Close();
+                this.Hide();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DatPhongHo f = new DatPhongHo(MaPhong, TenPhong, SoLuong);
+            f.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             
             
         }
@@ -58,12 +68,10 @@ namespace CDTTTN
         }
 
 
-        public GiaoDienDatPhong(string maPhong, string tenPhong, int sl, DateTime TGMuon, DateTime TGTra) : this()
+        public GiaoDienDatPhong(string maPhong, string tenPhong, int sl) : this()
         {
             TenPhong = tenPhong;
             MaPhong = maPhong;
-            TG_Muon = TGMuon;
-            TG_Tra = TGTra;
             SoLuong = sl;
         }
 
@@ -90,8 +98,9 @@ namespace CDTTTN
             txt_TenPhong.Text = TenPhong;
             txt_TrangThai.Text = "Trống";
             txt_SoLuong.Text = SoLuong.ToString();
-            txt_TGMuon.Text = TG_Muon.ToString();
-            txt_TGTra.Text = TG_Tra.ToString();
+            txt_TGMuon.Text = classMain.TG_Muon.ToString();
+            //Console.WriteLine(TG_Muon);
+            txt_TGTra.Text = classMain.TG_Tra.ToString();
             
 
             

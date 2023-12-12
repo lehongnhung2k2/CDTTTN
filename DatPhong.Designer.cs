@@ -127,6 +127,7 @@ namespace CDTTTN
             // flp_Phong
             // 
             this.flp_Phong.AutoScroll = true;
+            this.flp_Phong.BackColor = System.Drawing.Color.White;
             this.flp_Phong.Location = new System.Drawing.Point(34, 167);
             this.flp_Phong.Name = "flp_Phong";
             this.flp_Phong.Size = new System.Drawing.Size(1267, 780);
@@ -141,6 +142,7 @@ namespace CDTTTN
             this.grd.RowTemplate.Height = 28;
             this.grd.Size = new System.Drawing.Size(81, 59);
             this.grd.TabIndex = 7;
+            this.grd.Visible = false;
             // 
             // DatPhong
             // 
