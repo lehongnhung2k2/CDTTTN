@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CDTTTN.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ namespace CDTTTN
 {
     public partial class TaiKhoanCuaToi : UserControl
     {
+        string TenPB, TenNV, DiaChi, SDT, TenTK, Email;
         public TaiKhoanCuaToi()
         {
             InitializeComponent();
@@ -19,10 +22,52 @@ namespace CDTTTN
 
         private void TaiKhoanCuaToi_Load(object sender, EventArgs e)
         {
-            tb_TaiKhoan.Text = "nhunghongle";
-            tb_HoTen.Text = "Lê Hồng Nhung";
-            tb_NgaySinh.Text = "26/03/2002";
-            tb_GioiTinh.Text = "Nữ";
+            string connectionString = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
+
+            // SQL query to retrieve the required information
+            string query = "SELECT PhongBan.TenPB, NhanVien.TenNV, NhanVien.DiaChi, NhanVien.SDT, TaiKhoan.TenTK " +
+                           "FROM PhongBan " +
+                           "JOIN NhanVien ON PhongBan.MaPB = NhanVien.MaPB " +
+                           $"JOIN TaiKhoan ON NhanVien.MaNV = TaiKhoan.MaNV where TaiKhoan.TenTK = '{classMain.TENTAIKHOAN}'";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Check if the reader has any rows
+                        if (reader.HasRows)
+                        {
+                            // Loop through the rows and print the values
+                            while (reader.Read())
+                            {
+                                TenPB = reader["TenPB"].ToString();
+                                TenNV = reader["TenNV"].ToString();
+                                DiaChi = reader["DiaChi"].ToString();
+                                SDT = reader["SDT"].ToString();
+                                TenTK = reader["TenTK"].ToString();
+                                //Email = reader["Email"].ToString();
+
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No data found.");
+                        }
+                    }
+                }
+            }
+            txt_TenTK.Text = TenTK;
+            txt_TenNV.Text = TenNV;
+            txt_HoTen.Text = TenNV;
+            txt_PhongBan.Text = TenPB;
+            txt_Email.Text = "";
+            txt_SDT.Text = SDT;
+            txt_DiaChi.Text = DiaChi;
+            txt_NgaySinh.Text = "";
+            txt_GioiTinh.Text = "";
         }
 
         private void btn_SuaThongTin_Click(object sender, EventArgs e)
@@ -30,22 +75,22 @@ namespace CDTTTN
             if (btn_SuaThongTin.Text == "Sửa thông tin")
             {
                 btn_SuaThongTin.Text = "Lưu";
-                tb_HoTen.ReadOnly = false;
-                tb_GioiTinh.ReadOnly = false;
-                tb_NgaySinh.ReadOnly = false;
-                tb_Email.ReadOnly = false;
-                tb_sdt.ReadOnly = false;
-                tb_DiaChi.ReadOnly = false;
+                txt_HoTen.ReadOnly = false;
+                txt_GioiTinh.ReadOnly = false;
+                txt_NgaySinh.ReadOnly = false;
+                txt_Email.ReadOnly = false;
+                txt_SDT.ReadOnly = false;
+                txt_DiaChi.ReadOnly = false;
             }    
             else
             {
                 btn_SuaThongTin.Text = "Sửa thông tin";
-                tb_HoTen.ReadOnly = true;
-                tb_GioiTinh.ReadOnly = true;
-                tb_NgaySinh.ReadOnly = true;
-                tb_Email.ReadOnly = true;
-                tb_sdt.ReadOnly = true;
-                tb_DiaChi.ReadOnly = true;
+                txt_HoTen.ReadOnly = true;
+                txt_GioiTinh.ReadOnly = true;
+                txt_NgaySinh.ReadOnly = true;
+                txt_Email.ReadOnly = true;
+                txt_SDT.ReadOnly = true;
+                txt_DiaChi.ReadOnly = true;
             }    
             
         }

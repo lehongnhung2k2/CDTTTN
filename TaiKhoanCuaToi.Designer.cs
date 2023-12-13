@@ -32,22 +32,22 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HoTen = new System.Windows.Forms.Label();
-            this.BoPhan = new System.Windows.Forms.Label();
+            this.txt_TenNV = new System.Windows.Forms.Label();
+            this.txt_PhongBan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tb_TaiKhoan = new System.Windows.Forms.TextBox();
+            this.txt_TenTK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_HoTen = new System.Windows.Forms.TextBox();
+            this.txt_HoTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tb_NgaySinh = new System.Windows.Forms.TextBox();
+            this.txt_NgaySinh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tb_GioiTinh = new System.Windows.Forms.TextBox();
+            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tb_Email = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tb_sdt = new System.Windows.Forms.TextBox();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tb_DiaChi = new System.Windows.Forms.TextBox();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.btn_SuaThongTin = new System.Windows.Forms.Button();
             this.btn_DoiMK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,25 +63,25 @@ namespace CDTTTN
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // HoTen
+            // txt_TenNV
             // 
-            this.HoTen.AutoSize = true;
-            this.HoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.HoTen.Location = new System.Drawing.Point(330, 145);
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Size = new System.Drawing.Size(239, 36);
-            this.HoTen.TabIndex = 1;
-            this.HoTen.Text = "Lê Hồng Nhung";
+            this.txt_TenNV.AutoSize = true;
+            this.txt_TenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenNV.Location = new System.Drawing.Point(330, 145);
+            this.txt_TenNV.Name = "txt_TenNV";
+            this.txt_TenNV.Size = new System.Drawing.Size(239, 36);
+            this.txt_TenNV.TabIndex = 1;
+            this.txt_TenNV.Text = "Lê Hồng Nhung";
             // 
-            // BoPhan
+            // txt_PhongBan
             // 
-            this.BoPhan.AutoSize = true;
-            this.BoPhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BoPhan.Location = new System.Drawing.Point(331, 193);
-            this.BoPhan.Name = "BoPhan";
-            this.BoPhan.Size = new System.Drawing.Size(118, 30);
-            this.BoPhan.TabIndex = 2;
-            this.BoPhan.Text = "Teaching";
+            this.txt_PhongBan.AutoSize = true;
+            this.txt_PhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_PhongBan.Location = new System.Drawing.Point(331, 193);
+            this.txt_PhongBan.Name = "txt_PhongBan";
+            this.txt_PhongBan.Size = new System.Drawing.Size(118, 30);
+            this.txt_PhongBan.TabIndex = 2;
+            this.txt_PhongBan.Text = "Teaching";
             // 
             // label1
             // 
@@ -93,15 +93,15 @@ namespace CDTTTN
             this.label1.TabIndex = 3;
             this.label1.Text = "Tài khoản";
             // 
-            // tb_TaiKhoan
+            // txt_TenTK
             // 
-            this.tb_TaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_TaiKhoan.Location = new System.Drawing.Point(80, 384);
-            this.tb_TaiKhoan.Multiline = true;
-            this.tb_TaiKhoan.Name = "tb_TaiKhoan";
-            this.tb_TaiKhoan.ReadOnly = true;
-            this.tb_TaiKhoan.Size = new System.Drawing.Size(466, 35);
-            this.tb_TaiKhoan.TabIndex = 4;
+            this.txt_TenTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenTK.Location = new System.Drawing.Point(80, 384);
+            this.txt_TenTK.Multiline = true;
+            this.txt_TenTK.Name = "txt_TenTK";
+            this.txt_TenTK.ReadOnly = true;
+            this.txt_TenTK.Size = new System.Drawing.Size(466, 35);
+            this.txt_TenTK.TabIndex = 4;
             // 
             // label2
             // 
@@ -113,15 +113,15 @@ namespace CDTTTN
             this.label2.TabIndex = 3;
             this.label2.Text = "Họ và tên";
             // 
-            // tb_HoTen
+            // txt_HoTen
             // 
-            this.tb_HoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_HoTen.Location = new System.Drawing.Point(80, 481);
-            this.tb_HoTen.Multiline = true;
-            this.tb_HoTen.Name = "tb_HoTen";
-            this.tb_HoTen.ReadOnly = true;
-            this.tb_HoTen.Size = new System.Drawing.Size(466, 35);
-            this.tb_HoTen.TabIndex = 4;
+            this.txt_HoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_HoTen.Location = new System.Drawing.Point(80, 481);
+            this.txt_HoTen.Multiline = true;
+            this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.ReadOnly = true;
+            this.txt_HoTen.Size = new System.Drawing.Size(466, 35);
+            this.txt_HoTen.TabIndex = 4;
             // 
             // label3
             // 
@@ -133,15 +133,15 @@ namespace CDTTTN
             this.label3.TabIndex = 3;
             this.label3.Text = "Ngày sinh";
             // 
-            // tb_NgaySinh
+            // txt_NgaySinh
             // 
-            this.tb_NgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_NgaySinh.Location = new System.Drawing.Point(80, 584);
-            this.tb_NgaySinh.Multiline = true;
-            this.tb_NgaySinh.Name = "tb_NgaySinh";
-            this.tb_NgaySinh.ReadOnly = true;
-            this.tb_NgaySinh.Size = new System.Drawing.Size(466, 35);
-            this.tb_NgaySinh.TabIndex = 4;
+            this.txt_NgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NgaySinh.Location = new System.Drawing.Point(80, 584);
+            this.txt_NgaySinh.Multiline = true;
+            this.txt_NgaySinh.Name = "txt_NgaySinh";
+            this.txt_NgaySinh.ReadOnly = true;
+            this.txt_NgaySinh.Size = new System.Drawing.Size(466, 35);
+            this.txt_NgaySinh.TabIndex = 4;
             // 
             // label4
             // 
@@ -153,15 +153,15 @@ namespace CDTTTN
             this.label4.TabIndex = 3;
             this.label4.Text = "Giới tính";
             // 
-            // tb_GioiTinh
+            // txt_GioiTinh
             // 
-            this.tb_GioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_GioiTinh.Location = new System.Drawing.Point(80, 685);
-            this.tb_GioiTinh.Multiline = true;
-            this.tb_GioiTinh.Name = "tb_GioiTinh";
-            this.tb_GioiTinh.ReadOnly = true;
-            this.tb_GioiTinh.Size = new System.Drawing.Size(466, 35);
-            this.tb_GioiTinh.TabIndex = 4;
+            this.txt_GioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_GioiTinh.Location = new System.Drawing.Point(80, 685);
+            this.txt_GioiTinh.Multiline = true;
+            this.txt_GioiTinh.Name = "txt_GioiTinh";
+            this.txt_GioiTinh.ReadOnly = true;
+            this.txt_GioiTinh.Size = new System.Drawing.Size(466, 35);
+            this.txt_GioiTinh.TabIndex = 4;
             // 
             // label5
             // 
@@ -173,15 +173,15 @@ namespace CDTTTN
             this.label5.TabIndex = 3;
             this.label5.Text = "Email";
             // 
-            // tb_Email
+            // txt_Email
             // 
-            this.tb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_Email.Location = new System.Drawing.Point(682, 384);
-            this.tb_Email.Multiline = true;
-            this.tb_Email.Name = "tb_Email";
-            this.tb_Email.ReadOnly = true;
-            this.tb_Email.Size = new System.Drawing.Size(466, 35);
-            this.tb_Email.TabIndex = 4;
+            this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Email.Location = new System.Drawing.Point(682, 384);
+            this.txt_Email.Multiline = true;
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.ReadOnly = true;
+            this.txt_Email.Size = new System.Drawing.Size(466, 35);
+            this.txt_Email.TabIndex = 4;
             // 
             // label6
             // 
@@ -193,15 +193,15 @@ namespace CDTTTN
             this.label6.TabIndex = 3;
             this.label6.Text = "Số điện thoại";
             // 
-            // tb_sdt
+            // txt_SDT
             // 
-            this.tb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_sdt.Location = new System.Drawing.Point(682, 481);
-            this.tb_sdt.Multiline = true;
-            this.tb_sdt.Name = "tb_sdt";
-            this.tb_sdt.ReadOnly = true;
-            this.tb_sdt.Size = new System.Drawing.Size(466, 35);
-            this.tb_sdt.TabIndex = 4;
+            this.txt_SDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_SDT.Location = new System.Drawing.Point(682, 481);
+            this.txt_SDT.Multiline = true;
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.ReadOnly = true;
+            this.txt_SDT.Size = new System.Drawing.Size(466, 35);
+            this.txt_SDT.TabIndex = 4;
             // 
             // label7
             // 
@@ -213,15 +213,15 @@ namespace CDTTTN
             this.label7.TabIndex = 3;
             this.label7.Text = "Địa chỉ";
             // 
-            // tb_DiaChi
+            // txt_DiaChi
             // 
-            this.tb_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_DiaChi.Location = new System.Drawing.Point(682, 584);
-            this.tb_DiaChi.Multiline = true;
-            this.tb_DiaChi.Name = "tb_DiaChi";
-            this.tb_DiaChi.ReadOnly = true;
-            this.tb_DiaChi.Size = new System.Drawing.Size(466, 35);
-            this.tb_DiaChi.TabIndex = 4;
+            this.txt_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_DiaChi.Location = new System.Drawing.Point(682, 584);
+            this.txt_DiaChi.Multiline = true;
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.ReadOnly = true;
+            this.txt_DiaChi.Size = new System.Drawing.Size(466, 35);
+            this.txt_DiaChi.TabIndex = 4;
             // 
             // btn_SuaThongTin
             // 
@@ -256,22 +256,22 @@ namespace CDTTTN
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btn_DoiMK);
             this.Controls.Add(this.btn_SuaThongTin);
-            this.Controls.Add(this.tb_GioiTinh);
+            this.Controls.Add(this.txt_GioiTinh);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tb_DiaChi);
-            this.Controls.Add(this.tb_NgaySinh);
+            this.Controls.Add(this.txt_DiaChi);
+            this.Controls.Add(this.txt_NgaySinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_sdt);
+            this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tb_HoTen);
-            this.Controls.Add(this.tb_Email);
+            this.Controls.Add(this.txt_HoTen);
+            this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tb_TaiKhoan);
+            this.Controls.Add(this.txt_TenTK);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BoPhan);
-            this.Controls.Add(this.HoTen);
+            this.Controls.Add(this.txt_PhongBan);
+            this.Controls.Add(this.txt_TenNV);
             this.Controls.Add(this.pictureBox1);
             this.Name = "TaiKhoanCuaToi";
             this.Size = new System.Drawing.Size(1321, 922);
@@ -285,22 +285,22 @@ namespace CDTTTN
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label HoTen;
-        private System.Windows.Forms.Label BoPhan;
+        private System.Windows.Forms.Label txt_TenNV;
+        private System.Windows.Forms.Label txt_PhongBan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_TaiKhoan;
+        private System.Windows.Forms.TextBox txt_TenTK;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tb_HoTen;
+        private System.Windows.Forms.TextBox txt_HoTen;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_NgaySinh;
+        private System.Windows.Forms.TextBox txt_NgaySinh;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_GioiTinh;
+        private System.Windows.Forms.TextBox txt_GioiTinh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tb_Email;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tb_sdt;
+        private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tb_DiaChi;
+        private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Button btn_SuaThongTin;
         private System.Windows.Forms.Button btn_DoiMK;
 
