@@ -21,7 +21,7 @@ namespace CDTTTN
 
         private void addPhong_Load(object sender, EventArgs e)
         {
-            string sql = "select * from Phong";
+            string sql = "select MaPhong, TenPhong, SoLuong from Phong";
             grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
         }
 
@@ -37,7 +37,7 @@ namespace CDTTTN
                 + MaPhong + "', N'" + TenPhong + "', " + SoLuong + ", N'Trống')";
             grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
-            sql = "select * from Phong";
+            sql = "select MaPhong, TenPhong, SoLuong from Phong";
             grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
         }
 

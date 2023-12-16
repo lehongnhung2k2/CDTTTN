@@ -44,6 +44,7 @@ namespace CDTTTN
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdTTB = new System.Windows.Forms.DataGridView();
+            this.txt_TrangThai = new System.Windows.Forms.TextBox();
             this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,6 @@ namespace CDTTTN
             this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_TrangThai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdTTB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,86 +222,6 @@ namespace CDTTTN
             this.grdTTB.Size = new System.Drawing.Size(1237, 309);
             this.grdTTB.TabIndex = 24;
             // 
-            // MaTTB
-            // 
-            this.MaTTB.DataPropertyName = "MaTTB";
-            this.MaTTB.HeaderText = "Mã TTB";
-            this.MaTTB.MinimumWidth = 8;
-            this.MaTTB.Name = "MaTTB";
-            this.MaTTB.Width = 150;
-            // 
-            // TenTTB
-            // 
-            this.TenTTB.DataPropertyName = "TenTTB";
-            this.TenTTB.HeaderText = "Tên TTB";
-            this.TenTTB.MinimumWidth = 8;
-            this.TenTTB.Name = "TenTTB";
-            this.TenTTB.Width = 150;
-            // 
-            // NgayNhap
-            // 
-            this.NgayNhap.DataPropertyName = "NgayNhap";
-            this.NgayNhap.HeaderText = "Ngày nhập";
-            this.NgayNhap.MinimumWidth = 8;
-            this.NgayNhap.Name = "NgayNhap";
-            this.NgayNhap.Width = 150;
-            // 
-            // ThoiGianTinhKhauHao
-            // 
-            this.ThoiGianTinhKhauHao.DataPropertyName = "ThoiGianTinhKhauHao";
-            this.ThoiGianTinhKhauHao.HeaderText = "Thời gian tính KH";
-            this.ThoiGianTinhKhauHao.MinimumWidth = 8;
-            this.ThoiGianTinhKhauHao.Name = "ThoiGianTinhKhauHao";
-            this.ThoiGianTinhKhauHao.Width = 150;
-            // 
-            // Thue
-            // 
-            this.Thue.DataPropertyName = "Thue";
-            this.Thue.HeaderText = "Thuế";
-            this.Thue.MinimumWidth = 8;
-            this.Thue.Name = "Thue";
-            this.Thue.Width = 150;
-            // 
-            // NguyenGia
-            // 
-            this.NguyenGia.DataPropertyName = "NguyenGia";
-            this.NguyenGia.HeaderText = "Nguyên giá";
-            this.NguyenGia.MinimumWidth = 8;
-            this.NguyenGia.Name = "NguyenGia";
-            this.NguyenGia.Width = 150;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.MinimumWidth = 8;
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Width = 150;
-            // 
-            // MaTT
-            // 
-            this.MaTT.DataPropertyName = "MaTT";
-            this.MaTT.HeaderText = "Mã trạng thái";
-            this.MaTT.MinimumWidth = 8;
-            this.MaTT.Name = "MaTT";
-            this.MaTT.Width = 150;
-            // 
-            // MaNCC
-            // 
-            this.MaNCC.DataPropertyName = "MaNCC";
-            this.MaNCC.HeaderText = "Mã NCC";
-            this.MaNCC.MinimumWidth = 8;
-            this.MaNCC.Name = "MaNCC";
-            this.MaNCC.Width = 150;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 150;
-            // 
             // txt_TrangThai
             // 
             this.txt_TrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -310,6 +230,85 @@ namespace CDTTTN
             this.txt_TrangThai.Name = "txt_TrangThai";
             this.txt_TrangThai.Size = new System.Drawing.Size(339, 35);
             this.txt_TrangThai.TabIndex = 20;
+            // 
+            // MaTTB
+            // 
+            this.MaTTB.DataPropertyName = "MaTTB";
+            this.MaTTB.HeaderText = "Mã TTB";
+            this.MaTTB.MinimumWidth = 8;
+            this.MaTTB.Name = "MaTTB";
+            this.MaTTB.Width = 70;
+            // 
+            // TenTTB
+            // 
+            this.TenTTB.DataPropertyName = "TenTTB";
+            this.TenTTB.HeaderText = "Tên TTB";
+            this.TenTTB.MinimumWidth = 8;
+            this.TenTTB.Name = "TenTTB";
+            this.TenTTB.Width = 80;
+            // 
+            // NgayNhap
+            // 
+            this.NgayNhap.DataPropertyName = "NgayNhap";
+            this.NgayNhap.HeaderText = "Ngày nhập";
+            this.NgayNhap.MinimumWidth = 8;
+            this.NgayNhap.Name = "NgayNhap";
+            // 
+            // ThoiGianTinhKhauHao
+            // 
+            this.ThoiGianTinhKhauHao.DataPropertyName = "ThoiGianTinhKhauHao";
+            this.ThoiGianTinhKhauHao.HeaderText = "TG tính KH";
+            this.ThoiGianTinhKhauHao.MinimumWidth = 8;
+            this.ThoiGianTinhKhauHao.Name = "ThoiGianTinhKhauHao";
+            this.ThoiGianTinhKhauHao.Width = 90;
+            // 
+            // Thue
+            // 
+            this.Thue.DataPropertyName = "Thue";
+            this.Thue.HeaderText = "Thuế";
+            this.Thue.MinimumWidth = 8;
+            this.Thue.Name = "Thue";
+            this.Thue.Width = 60;
+            // 
+            // NguyenGia
+            // 
+            this.NguyenGia.DataPropertyName = "NguyenGia";
+            this.NguyenGia.HeaderText = "Nguyên giá (VNĐ)";
+            this.NguyenGia.MinimumWidth = 8;
+            this.NguyenGia.Name = "NguyenGia";
+            this.NguyenGia.Width = 80;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.MinimumWidth = 8;
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Width = 80;
+            // 
+            // MaTT
+            // 
+            this.MaTT.DataPropertyName = "MaTT";
+            this.MaTT.HeaderText = "Mã TT";
+            this.MaTT.MinimumWidth = 8;
+            this.MaTT.Name = "MaTT";
+            this.MaTT.Width = 60;
+            // 
+            // MaNCC
+            // 
+            this.MaNCC.DataPropertyName = "MaNCC";
+            this.MaNCC.HeaderText = "Mã NCC";
+            this.MaNCC.MinimumWidth = 8;
+            this.MaNCC.Name = "MaNCC";
+            this.MaNCC.Width = 60;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 60;
             // 
             // searchTTB
             // 
@@ -357,6 +356,7 @@ namespace CDTTTN
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView grdTTB;
+        private System.Windows.Forms.TextBox txt_TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
@@ -367,6 +367,5 @@ namespace CDTTTN
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
-        private System.Windows.Forms.TextBox txt_TrangThai;
     }
 }

@@ -8,35 +8,74 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CDTTTN.DAO;
 
 namespace CDTTTN
 {
     public partial class searchKiemKe : UserControl
     {
-        SqlConnection conn = new SqlConnection();
-        SqlDataAdapter da = new SqlDataAdapter();
-        SqlCommand cmd = new SqlCommand();
-        DataTable dt = new DataTable();
-        string sql, constr;
-        int i;
         public searchKiemKe()
         {
             InitializeComponent();
         }
 
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            int dd = 0;
+            string sql = "SELECT * FROM KiemKe INNER JOIN ChiTietKiemKe ON KiemKe.MaKK = ChiTietKiemKe.MaKK where ";
+            if (txt_MaKK.Text != "")
+            {
+                if (dd == 0)
+                {
+                    sql += $"KiemKe.MaKK = '{txt_MaKK.Text}' ";
+                    ++dd;
+                }
+                else
+                {
+                    sql += $"and KiemKe.MaKK = '{txt_MaKK.Text}' ";
+                }
+            }
+            if (txt_MaNV.Text != "")
+            {
+                if (dd == 0)
+                {
+                    sql += $"KiemKe.MaNV = '{txt_MaNV.Text}' ";
+                    ++dd;
+                }
+                else
+                {
+                    sql += $"and KiemKe.MaNV = '{txt_MaNV.Text}' ";
+                }
+            }
+            if (txt_NgayKK.Text != "")
+            {
+                DateTime result = DateTime.Parse(txt_NgayKK.Text);
+                if (dd == 0)
+                {
+                    sql += $"KiemKe.NgayKK = '{result}' ";
+                    ++dd;
+                }
+                else
+                {
+                    sql += $"and KiemKe.NgayKK = '{result}' ";
+                }
+
+            }
+            grdKiemKe.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+        }
+
         private void searchKiemKe_Load(object sender, EventArgs e)
         {
-            constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
-            conn.ConnectionString = constr;
-            conn.Open();
+            string sql = "SELECT KiemKe.MaKK, KiemKe.NgayKK, KiemKe.MaNV, ChiTietKiemKe.GhiChu, ChiTietKiemKe.MaTT, ChiTietKiemKe.MaTTB FROM KiemKe INNER JOIN ChiTietKiemKe ON KiemKe.MaKK = ChiTietKiemKe.MaKK";
+            grdKiemKe.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            
+        }
 
-            sql = "select * from KiemKe";
-            //truyen da cau lenh sql va ket noi toi conn
-            da = new SqlDataAdapter(sql, conn);
-            dt = new DataTable();
-            dt.Clear();
-            da.Fill(dt);
-            grdKiemKe.DataSource = dt;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txt_MaKK.Text = "";
+            txt_MaNV.Text = "";
+            txt_NgayKK.Text = "";
         }
     }
 }

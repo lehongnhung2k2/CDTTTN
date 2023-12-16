@@ -51,6 +51,8 @@ namespace CDTTTN
             this.label11 = new System.Windows.Forms.Label();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
+            this.grd = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -267,11 +269,23 @@ namespace CDTTTN
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(153, 645);
+            this.grd.Name = "grd";
+            this.grd.RowHeadersWidth = 62;
+            this.grd.RowTemplate.Height = 28;
+            this.grd.Size = new System.Drawing.Size(88, 46);
+            this.grd.TabIndex = 19;
+            this.grd.Visible = false;
+            // 
             // addTTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.grd);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.cb_MaTT);
             this.Controls.Add(this.txt_GhiChu);
@@ -297,6 +311,7 @@ namespace CDTTTN
             this.Name = "addTTB";
             this.Size = new System.Drawing.Size(1321, 880);
             this.Load += new System.EventHandler(this.addTTB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +341,6 @@ namespace CDTTTN
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_GhiChu;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.DataGridView grd;
     }
 }

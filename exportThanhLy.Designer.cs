@@ -38,6 +38,12 @@ namespace CDTTTN
             this.cb_GiaTri = new System.Windows.Forms.ComboBox();
             this.cb_TenTruong = new System.Windows.Forms.ComboBox();
             this.grd_exportThanhLy = new System.Windows.Forms.DataGridView();
+            this.MaTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NguoiMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_exportThanhLy)).BeginInit();
             this.SuspendLayout();
@@ -143,12 +149,67 @@ namespace CDTTTN
             // 
             this.grd_exportThanhLy.BackgroundColor = System.Drawing.Color.White;
             this.grd_exportThanhLy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd_exportThanhLy.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTL,
+            this.MaTTB,
+            this.GiaTL,
+            this.NgayTL,
+            this.NguoiMua,
+            this.MaNV});
             this.grd_exportThanhLy.Location = new System.Drawing.Point(47, 353);
             this.grd_exportThanhLy.Name = "grd_exportThanhLy";
             this.grd_exportThanhLy.RowHeadersWidth = 62;
             this.grd_exportThanhLy.RowTemplate.Height = 28;
             this.grd_exportThanhLy.Size = new System.Drawing.Size(1227, 493);
             this.grd_exportThanhLy.TabIndex = 3;
+            // 
+            // MaTL
+            // 
+            this.MaTL.DataPropertyName = "MaTL";
+            this.MaTL.HeaderText = "Mã TL";
+            this.MaTL.MinimumWidth = 8;
+            this.MaTL.Name = "MaTL";
+            this.MaTL.Width = 145;
+            // 
+            // MaTTB
+            // 
+            this.MaTTB.DataPropertyName = "MaTTB";
+            this.MaTTB.HeaderText = "Mã TTB";
+            this.MaTTB.MinimumWidth = 8;
+            this.MaTTB.Name = "MaTTB";
+            this.MaTTB.Width = 150;
+            // 
+            // GiaTL
+            // 
+            this.GiaTL.DataPropertyName = "GiaTL";
+            this.GiaTL.HeaderText = "Giá TL (VNĐ)";
+            this.GiaTL.MinimumWidth = 8;
+            this.GiaTL.Name = "GiaTL";
+            this.GiaTL.Width = 150;
+            // 
+            // NgayTL
+            // 
+            this.NgayTL.DataPropertyName = "NgayTL";
+            this.NgayTL.HeaderText = "Ngày TL";
+            this.NgayTL.MinimumWidth = 8;
+            this.NgayTL.Name = "NgayTL";
+            this.NgayTL.Width = 150;
+            // 
+            // NguoiMua
+            // 
+            this.NguoiMua.DataPropertyName = "NguoiMua";
+            this.NguoiMua.HeaderText = "Người mua";
+            this.NguoiMua.MinimumWidth = 8;
+            this.NguoiMua.Name = "NguoiMua";
+            this.NguoiMua.Width = 150;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 145;
             // 
             // exportThanhLy
             // 
@@ -177,5 +238,11 @@ namespace CDTTTN
         private System.Windows.Forms.ComboBox cb_GiaTri;
         private System.Windows.Forms.ComboBox cb_TenTruong;
         private System.Windows.Forms.DataGridView grd_exportThanhLy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NguoiMua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
     }
 }

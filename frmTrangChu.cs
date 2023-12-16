@@ -61,7 +61,7 @@ namespace CDTTTN
             kiemke.Hide();
             suachua.Hide();
             thanhly.Hide();
-            trangchu.Hide();
+            trangchu.Show();
             quanlyphong.Hide();
             quanlytaikhoan.Hide();
         }
@@ -302,6 +302,11 @@ namespace CDTTTN
             trangchu.Hide();
             quanlyphong.Hide();
             quanlytaikhoan.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void img_SuaChua_Click(object sender, EventArgs e)

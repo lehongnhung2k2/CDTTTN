@@ -1,7 +1,7 @@
 ﻿
 namespace CDTTTN
 {
-    partial class exportTTB
+    partial class exportDatPhong
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,17 +37,15 @@ namespace CDTTTN
             this.label2 = new System.Windows.Forms.Label();
             this.cb_GiaTri = new System.Windows.Forms.ComboBox();
             this.cb_TenTruong = new System.Windows.Forms.ComboBox();
-            this.grd_exportTTB = new System.Windows.Forms.DataGridView();
-            this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianTinhKhauHao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NguyenGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grd_exportDatPhong = new System.Windows.Forms.DataGridView();
+            this.MaDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grd_exportTTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd_exportDatPhong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,10 +59,10 @@ namespace CDTTTN
             this.groupBox1.Controls.Add(this.cb_TenTruong);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
-            this.groupBox1.Location = new System.Drawing.Point(302, 12);
+            this.groupBox1.Location = new System.Drawing.Point(305, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(744, 247);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lọc dữ liệu";
             // 
@@ -134,95 +132,76 @@ namespace CDTTTN
             this.cb_GiaTri.Name = "cb_GiaTri";
             this.cb_GiaTri.Size = new System.Drawing.Size(181, 33);
             this.cb_GiaTri.TabIndex = 1;
-            this.cb_GiaTri.SelectedIndexChanged += new System.EventHandler(this.cb_GiaTri_SelectedIndexChanged);
             // 
             // cb_TenTruong
             // 
             this.cb_TenTruong.FormattingEnabled = true;
             this.cb_TenTruong.Items.AddRange(new object[] {
-            "TenTTB",
-            "NgayNhap",
-            "MaTT"});
+            "MaPhong",
+            "MaNV"});
             this.cb_TenTruong.Location = new System.Drawing.Point(158, 89);
             this.cb_TenTruong.Name = "cb_TenTruong";
             this.cb_TenTruong.Size = new System.Drawing.Size(181, 33);
             this.cb_TenTruong.TabIndex = 0;
             this.cb_TenTruong.SelectedIndexChanged += new System.EventHandler(this.cb_TenTruong_SelectedIndexChanged);
             // 
-            // grd_exportTTB
+            // grd_exportDatPhong
             // 
-            this.grd_exportTTB.BackgroundColor = System.Drawing.Color.White;
-            this.grd_exportTTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grd_exportTTB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaTTB,
-            this.TenTTB,
-            this.NgayNhap,
-            this.ThoiGianTinhKhauHao,
-            this.NguyenGia,
-            this.MaTT,
-            this.MaNCC,
+            this.grd_exportDatPhong.BackgroundColor = System.Drawing.Color.White;
+            this.grd_exportDatPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd_exportDatPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDP,
+            this.ThoiGianDat,
+            this.ThoiGianMuon,
+            this.ThoiGianTra,
+            this.MaPhong,
             this.MaNV});
-            this.grd_exportTTB.Location = new System.Drawing.Point(44, 331);
-            this.grd_exportTTB.Name = "grd_exportTTB";
-            this.grd_exportTTB.RowHeadersWidth = 62;
-            this.grd_exportTTB.RowTemplate.Height = 28;
-            this.grd_exportTTB.Size = new System.Drawing.Size(1227, 493);
-            this.grd_exportTTB.TabIndex = 1;
+            this.grd_exportDatPhong.Location = new System.Drawing.Point(47, 330);
+            this.grd_exportDatPhong.Name = "grd_exportDatPhong";
+            this.grd_exportDatPhong.RowHeadersWidth = 62;
+            this.grd_exportDatPhong.RowTemplate.Height = 28;
+            this.grd_exportDatPhong.Size = new System.Drawing.Size(1227, 493);
+            this.grd_exportDatPhong.TabIndex = 3;
             // 
-            // MaTTB
+            // MaDP
             // 
-            this.MaTTB.DataPropertyName = "MaTTB";
-            this.MaTTB.HeaderText = "Mã TTB";
-            this.MaTTB.MinimumWidth = 8;
-            this.MaTTB.Name = "MaTTB";
-            this.MaTTB.Width = 90;
+            this.MaDP.DataPropertyName = "MaDP";
+            this.MaDP.HeaderText = "Mã ĐP";
+            this.MaDP.MinimumWidth = 8;
+            this.MaDP.Name = "MaDP";
+            this.MaDP.Width = 150;
             // 
-            // TenTTB
+            // ThoiGianDat
             // 
-            this.TenTTB.DataPropertyName = "TenTTB";
-            this.TenTTB.HeaderText = "Tên TTB";
-            this.TenTTB.MinimumWidth = 8;
-            this.TenTTB.Name = "TenTTB";
-            this.TenTTB.Width = 140;
+            this.ThoiGianDat.DataPropertyName = "ThoiGianDat";
+            this.ThoiGianDat.HeaderText = "TG đặt";
+            this.ThoiGianDat.MinimumWidth = 8;
+            this.ThoiGianDat.Name = "ThoiGianDat";
+            this.ThoiGianDat.Width = 150;
             // 
-            // NgayNhap
+            // ThoiGianMuon
             // 
-            this.NgayNhap.DataPropertyName = "NgayNhap";
-            this.NgayNhap.HeaderText = "Ngày nhập";
-            this.NgayNhap.MinimumWidth = 8;
-            this.NgayNhap.Name = "NgayNhap";
+            this.ThoiGianMuon.DataPropertyName = "ThoiGianMuon";
+            this.ThoiGianMuon.HeaderText = "TG mượn";
+            this.ThoiGianMuon.MinimumWidth = 8;
+            this.ThoiGianMuon.Name = "ThoiGianMuon";
+            this.ThoiGianMuon.Width = 150;
             // 
-            // ThoiGianTinhKhauHao
+            // ThoiGianTra
             // 
-            this.ThoiGianTinhKhauHao.DataPropertyName = "ThoiGianTinhKhauHao";
-            this.ThoiGianTinhKhauHao.HeaderText = "TG tính KH";
-            this.ThoiGianTinhKhauHao.MinimumWidth = 8;
-            this.ThoiGianTinhKhauHao.Name = "ThoiGianTinhKhauHao";
-            this.ThoiGianTinhKhauHao.Width = 120;
+            this.ThoiGianTra.DataPropertyName = "ThoiGianTra";
+            this.ThoiGianTra.HeaderText = "TG trả";
+            this.ThoiGianTra.MinimumWidth = 8;
+            this.ThoiGianTra.Name = "ThoiGianTra";
+            this.ThoiGianTra.Width = 150;
             // 
-            // NguyenGia
+            // MaPhong
             // 
-            this.NguyenGia.DataPropertyName = "NguyenGia";
-            this.NguyenGia.HeaderText = "Nguyên giá (VNĐ)";
-            this.NguyenGia.MinimumWidth = 8;
-            this.NguyenGia.Name = "NguyenGia";
-            this.NguyenGia.Width = 150;
-            // 
-            // MaTT
-            // 
-            this.MaTT.DataPropertyName = "MaTT";
-            this.MaTT.HeaderText = "Mã TT";
-            this.MaTT.MinimumWidth = 8;
-            this.MaTT.Name = "MaTT";
-            this.MaTT.Width = 90;
-            // 
-            // MaNCC
-            // 
-            this.MaNCC.DataPropertyName = "MaNCC";
-            this.MaNCC.HeaderText = "Mã NCC";
-            this.MaNCC.MinimumWidth = 8;
-            this.MaNCC.Name = "MaNCC";
-            this.MaNCC.Width = 90;
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.MinimumWidth = 8;
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.Width = 150;
             // 
             // MaNV
             // 
@@ -230,25 +209,26 @@ namespace CDTTTN
             this.MaNV.HeaderText = "Mã NV";
             this.MaNV.MinimumWidth = 8;
             this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 90;
+            this.MaNV.Width = 115;
             // 
-            // exportTTB
+            // exportDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grd_exportTTB);
-            this.Name = "exportTTB";
+            this.Controls.Add(this.grd_exportDatPhong);
+            this.Name = "exportDatPhong";
             this.Size = new System.Drawing.Size(1321, 880);
-            this.Load += new System.EventHandler(this.exportTTB_Load);
+            this.Load += new System.EventHandler(this.exportDatPhong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grd_exportTTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd_exportDatPhong)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
@@ -257,14 +237,12 @@ namespace CDTTTN
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_GiaTri;
         private System.Windows.Forms.ComboBox cb_TenTruong;
-        private System.Windows.Forms.DataGridView grd_exportTTB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTTB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianTinhKhauHao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NguyenGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
+        private System.Windows.Forms.DataGridView grd_exportDatPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianDat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianTra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
     }
 }

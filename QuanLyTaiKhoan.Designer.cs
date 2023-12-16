@@ -43,6 +43,11 @@ namespace CDTTTN
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd_TaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +84,12 @@ namespace CDTTTN
             // 
             this.grd_TaiKhoan.BackgroundColor = System.Drawing.Color.White;
             this.grd_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd_TaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNV,
+            this.TenNV,
+            this.TenTK,
+            this.MatKhau,
+            this.MaPQ});
             this.grd_TaiKhoan.Location = new System.Drawing.Point(610, 150);
             this.grd_TaiKhoan.Name = "grd_TaiKhoan";
             this.grd_TaiKhoan.RowHeadersWidth = 62;
@@ -195,6 +206,46 @@ namespace CDTTTN
             this.label5.TabIndex = 33;
             this.label5.Text = "THÔNG TIN TÀI KHOẢN";
             // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 80;
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên NV";
+            this.TenNV.MinimumWidth = 8;
+            this.TenNV.Name = "TenNV";
+            this.TenNV.Width = 120;
+            // 
+            // TenTK
+            // 
+            this.TenTK.DataPropertyName = "TenTK";
+            this.TenTK.HeaderText = "Tên TK";
+            this.TenTK.MinimumWidth = 8;
+            this.TenTK.Name = "TenTK";
+            this.TenTK.Width = 90;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật khẩu";
+            this.MatKhau.MinimumWidth = 8;
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.Width = 90;
+            // 
+            // MaPQ
+            // 
+            this.MaPQ.DataPropertyName = "MaPQ";
+            this.MaPQ.HeaderText = "Mã PQ";
+            this.MaPQ.MinimumWidth = 8;
+            this.MaPQ.Name = "MaPQ";
+            this.MaPQ.Width = 75;
+            // 
             // QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -238,5 +289,10 @@ namespace CDTTTN
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPQ;
     }
 }

@@ -85,7 +85,7 @@ namespace CDTTTN
                         }
                     }
                 }
-                KiemKeTTBTrongPhong f = new KiemKeTTBTrongPhong(maDP, MaPhong);
+                KiemKeTTB_TrongPhong f = new KiemKeTTB_TrongPhong(maDP, MaPhong);
                 f.Show();
             }    
             

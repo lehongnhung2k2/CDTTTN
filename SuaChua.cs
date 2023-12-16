@@ -45,5 +45,12 @@ namespace CDTTTN
             addsuachua.Hide();
             exportsuachua.Show();
         }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchsuachua.Show();
+            addsuachua.Hide();
+            exportsuachua.Hide();
+        }
     }
 }

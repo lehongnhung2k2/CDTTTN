@@ -45,5 +45,12 @@ namespace CDTTTN
             addthanhly.Hide();
             exportthanhly.Show();
         }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchthanhly.Show();
+            addthanhly.Hide();
+            exportthanhly.Hide();
+        }
     }
 }

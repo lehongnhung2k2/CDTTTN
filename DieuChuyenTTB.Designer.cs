@@ -39,6 +39,9 @@ namespace CDTTTN
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.grd = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_TimKiem
@@ -133,11 +136,24 @@ namespace CDTTTN
             this.button1.TabIndex = 34;
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(119, 388);
+            this.grd.Name = "grd";
+            this.grd.RowHeadersWidth = 62;
+            this.grd.RowTemplate.Height = 28;
+            this.grd.Size = new System.Drawing.Size(86, 46);
+            this.grd.TabIndex = 35;
+            this.grd.Visible = false;
             // 
             // DieuChuyenTTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.grd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_TenTT);
@@ -150,6 +166,7 @@ namespace CDTTTN
             this.Name = "DieuChuyenTTB";
             this.Size = new System.Drawing.Size(1321, 880);
             this.Load += new System.EventHandler(this.DieuChuyenTTB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +184,7 @@ namespace CDTTTN
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView grd;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -13,31 +13,44 @@ namespace CDTTTN
     public partial class QuanLyPhong : UserControl
     {
         private addPhong addphong;
-        private editPhong editPhong;
+        private editPhong editphong;
+        private exportDatPhong exportdatphong;
         public QuanLyPhong()
         {
             InitializeComponent();
 
             addphong = new addPhong();
-            editPhong = new editPhong();
+            editphong = new editPhong();
+            exportdatphong = new exportDatPhong();
 
             panelPhong.Controls.Add(addphong);
-            panelPhong.Controls.Add(editPhong);
+            panelPhong.Controls.Add(editphong);
+            panelPhong.Controls.Add(exportdatphong);
 
             addphong.Show();
-            editPhong.Hide();
+            editphong.Hide();
+            exportdatphong.Hide();
         }
 
         private void thêmMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addphong.Show();
-            editPhong.Hide();
+            editphong.Hide();
+            exportdatphong.Hide();
         }
 
         private void chỉnhSửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addphong.Hide();
-            editPhong.Show();
+            editphong.Show();
+            exportdatphong.Hide();
+        }
+
+        private void quảnLýĐặtPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addphong.Hide();
+            editphong.Hide();
+            exportdatphong.Show();
         }
     }
 }

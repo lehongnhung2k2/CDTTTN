@@ -38,6 +38,13 @@ namespace CDTTTN
             this.cb_GiaTri = new System.Windows.Forms.ComboBox();
             this.cb_TenTruong = new System.Windows.Forms.ComboBox();
             this.grd_exportKiemKe = new System.Windows.Forms.DataGridView();
+            this.MaKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_exportKiemKe)).BeginInit();
             this.SuspendLayout();
@@ -144,12 +151,76 @@ namespace CDTTTN
             // 
             this.grd_exportKiemKe.BackgroundColor = System.Drawing.Color.White;
             this.grd_exportKiemKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd_exportKiemKe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKK,
+            this.NgayKK,
+            this.MaNV,
+            this.MaTTB,
+            this.TenTTB,
+            this.MaTT,
+            this.GhiChu});
             this.grd_exportKiemKe.Location = new System.Drawing.Point(47, 353);
             this.grd_exportKiemKe.Name = "grd_exportKiemKe";
             this.grd_exportKiemKe.RowHeadersWidth = 62;
             this.grd_exportKiemKe.RowTemplate.Height = 28;
             this.grd_exportKiemKe.Size = new System.Drawing.Size(1227, 493);
             this.grd_exportKiemKe.TabIndex = 7;
+            // 
+            // MaKK
+            // 
+            this.MaKK.DataPropertyName = "MaKK";
+            this.MaKK.HeaderText = "Mã KK";
+            this.MaKK.MinimumWidth = 8;
+            this.MaKK.Name = "MaKK";
+            this.MaKK.Width = 130;
+            // 
+            // NgayKK
+            // 
+            this.NgayKK.DataPropertyName = "NgayKK";
+            this.NgayKK.HeaderText = "Ngày KK";
+            this.NgayKK.MinimumWidth = 8;
+            this.NgayKK.Name = "NgayKK";
+            this.NgayKK.Width = 130;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 115;
+            // 
+            // MaTTB
+            // 
+            this.MaTTB.DataPropertyName = "MaTTB";
+            this.MaTTB.HeaderText = "Mã TTB";
+            this.MaTTB.MinimumWidth = 8;
+            this.MaTTB.Name = "MaTTB";
+            this.MaTTB.Width = 115;
+            // 
+            // TenTTB
+            // 
+            this.TenTTB.DataPropertyName = "TenTTB";
+            this.TenTTB.HeaderText = "Tên TTB";
+            this.TenTTB.MinimumWidth = 8;
+            this.TenTTB.Name = "TenTTB";
+            this.TenTTB.Width = 130;
+            // 
+            // MaTT
+            // 
+            this.MaTT.DataPropertyName = "MaTT";
+            this.MaTT.HeaderText = "Mã TT";
+            this.MaTT.MinimumWidth = 8;
+            this.MaTT.Name = "MaTT";
+            this.MaTT.Width = 115;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.MinimumWidth = 8;
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Width = 130;
             // 
             // exportKiemKe
             // 
@@ -178,5 +249,12 @@ namespace CDTTTN
         private System.Windows.Forms.ComboBox cb_GiaTri;
         private System.Windows.Forms.ComboBox cb_TenTruong;
         private System.Windows.Forms.DataGridView grd_exportKiemKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }

@@ -40,6 +40,9 @@ namespace CDTTTN
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Phong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +50,10 @@ namespace CDTTTN
             // 
             this.grd_Phong.BackgroundColor = System.Drawing.Color.White;
             this.grd_Phong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd_Phong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaPhong,
+            this.TenPhong,
+            this.SoLuong});
             this.grd_Phong.Location = new System.Drawing.Point(594, 106);
             this.grd_Phong.Name = "grd_Phong";
             this.grd_Phong.RowHeadersWidth = 62;
@@ -163,6 +170,30 @@ namespace CDTTTN
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.MinimumWidth = 8;
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.Width = 150;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên phòng";
+            this.TenPhong.MinimumWidth = 8;
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.Width = 150;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 8;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 135;
+            // 
             // editPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -200,5 +231,8 @@ namespace CDTTTN
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
     }
 }

@@ -33,6 +33,7 @@ namespace CDTTTN
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSuaChua = new System.Windows.Forms.FlowLayoutPanel();
+            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@ namespace CDTTTN
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tìmKiếmToolStripMenuItem,
             this.thêmMớiToolStripMenuItem,
             this.xuấtBáoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -74,6 +76,16 @@ namespace CDTTTN
             this.panelSuaChua.Size = new System.Drawing.Size(1321, 880);
             this.panelSuaChua.TabIndex = 11;
             // 
+            // tìmKiếmToolStripMenuItem
+            // 
+            this.tìmKiếmToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.tìmKiếmToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tìmKiếmToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.search;
+            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(124, 29);
+            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
+            // 
             // SuaChua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -95,5 +107,6 @@ namespace CDTTTN
         private System.Windows.Forms.ToolStripMenuItem thêmMớiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuấtBáoCáoToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel panelSuaChua;
+        private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
     }
 }

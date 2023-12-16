@@ -30,19 +30,21 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.btn_add = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_MaTTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_GiaSC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MaSC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_NgaySC = new System.Windows.Forms.TextBox();
+            this.grd = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_add
@@ -58,23 +60,14 @@ namespace CDTTTN
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // comboBox1
+            // txt_GhiChu
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(256, 276);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(339, 28);
-            this.comboBox1.TabIndex = 39;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(891, 348);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(339, 35);
-            this.textBox5.TabIndex = 32;
+            this.txt_GhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_GhiChu.Location = new System.Drawing.Point(891, 348);
+            this.txt_GhiChu.Multiline = true;
+            this.txt_GhiChu.Name = "txt_GhiChu";
+            this.txt_GhiChu.Size = new System.Drawing.Size(339, 35);
+            this.txt_GhiChu.TabIndex = 32;
             // 
             // label7
             // 
@@ -86,14 +79,14 @@ namespace CDTTTN
             this.label7.TabIndex = 22;
             this.label7.Text = "Ghi chú";
             // 
-            // textBox3
+            // txt_MaTTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(891, 196);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(339, 35);
-            this.textBox3.TabIndex = 33;
+            this.txt_MaTTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaTTB.Location = new System.Drawing.Point(891, 196);
+            this.txt_MaTTB.Multiline = true;
+            this.txt_MaTTB.Name = "txt_MaTTB";
+            this.txt_MaTTB.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaTTB.TabIndex = 33;
             // 
             // label4
             // 
@@ -105,14 +98,14 @@ namespace CDTTTN
             this.label4.TabIndex = 23;
             this.label4.Text = "Mã trang thiết bị";
             // 
-            // textBox2
+            // txt_MaNV
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(891, 269);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(339, 35);
-            this.textBox2.TabIndex = 34;
+            this.txt_MaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNV.Location = new System.Drawing.Point(891, 269);
+            this.txt_MaNV.Multiline = true;
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaNV.TabIndex = 34;
             // 
             // label3
             // 
@@ -124,14 +117,14 @@ namespace CDTTTN
             this.label3.TabIndex = 24;
             this.label3.Text = "Mã nhân viên";
             // 
-            // textBox4
+            // txt_GiaSC
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(256, 348);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(339, 35);
-            this.textBox4.TabIndex = 37;
+            this.txt_GiaSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_GiaSC.Location = new System.Drawing.Point(256, 348);
+            this.txt_GiaSC.Multiline = true;
+            this.txt_GiaSC.Name = "txt_GiaSC";
+            this.txt_GiaSC.Size = new System.Drawing.Size(339, 35);
+            this.txt_GiaSC.TabIndex = 37;
             // 
             // label5
             // 
@@ -153,14 +146,14 @@ namespace CDTTTN
             this.label6.TabIndex = 26;
             this.label6.Text = "Giá sửa chữa";
             // 
-            // textBox1
+            // txt_MaSC
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(256, 196);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 35);
-            this.textBox1.TabIndex = 38;
+            this.txt_MaSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaSC.Location = new System.Drawing.Point(256, 196);
+            this.txt_MaSC.Multiline = true;
+            this.txt_MaSC.Name = "txt_MaSC";
+            this.txt_MaSC.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaSC.TabIndex = 38;
             // 
             // label2
             // 
@@ -183,26 +176,49 @@ namespace CDTTTN
             this.label1.TabIndex = 19;
             this.label1.Text = "THÊM MỚI SỬA CHỮA";
             // 
+            // txt_NgaySC
+            // 
+            this.txt_NgaySC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NgaySC.Location = new System.Drawing.Point(256, 269);
+            this.txt_NgaySC.Multiline = true;
+            this.txt_NgaySC.Name = "txt_NgaySC";
+            this.txt_NgaySC.Size = new System.Drawing.Size(339, 35);
+            this.txt_NgaySC.TabIndex = 41;
+            // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(96, 75);
+            this.grd.Name = "grd";
+            this.grd.RowHeadersWidth = 62;
+            this.grd.RowTemplate.Height = 28;
+            this.grd.Size = new System.Drawing.Size(81, 51);
+            this.grd.TabIndex = 42;
+            this.grd.Visible = false;
+            // 
             // addSuaChua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.grd);
+            this.Controls.Add(this.txt_NgaySC);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txt_GhiChu);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_MaTTB);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_MaNV);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_GiaSC);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_MaSC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "addSuaChua";
             this.Size = new System.Drawing.Size(1321, 880);
+            this.Load += new System.EventHandler(this.addSuaChua_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,18 +227,19 @@ namespace CDTTTN
         #endregion
 
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_GhiChu;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_MaTTB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_GiaSC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaSC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_NgaySC;
+        private System.Windows.Forms.DataGridView grd;
     }
 }

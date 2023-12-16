@@ -38,7 +38,7 @@ namespace CDTTTN
 
         private void editPhong_Load(object sender, EventArgs e)
         {
-            string sql = "select * from Phong";
+            string sql = "select MaPhong, TenPhong, SoLuong from Phong";
             grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
             NapCT();
@@ -70,7 +70,7 @@ namespace CDTTTN
                 string sql = "UPDATE Phong SET TenPhong = N'" + TenPhong + "', SoLuong = " + SoLuong + " WHERE MaPhong = '" + MaPhong +"'";
                 grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
-                sql = "select * from Phong";
+                sql = "select MaPhong, TenPhong, SoLuong from Phong";
                 grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
             }
         }
@@ -87,7 +87,7 @@ namespace CDTTTN
                 string sql = "DELETE FROM Phong WHERE MaPhong = '" + MaPhong + "'";
                 grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
-                sql = "select * from Phong";
+                sql = "select MaPhong, TenPhong, SoLuong from Phong";
                 grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
             }
         }

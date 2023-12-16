@@ -106,7 +106,9 @@ namespace CDTTTN
                 grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
                 
                 //hien ttb trong phong
-                sql = "select * from TTBTrongPhong";
+                sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
+                              "FROM TrangThietBi " +
+                              "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
                 grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
                 //hien ttb
                 //string sql1 = "select * from TrangThietBi";
@@ -149,7 +151,9 @@ namespace CDTTTN
                 string sql = "INSERT INTO TTBTrongPhong (MaPhong, MaTTB, TrangThaiTrongPhong) VALUES ('" + MA_PHONG + "', '" + MaTTB + "', 1)";
                 grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
                 //hien ttb trong phong
-                sql = "select * from TTBTrongPhong";
+                sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
+                              "FROM TrangThietBi " +
+                              "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
                 grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
                 //hien ttb
                 //string sql1 = "select * from TrangThietBi";
@@ -164,7 +168,9 @@ namespace CDTTTN
         private void editTTBTrongPhong_Load(object sender, EventArgs e)
         {
             txt_TenPhong.Text = TEN_PHONG;
-            string sql = "select * from TTBTrongPhong";
+            string sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
+                              "FROM TrangThietBi " +
+                              "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
             grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
         }
         

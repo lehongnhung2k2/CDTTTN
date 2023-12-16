@@ -134,6 +134,12 @@
     <Compile Include="editTTBTrongPhong.Designer.cs">
       <DependentUpon>editTTBTrongPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="exportDatPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="exportDatPhong.Designer.cs">
+      <DependentUpon>exportDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="exportKiemKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +181,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrptDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrptDatPhong.Designer.cs">
+      <DependentUpon>frmrptDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmrptKiemKe.cs">
       <SubType>Form</SubType>
@@ -224,11 +236,11 @@
     <Compile Include="KiemKe.Designer.cs">
       <DependentUpon>KiemKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemKeTTBTrongPhong.cs">
+    <Compile Include="KiemKeTTB_TrongPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KiemKeTTBTrongPhong.Designer.cs">
-      <DependentUpon>KiemKeTTBTrongPhong.cs</DependentUpon>
+    <Compile Include="KiemKeTTB_TrongPhong.Designer.cs">
+      <DependentUpon>KiemKeTTB_TrongPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,6 +255,12 @@
     </Compile>
     <Compile Include="QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptDatPhong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDatPhong.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptKiemKe.cs">
       <AutoGen>True</AutoGen>
@@ -352,6 +370,9 @@
     <EmbeddedResource Include="editTTBTrongPhong.resx">
       <DependentUpon>editTTBTrongPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="exportDatPhong.resx">
+      <DependentUpon>exportDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="exportKiemKe.resx">
       <DependentUpon>exportKiemKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrptDatPhong.resx">
+      <DependentUpon>frmrptDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmrptKiemKe.resx">
       <DependentUpon>frmrptKiemKe.cs</DependentUpon>
@@ -397,8 +421,8 @@
     <EmbeddedResource Include="KiemKe.resx">
       <DependentUpon>KiemKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemKeTTBTrongPhong.resx">
-      <DependentUpon>KiemKeTTBTrongPhong.cs</DependentUpon>
+    <EmbeddedResource Include="KiemKeTTB_TrongPhong.resx">
+      <DependentUpon>KiemKeTTB_TrongPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -415,6 +439,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDatPhong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDatPhong.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptKiemKe.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -570,6 +598,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brown Minimalist Business Quote Instagram Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue Green Childish Back to School Greeting Card.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

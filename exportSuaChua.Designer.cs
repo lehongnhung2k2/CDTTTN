@@ -38,6 +38,11 @@ namespace CDTTTN
             this.cb_GiaTri = new System.Windows.Forms.ComboBox();
             this.cb_TenTruong = new System.Windows.Forms.ComboBox();
             this.grd_exportSuaChua = new System.Windows.Forms.DataGridView();
+            this.MaSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_exportSuaChua)).BeginInit();
             this.SuspendLayout();
@@ -143,12 +148,58 @@ namespace CDTTTN
             // 
             this.grd_exportSuaChua.BackgroundColor = System.Drawing.Color.White;
             this.grd_exportSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd_exportSuaChua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSC,
+            this.MaTTB,
+            this.NgaySC,
+            this.GiaSC,
+            this.MaNV});
             this.grd_exportSuaChua.Location = new System.Drawing.Point(47, 353);
             this.grd_exportSuaChua.Name = "grd_exportSuaChua";
             this.grd_exportSuaChua.RowHeadersWidth = 62;
             this.grd_exportSuaChua.RowTemplate.Height = 28;
             this.grd_exportSuaChua.Size = new System.Drawing.Size(1227, 493);
             this.grd_exportSuaChua.TabIndex = 5;
+            // 
+            // MaSC
+            // 
+            this.MaSC.DataPropertyName = "MaSC";
+            this.MaSC.HeaderText = "Mã SC";
+            this.MaSC.MinimumWidth = 8;
+            this.MaSC.Name = "MaSC";
+            this.MaSC.Width = 175;
+            // 
+            // MaTTB
+            // 
+            this.MaTTB.DataPropertyName = "MaTTB";
+            this.MaTTB.HeaderText = "Mã TTB";
+            this.MaTTB.MinimumWidth = 8;
+            this.MaTTB.Name = "MaTTB";
+            this.MaTTB.Width = 175;
+            // 
+            // NgaySC
+            // 
+            this.NgaySC.DataPropertyName = "NgaySC";
+            this.NgaySC.HeaderText = "Ngày SC";
+            this.NgaySC.MinimumWidth = 8;
+            this.NgaySC.Name = "NgaySC";
+            this.NgaySC.Width = 175;
+            // 
+            // GiaSC
+            // 
+            this.GiaSC.DataPropertyName = "GiaSC";
+            this.GiaSC.HeaderText = "Giá SC (VNĐ)";
+            this.GiaSC.MinimumWidth = 8;
+            this.GiaSC.Name = "GiaSC";
+            this.GiaSC.Width = 175;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 175;
             // 
             // exportSuaChua
             // 
@@ -177,5 +228,10 @@ namespace CDTTTN
         private System.Windows.Forms.ComboBox cb_GiaTri;
         private System.Windows.Forms.ComboBox cb_TenTruong;
         private System.Windows.Forms.DataGridView grd_exportSuaChua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaSC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
     }
 }

@@ -74,5 +74,14 @@ namespace CDTTTN
             dieuchuyenttb.Hide();
             exportttb.Show();
         }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchttb.Show();
+            addttb.Hide();
+            editttb.Hide();
+            dieuchuyenttb.Hide();
+            exportttb.Hide();
+        }
     }
 }

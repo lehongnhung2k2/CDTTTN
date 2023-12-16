@@ -45,5 +45,12 @@ namespace CDTTTN
             addkiemke.Hide();
             exportkiemke.Show();
         }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchkiemke.Show();
+            addkiemke.Hide();
+            exportkiemke.Hide();
+        }
     }
 }

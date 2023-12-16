@@ -31,14 +31,20 @@ namespace CDTTTN
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_NgayKK = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MaKK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdKiemKe = new System.Windows.Forms.DataGridView();
+            this.MaKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdKiemKe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +59,7 @@ namespace CDTTTN
             this.button1.TabIndex = 38;
             this.button1.Text = "Xóa điều kiện";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_edit
             // 
@@ -65,15 +72,16 @@ namespace CDTTTN
             this.btn_edit.TabIndex = 37;
             this.btn_edit.Text = "Tìm kiếm";
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
-            // textBox3
+            // txt_MaNV
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(892, 196);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(339, 35);
-            this.textBox3.TabIndex = 32;
+            this.txt_MaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNV.Location = new System.Drawing.Point(892, 196);
+            this.txt_MaNV.Multiline = true;
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaNV.TabIndex = 32;
             // 
             // label4
             // 
@@ -85,14 +93,14 @@ namespace CDTTTN
             this.label4.TabIndex = 26;
             this.label4.Text = "Mã nhân viên";
             // 
-            // textBox4
+            // txt_NgayKK
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(257, 272);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(339, 35);
-            this.textBox4.TabIndex = 34;
+            this.txt_NgayKK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NgayKK.Location = new System.Drawing.Point(257, 272);
+            this.txt_NgayKK.Multiline = true;
+            this.txt_NgayKK.Name = "txt_NgayKK";
+            this.txt_NgayKK.Size = new System.Drawing.Size(339, 35);
+            this.txt_NgayKK.TabIndex = 34;
             // 
             // label6
             // 
@@ -104,14 +112,14 @@ namespace CDTTTN
             this.label6.TabIndex = 29;
             this.label6.Text = "Ngày kiểm kê";
             // 
-            // textBox1
+            // txt_MaKK
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(257, 196);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 35);
-            this.textBox1.TabIndex = 35;
+            this.txt_MaKK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaKK.Location = new System.Drawing.Point(257, 196);
+            this.txt_MaKK.Multiline = true;
+            this.txt_MaKK.Name = "txt_MaKK";
+            this.txt_MaKK.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaKK.TabIndex = 35;
             // 
             // label2
             // 
@@ -138,12 +146,67 @@ namespace CDTTTN
             // 
             this.grdKiemKe.BackgroundColor = System.Drawing.Color.White;
             this.grdKiemKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdKiemKe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKK,
+            this.NgayKK,
+            this.MaNV,
+            this.GhiChu,
+            this.MaTT,
+            this.MaTTB});
             this.grdKiemKe.Location = new System.Drawing.Point(43, 480);
             this.grdKiemKe.Name = "grdKiemKe";
             this.grdKiemKe.RowHeadersWidth = 62;
             this.grdKiemKe.RowTemplate.Height = 28;
             this.grdKiemKe.Size = new System.Drawing.Size(1237, 378);
             this.grdKiemKe.TabIndex = 40;
+            // 
+            // MaKK
+            // 
+            this.MaKK.DataPropertyName = "MaKK";
+            this.MaKK.HeaderText = "Mã KK";
+            this.MaKK.MinimumWidth = 8;
+            this.MaKK.Name = "MaKK";
+            this.MaKK.Width = 140;
+            // 
+            // NgayKK
+            // 
+            this.NgayKK.DataPropertyName = "NgayKK";
+            this.NgayKK.HeaderText = "Ngày KK";
+            this.NgayKK.MinimumWidth = 8;
+            this.NgayKK.Name = "NgayKK";
+            this.NgayKK.Width = 150;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 150;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.MinimumWidth = 8;
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Width = 150;
+            // 
+            // MaTT
+            // 
+            this.MaTT.DataPropertyName = "MaTT";
+            this.MaTT.HeaderText = "Mã TT";
+            this.MaTT.MinimumWidth = 8;
+            this.MaTT.Name = "MaTT";
+            this.MaTT.Width = 150;
+            // 
+            // MaTTB
+            // 
+            this.MaTTB.DataPropertyName = "MaTTB";
+            this.MaTTB.HeaderText = "Mã TTB";
+            this.MaTTB.MinimumWidth = 8;
+            this.MaTTB.Name = "MaTTB";
+            this.MaTTB.Width = 135;
             // 
             // searchKiemKe
             // 
@@ -152,11 +215,11 @@ namespace CDTTTN
             this.Controls.Add(this.grdKiemKe);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_edit);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_MaNV);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_NgayKK);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_MaKK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "searchKiemKe";
@@ -172,13 +235,19 @@ namespace CDTTTN
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_NgayKK;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaKK;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView grdKiemKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTTB;
     }
 }
