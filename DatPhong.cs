@@ -52,41 +52,49 @@ namespace CDTTTN
             }    
             else 
             {
-                //DateTime TG_Now = DateTime.Now;
-                string connectionString = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
-                string maNV = classMain.MANV;
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                try
                 {
-                    connection.Open();
+                    //DateTime TG_Now = DateTime.Now;
+                    string connectionString = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
+                    string maNV = classMain.MANV;
 
-                    // Lấy thời gian hiện tại
-                    DateTime thoiGianHienTai = DateTime.Now;
-
-                    // Tạo và thực thi câu lệnh SQL để lấy MaDP khi thời gian hiện tại nằm trong khoảng từ ThoiGianMuon đến ThoiGianTra và MaNV = maNV
-                    string query = "SELECT MaDP FROM DatPhong WHERE @ThoiGianHienTai BETWEEN ThoiGianMuon AND ThoiGianTra AND MaNV = @MaNV";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        // Thêm tham số cho thời gian hiện tại và MaNV
-                        command.Parameters.AddWithValue("@ThoiGianHienTai", thoiGianHienTai);
-                        command.Parameters.AddWithValue("@MaNV", maNV);
+                        connection.Open();
 
-                        // Thực hiện truy vấn và đọc kết quả
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        // Lấy thời gian hiện tại
+                        DateTime thoiGianHienTai = DateTime.Now;
+
+                        // Tạo và thực thi câu lệnh SQL để lấy MaDP khi thời gian hiện tại nằm trong khoảng từ ThoiGianMuon đến ThoiGianTra và MaNV = maNV
+                        string query = "SELECT MaDP FROM DatPhong WHERE @ThoiGianHienTai BETWEEN ThoiGianMuon AND ThoiGianTra AND MaNV = @MaNV";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            while (reader.Read())
-                            {
-                                // Lấy giá trị MaDP từ kết quả
-                                maDP = reader["MaDP"].ToString();
+                            // Thêm tham số cho thời gian hiện tại và MaNV
+                            command.Parameters.AddWithValue("@ThoiGianHienTai", thoiGianHienTai);
+                            command.Parameters.AddWithValue("@MaNV", maNV);
 
-                                
+                            // Thực hiện truy vấn và đọc kết quả
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    // Lấy giá trị MaDP từ kết quả
+                                    maDP = reader["MaDP"].ToString();
+
+
+                                }
                             }
                         }
                     }
+                    KiemKeTTB_TrongPhong f = new KiemKeTTB_TrongPhong(maDP, MaPhong);
+                    f.Show();
                 }
-                KiemKeTTB_TrongPhong f = new KiemKeTTB_TrongPhong(maDP, MaPhong);
-                f.Show();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }    
             
         }
@@ -213,7 +221,6 @@ namespace CDTTTN
 
                 Button btn = new Button() { Width = PhongDAO.PhongDai, Height = PhongDAO.PhongRong };
                 
-
 
                 List<DatPhongDTO> datphongList = DatPhongDAO.Instance.LoadDatPhongList();
                 foreach (DatPhongDTO item1 in datphongList)

@@ -78,6 +78,24 @@ namespace CDTTTN
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
+            pn.Controls.Add(pn_TrangChu);
+            pn.Controls.Add(pn_DP);
+            pn.Controls.Add(pn_QLP);
+            pn.Controls.Add(pn_TTB);
+            pn.Controls.Add(pn_KK);
+            pn.Controls.Add(pn_SC);
+            pn.Controls.Add(pn_TL);
+            pn.Controls.Add(pn_QLTK);
+            pn.Controls.Add(pn_TK);
+            if (classMain.MA_PQ == "user")
+            {
+                pn.Controls.Remove(pn_QLP);
+                pn.Controls.Remove(pn_TTB);
+                pn.Controls.Remove(pn_KK);
+                pn.Controls.Remove(pn_SC);
+                pn.Controls.Remove(pn_TL);
+                pn.Controls.Remove(pn_QLTK);
+            }
             //Console.WriteLine(classMain.TENTAIKHOAN);
 
             constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";

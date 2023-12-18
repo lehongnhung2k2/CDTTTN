@@ -61,27 +61,35 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                ++SL;
-                if (SL >= 0 && SL <= 9)
+                try
                 {
-                    MaDP += "00";
-                    MaDP += SL.ToString();
-                }
-                else if (SL >= 10 && SL <= 99)
-                {
-                    MaDP += "0";
-                    MaDP += SL.ToString();
-                }
-                else
-                {
-                    MaDP += SL.ToString();
-                }
+                    ++SL;
+                    if (SL >= 0 && SL <= 9)
+                    {
+                        MaDP += "00";
+                        MaDP += SL.ToString();
+                    }
+                    else if (SL >= 10 && SL <= 99)
+                    {
+                        MaDP += "0";
+                        MaDP += SL.ToString();
+                    }
+                    else
+                    {
+                        MaDP += SL.ToString();
+                    }
 
-                DateTime TG_Dat = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
-                string sql = $"INSERT INTO DatPhong (MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV) VALUES('{MaDP}', '{TG_Dat}', '{classMain.TG_Muon}', '{classMain.TG_Tra}', '{MaPhong}', '{txt_MaNV.Text}')";
-                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-                MessageBox.Show("Đặt phòng thành công");
-                this.Hide();
+                    DateTime TG_Dat = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
+                    string sql = $"INSERT INTO DatPhong (MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV) VALUES('{MaDP}', '{TG_Dat}', '{classMain.TG_Muon}', '{classMain.TG_Tra}', '{MaPhong}', '{txt_MaNV.Text}')";
+                    grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    MessageBox.Show("Đặt phòng thành công");
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }
         }
     }

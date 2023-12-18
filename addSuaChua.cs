@@ -25,10 +25,17 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-
-                string sql = $"INSERT INTO SuaChua (MaSC, NgaySC, GiaSC, GhiChu, MaTTB, MaNV) VALUES ('{txt_MaSC.Text}', '{txt_NgaySC.Text}', {txt_GiaSC.Text}, N'{txt_GhiChu.Text}', '{txt_MaTTB.Text}', '{txt_MaNV}')";
-                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-                MessageBox.Show("Thêm danh mục sửa chữa trang thiết bị thành công");
+                try
+                {
+                    string sql = $"INSERT INTO SuaChua (MaSC, NgaySC, GiaSC, GhiChu, MaTTB, MaNV) VALUES ('{txt_MaSC.Text}', '{txt_NgaySC.Text}', {txt_GiaSC.Text}, N'{txt_GhiChu.Text}', '{txt_MaTTB.Text}', '{txt_MaNV}')";
+                    grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    MessageBox.Show("Thêm danh mục sửa chữa trang thiết bị thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }
         }
 

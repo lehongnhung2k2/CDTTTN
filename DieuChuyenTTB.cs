@@ -36,89 +36,105 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                string sql = $"update TrangThietBi set MaTT = '{TrangThai}' where MaTTB = '{MaTTB}'";
-                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                try
+                {
+                    string sql = $"update TrangThietBi set MaTT = '{TrangThai}' where MaTTB = '{MaTTB}'";
+                    grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }
             
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            MaTTB = txt_MaTTB_input.Text;
-            if (MaTTB == "")
+            try
             {
-                MessageBox.Show("Bạn chưa nhập mã trang thiết bị");
-            }
-            else
-            {
-                
-                //Console.WriteLine(MaTTB);
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                MaTTB = txt_MaTTB_input.Text;
+                if (MaTTB == "")
                 {
-                    //txt_TenTTB.Text = string.Empty;
-                    connection.Open();
-                    //string sql = "select * from TrangThietBi where MaTTB = '" + MaTTB + "'";
-                    string sql = $"SELECT * FROM TrangThietBi WHERE MaTTB = '{MaTTB}'";
+                    MessageBox.Show("Bạn chưa nhập mã trang thiết bị");
+                }
+                else
+                {
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    //Console.WriteLine(MaTTB);
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        SqlDataReader reader = command.ExecuteReader();
+                        //txt_TenTTB.Text = string.Empty;
+                        connection.Open();
+                        //string sql = "select * from TrangThietBi where MaTTB = '" + MaTTB + "'";
+                        string sql = $"SELECT * FROM TrangThietBi WHERE MaTTB = '{MaTTB}'";
 
-                        if (reader.HasRows)
+                        using (SqlCommand command = new SqlCommand(sql, connection))
                         {
-                            while (reader.Read())
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            if (reader.HasRows)
                             {
-                                
-                                MaTT = reader["MaTT"].ToString();
-                                
+                                while (reader.Read())
+                                {
+
+                                    MaTT = reader["MaTT"].ToString();
+
+                                }
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy trang thiết bị với mã đã nhập.", "Thông báo");
                             }
 
+                            // Đóng đối tượng SqlDataReader
+                            reader.Close();
                         }
-                        else
-                        {
-                            MessageBox.Show("Không tìm thấy trang thiết bị với mã đã nhập.", "Thông báo");
-                        }
-
-                        // Đóng đối tượng SqlDataReader
-                        reader.Close();
                     }
                 }
-            }
-            flp_TrangThai.Controls.Clear();
-            RadioButton btn_SuDung = new RadioButton();
-            btn_SuDung.Text = "Sử dụng";
-            btn_SuDung.Font = new Font("Microsoft Sans Serif", 10);
+                flp_TrangThai.Controls.Clear();
+                RadioButton btn_SuDung = new RadioButton();
+                btn_SuDung.Text = "Sử dụng";
+                btn_SuDung.Font = new Font("Microsoft Sans Serif", 10);
 
-            RadioButton btn_SuaChua = new RadioButton();
-            btn_SuaChua.Text = "Sửa chữa";
-            btn_SuaChua.Font = new Font("Microsoft Sans Serif", 10);
+                RadioButton btn_SuaChua = new RadioButton();
+                btn_SuaChua.Text = "Sửa chữa";
+                btn_SuaChua.Font = new Font("Microsoft Sans Serif", 10);
 
-            RadioButton btn_ThanhLy = new RadioButton();
-            btn_ThanhLy.Text = "Thanh lý";
-            btn_ThanhLy.Font = new Font("Microsoft Sans Serif", 10);
+                RadioButton btn_ThanhLy = new RadioButton();
+                btn_ThanhLy.Text = "Thanh lý";
+                btn_ThanhLy.Font = new Font("Microsoft Sans Serif", 10);
 
-            if (MaTT == "TT001")
-            {
-                txt_TenTT.Text = "Sử dụng";
-                flp_TrangThai.Controls.Add(btn_SuaChua);
-                flp_TrangThai.Controls.Add(btn_ThanhLy);
+                if (MaTT == "TT001")
+                {
+                    txt_TenTT.Text = "Sử dụng";
+                    flp_TrangThai.Controls.Add(btn_SuaChua);
+                    flp_TrangThai.Controls.Add(btn_ThanhLy);
+                }
+                else if (MaTT == "TT002")
+                {
+                    txt_TenTT.Text = "Sửa chữa";
+                    flp_TrangThai.Controls.Add(btn_SuDung);
+                    flp_TrangThai.Controls.Add(btn_ThanhLy);
+                }
+                else
+                {
+                    txt_TenTT.Text = "Thanh lý";
+                    flp_TrangThai.Controls.Add(btn_SuDung);
+                    flp_TrangThai.Controls.Add(btn_SuaChua);
+                }
+                btn_SuDung.Click += Btn_SuDung_Click;
+                btn_SuaChua.Click += Btn_SuaChua_Click;
+                btn_ThanhLy.Click += btn_ThanhLy_Click;
             }
-            else if (MaTT == "TT002")
+            catch (Exception ex)
             {
-                txt_TenTT.Text = "Sửa chữa";
-                flp_TrangThai.Controls.Add(btn_SuDung);
-                flp_TrangThai.Controls.Add(btn_ThanhLy);
+                MessageBox.Show("Không thành công");
             }
-            else
-            {
-                txt_TenTT.Text = "Thanh lý";
-                flp_TrangThai.Controls.Add(btn_SuDung);
-                flp_TrangThai.Controls.Add(btn_SuaChua);
-            }
-            btn_SuDung.Click += Btn_SuDung_Click;
-            btn_SuaChua.Click += Btn_SuaChua_Click;
-            btn_ThanhLy.Click += btn_ThanhLy_Click;
+            
             //myRadioButton.Click += MyRadioButton_Click;
         }
 

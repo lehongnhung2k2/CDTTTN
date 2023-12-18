@@ -32,13 +32,20 @@ namespace CDTTTN
             int SoLuong;
             if (int.TryParse(txt_SoLuong.Text, out SoLuong)) { }
             else { }
-
-            string sql = "INSERT INTO Phong (MaPhong, TenPhong, SoLuong, TrangThaiPhong) VALUES ('"
+            try
+            {
+                string sql = "INSERT INTO Phong (MaPhong, TenPhong, SoLuong, TrangThaiPhong) VALUES ('"
                 + MaPhong + "', N'" + TenPhong + "', " + SoLuong + ", N'Trống')";
-            grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
-            sql = "select MaPhong, TenPhong, SoLuong from Phong";
-            grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                sql = "select MaPhong, TenPhong, SoLuong from Phong";
+                grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
         }
 
         private void btn_add_Click_1(object sender, EventArgs e)

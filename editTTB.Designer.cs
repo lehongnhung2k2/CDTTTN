@@ -33,7 +33,6 @@ namespace CDTTTN
             this.txt_MaTTB_input = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.txt_MaTT = new System.Windows.Forms.ComboBox();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.txt_Thue = new System.Windows.Forms.TextBox();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@ namespace CDTTTN
             this.txt_MaTTB = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btn_add = new System.Windows.Forms.Button();
+            this.txt_MaTT = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -98,15 +98,6 @@ namespace CDTTTN
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = false;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
-            // 
-            // txt_MaTT
-            // 
-            this.txt_MaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_MaTT.FormattingEnabled = true;
-            this.txt_MaTT.Location = new System.Drawing.Point(256, 362);
-            this.txt_MaTT.Name = "txt_MaTT";
-            this.txt_MaTT.Size = new System.Drawing.Size(339, 28);
-            this.txt_MaTT.TabIndex = 59;
             // 
             // txt_GhiChu
             // 
@@ -303,12 +294,21 @@ namespace CDTTTN
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // txt_MaTT
+            // 
+            this.txt_MaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaTT.Location = new System.Drawing.Point(256, 355);
+            this.txt_MaTT.Multiline = true;
+            this.txt_MaTT.Name = "txt_MaTT";
+            this.txt_MaTT.Size = new System.Drawing.Size(339, 35);
+            this.txt_MaTT.TabIndex = 61;
+            // 
             // editTTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.txt_MaTT);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.txt_GhiChu);
             this.Controls.Add(this.txt_Thue);
             this.Controls.Add(this.txt_MaNV);
@@ -334,6 +334,7 @@ namespace CDTTTN
             this.Controls.Add(this.label1);
             this.Name = "editTTB";
             this.Size = new System.Drawing.Size(1321, 880);
+            this.Load += new System.EventHandler(this.editTTB_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +346,6 @@ namespace CDTTTN
         private System.Windows.Forms.TextBox txt_MaTTB_input;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_TimKiem;
-        private System.Windows.Forms.ComboBox txt_MaTT;
         private System.Windows.Forms.TextBox txt_GhiChu;
         private System.Windows.Forms.TextBox txt_Thue;
         private System.Windows.Forms.TextBox txt_MaNV;
@@ -366,5 +366,6 @@ namespace CDTTTN
         private System.Windows.Forms.TextBox txt_MaTTB;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.TextBox txt_MaTT;
     }
 }

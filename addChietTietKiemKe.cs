@@ -67,24 +67,33 @@ namespace CDTTTN
             string sql = $"INSERT INTO ChiTietKiemKe (MaKK, GhiChu, MaTT, MaTTB) VALUES ('{txt_MaKK.Text}', N'{txt_GhiChu.Text}', '{txt_MaTT.Text}', '{txt_MaTTB.Text}')";
             string constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
             
-            Console.WriteLine(sql);
+            //Console.WriteLine(sql);
+
             var dataTable = new System.Data.DataTable();
 
-            // Tạo kết nối và adapter
-            using (SqlConnection connection = new SqlConnection(constr))
+            try
             {
-                connection.Open();
-
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                // Tạo kết nối và adapter
+                using (SqlConnection connection = new SqlConnection(constr))
                 {
-                    // Sử dụng SqlDataAdapter để đổ dữ liệu từ cơ sở dữ liệu vào DataTable
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        adapter.Fill(dataTable);
+                        // Sử dụng SqlDataAdapter để đổ dữ liệu từ cơ sở dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(dataTable);
+                        }
                     }
+                    MessageBox.Show("Thêm thành công");
                 }
-                MessageBox.Show("Thêm thành công");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace CDTTTN
     public partial class editTTB : UserControl
     {
         string connectionString = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
-        private frmEditTTB frmeditttb;
+        //private frmEditTTB frmeditttb;
         string MaTTB;
         public editTTB()
         {
@@ -27,85 +27,105 @@ namespace CDTTTN
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            MaTTB = txt_MaTTB_input.Text;
-            if (MaTTB == "")
+            try
             {
-                MessageBox.Show("Bạn chưa nhập mã trang thiết bị");
-            }
-            else
-            {
-                
-                //Console.WriteLine(MaTTB);
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                MaTTB = txt_MaTTB_input.Text;
+                if (MaTTB == "")
                 {
-                    //txt_TenTTB.Text = string.Empty;
-                    connection.Open();
-                    //string sql = "select * from TrangThietBi where MaTTB = '" + MaTTB + "'";
-                    string sql = $"SELECT * FROM TrangThietBi WHERE MaTTB = '{MaTTB}'";
-                    
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    MessageBox.Show("Bạn chưa nhập mã trang thiết bị");
+                }
+                else
+                {
+
+                    //Console.WriteLine(MaTTB);
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        SqlDataReader reader = command.ExecuteReader();
+                        //txt_TenTTB.Text = string.Empty;
+                        connection.Open();
+                        //string sql = "select * from TrangThietBi where MaTTB = '" + MaTTB + "'";
+                        string sql = $"SELECT * FROM TrangThietBi WHERE MaTTB = '{MaTTB}'";
 
-                        if (reader.HasRows)
+                        using (SqlCommand command = new SqlCommand(sql, connection))
                         {
-                            while (reader.Read())
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            if (reader.HasRows)
                             {
-                                txt_MaTTB.Text = reader["MaTTB"].ToString();
-                                txt_TenTTB.Text = reader["TenTTB"].ToString();
-                                txt_MaTT.Text = reader["MaTT"].ToString();
-                                txt_MaNCC.Text = reader["MaNCC"].ToString();
-                                txt_NgayNhap.Text = reader["NgayNhap"].ToString();
-                                txt_MaNV.Text = reader["MaNV"].ToString();
-                                txt_NguyenGia.Text = reader["NguyenGia"].ToString();
-                                txt_Thue.Text = reader["Thue"].ToString();
-                                txt_ThoiGianTinhKhauHao.Text = reader["ThoiGianTinhKhauHao"].ToString();
-                                txt_GhiChu.Text = reader["GhiChu"].ToString();
+                                while (reader.Read())
+                                {
+                                    txt_MaTTB.Text = reader["MaTTB"].ToString();
+                                    txt_TenTTB.Text = reader["TenTTB"].ToString();
+                                    txt_MaTT.Text = reader["MaTT"].ToString();
+                                    txt_MaNCC.Text = reader["MaNCC"].ToString();
+                                    txt_NgayNhap.Text = reader["NgayNhap"].ToString();
+                                    txt_MaNV.Text = reader["MaNV"].ToString();
+                                    txt_NguyenGia.Text = reader["NguyenGia"].ToString();
+                                    txt_Thue.Text = reader["Thue"].ToString();
+                                    txt_ThoiGianTinhKhauHao.Text = reader["ThoiGianTinhKhauHao"].ToString();
+                                    txt_GhiChu.Text = reader["GhiChu"].ToString();
+                                }
+                                Console.WriteLine(txt_TenTTB.Text);
+
                             }
-                            Console.WriteLine(txt_TenTTB.Text);
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy trang thiết bị với mã đã nhập.", "Thông báo");
+                            }
 
+                            // Đóng đối tượng SqlDataReader
+                            reader.Close();
                         }
-                        else
-                        {
-                            MessageBox.Show("Không tìm thấy trang thiết bị với mã đã nhập.", "Thông báo");
-                        }
-
-                        // Đóng đối tượng SqlDataReader
-                        reader.Close();
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
             
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-
-                //string sql = $"update TrangThietBi set TenTTB = N' WHERE MaTTB = '{MaTTB}'";
-                string sql = $"UPDATE TrangThietBi SET TenTTB = N'{txt_TenTTB.Text}' where MaTTB = '{MaTTB}'";
-
-                var dataTable = new System.Data.DataTable();
-
-                // Tạo kết nối và adapter
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    conn.Open();
 
-                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    //string sql = $"update TrangThietBi set TenTTB = N' WHERE MaTTB = '{MaTTB}'";
+                    string sql = $"UPDATE TrangThietBi SET TenTTB = N'{txt_TenTTB.Text}', MaTT = '{txt_MaTT.Text}', MaNCC = '{txt_MaNCC.Text}', NgayNhap = '{txt_NgayNhap.Text}', MaNV = '{txt_MaNV.Text}', NguyenGia = {txt_NguyenGia.Text}, Thue = {txt_Thue.Text}, ThoiGianTinhKhauHao = {txt_ThoiGianTinhKhauHao.Text}, GhiChu = {txt_GhiChu.Text}, where MaTTB = '{MaTTB}'";
+
+                    var dataTable = new System.Data.DataTable();
+
+                    // Tạo kết nối và adapter
+                    using (SqlConnection conn = new SqlConnection(connectionString))
                     {
-                        // Sử dụng SqlDataAdapter để đổ dữ liệu từ cơ sở dữ liệu vào DataTable
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        conn.Open();
+
+                        using (SqlCommand command = new SqlCommand(sql, conn))
                         {
-                            adapter.Fill(dataTable);
+                            // Sử dụng SqlDataAdapter để đổ dữ liệu từ cơ sở dữ liệu vào DataTable
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                            {
+                                adapter.Fill(dataTable);
+                            }
                         }
+                        MessageBox.Show("Cập nhật thông tin thành công.", "Thông báo");
                     }
-                    MessageBox.Show("Cập nhật thông tin thành công.", "Thông báo");
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
+        }
+
+        private void editTTB_Load(object sender, EventArgs e)
+        {
+            txt_GhiChu.Text = "";
         }
     }
 }

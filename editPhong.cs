@@ -61,17 +61,25 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                string MaPhong = txt_MaPhong.Text;
-                string TenPhong = txt_TenPhong.Text;
-                int SoLuong;
-                if (int.TryParse(txt_SoLuong.Text, out SoLuong)) { }
-                else { }
+                try
+                {
+                    string MaPhong = txt_MaPhong.Text;
+                    string TenPhong = txt_TenPhong.Text;
+                    int SoLuong;
+                    if (int.TryParse(txt_SoLuong.Text, out SoLuong)) { }
+                    else { }
 
-                string sql = "UPDATE Phong SET TenPhong = N'" + TenPhong + "', SoLuong = " + SoLuong + " WHERE MaPhong = '" + MaPhong +"'";
-                grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    string sql = "UPDATE Phong SET TenPhong = N'" + TenPhong + "', SoLuong = " + SoLuong + " WHERE MaPhong = '" + MaPhong + "'";
+                    grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
-                sql = "select MaPhong, TenPhong, SoLuong from Phong";
-                grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    sql = "select MaPhong, TenPhong, SoLuong from Phong";
+                    grd_Phong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }
         }
 

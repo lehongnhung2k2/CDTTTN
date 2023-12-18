@@ -32,18 +32,26 @@ namespace CDTTTN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SLKK();
-            set_MaKKP();
-            set_GT();
-            Console.WriteLine(MaKKP);
-            for (int i=0; i<n-1; i++)
+            try
             {
-                Console.WriteLine(tinhTrang[i]);
-                string sql1 = $"INSERT INTO ChiTietKiemKePhong (MaKKP, TinhTrang, GhiChu, MaTTB) VALUES ('{MaKKP}', N'{tinhTrang[i]}', N'{ghiChu[i]}', '{maTTB[i]}')";
-                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                SLKK();
+                set_MaKKP();
+                set_GT();
+                Console.WriteLine(MaKKP);
+                for (int i = 0; i < n - 1; i++)
+                {
+                    Console.WriteLine(tinhTrang[i]);
+                    string sql1 = $"INSERT INTO ChiTietKiemKePhong (MaKKP, TinhTrang, GhiChu, MaTTB) VALUES ('{MaKKP}', N'{tinhTrang[i]}', N'{ghiChu[i]}', '{maTTB[i]}')";
+                    grd.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                }
+                string sql = $"INSERT INTO KiemKePhong (MaKKP, MaDP) VALUES ('{MaKKP}', '{MaDP}')";
+                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
             }
-            string sql = $"INSERT INTO KiemKePhong (MaKKP, MaDP) VALUES ('{MaKKP}', '{MaDP}')";
-            grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
             
         }
 

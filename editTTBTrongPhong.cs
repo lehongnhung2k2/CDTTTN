@@ -101,21 +101,29 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                //them ttb vao phong
-                string sql = "DELETE FROM TTBTrongPhong WHERE MaTTB = '" + MaTTB_Phong + "'";
-                grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                try
+                {
+                    //them ttb vao phong
+                    string sql = "DELETE FROM TTBTrongPhong WHERE MaTTB = '" + MaTTB_Phong + "'";
+                    grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+
+                    //hien ttb trong phong
+                    sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
+                                  "FROM TrangThietBi " +
+                                  "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
+                    grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    //hien ttb
+                    //string sql1 = "select * from TrangThietBi";
+                    string sql1 = "update TrangThietBi set TrangThaiTrongPhong = 0 where MaTTB = '" + MaTTB_Phong + "'";
+                    grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                    sql1 = "select MaTTB, TenTTB from TrangThietBi where TenTTB = N'" + TenTTB + "' and TrangThaiTrongPhong = 0";
+                    grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
                 
-                //hien ttb trong phong
-                sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
-                              "FROM TrangThietBi " +
-                              "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
-                grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-                //hien ttb
-                //string sql1 = "select * from TrangThietBi";
-                string sql1 = "update TrangThietBi set TrangThaiTrongPhong = 0 where MaTTB = '" + MaTTB_Phong + "'";
-                grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
-                sql1 = "select MaTTB, TenTTB from TrangThietBi where TenTTB = N'" + TenTTB + "' and TrangThaiTrongPhong = 0";
-                grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
 
             }
         }
@@ -127,10 +135,18 @@ namespace CDTTTN
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string TenTTB = comboBox1.Text;
-            //string sql = "select * from TrangThietBi";
-            string sql = "select MaTTB, TenTTB from TrangThietBi where TenTTB = N'" + TenTTB + "' and TrangThaiTrongPhong = 0";
-            grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            try
+            {
+                string TenTTB = comboBox1.Text;
+                //string sql = "select * from TrangThietBi";
+                string sql = "select MaTTB, TenTTB from TrangThietBi where TenTTB = N'" + TenTTB + "' and TrangThaiTrongPhong = 0";
+                grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
         }
 
         private void grd_TTB_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -147,20 +163,28 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                //them ttb vao phong
-                string sql = "INSERT INTO TTBTrongPhong (MaPhong, MaTTB, TrangThaiTrongPhong) VALUES ('" + MA_PHONG + "', '" + MaTTB + "', 1)";
-                grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-                //hien ttb trong phong
-                sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
-                              "FROM TrangThietBi " +
-                              "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
-                grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-                //hien ttb
-                //string sql1 = "select * from TrangThietBi";
-                string sql1 = "update TrangThietBi set TrangThaiTrongPhong = 1 where MaTTB = '" + MaTTB + "'";
-                grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
-                sql1 = "select MaTTB, TenTTB from TrangThietBi where TenTTB = N'" + TenTTB + "' and TrangThaiTrongPhong = 0";
-                grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                try
+                {
+                    //them ttb vao phong
+                    string sql = "INSERT INTO TTBTrongPhong (MaPhong, MaTTB, TrangThaiTrongPhong) VALUES ('" + MA_PHONG + "', '" + MaTTB + "', 1)";
+                    grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    //hien ttb trong phong
+                    sql = "SELECT TrangThietBi.MaTTB, TrangThietBi.TenTTB " +
+                                  "FROM TrangThietBi " +
+                                  "INNER JOIN TTBTrongPhong ON TrangThietBi.MaTTB = TTBTrongPhong.MaTTB";
+                    grd_TTBPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    //hien ttb
+                    //string sql1 = "select * from TrangThietBi";
+                    string sql1 = "update TrangThietBi set TrangThaiTrongPhong = 1 where MaTTB = '" + MaTTB + "'";
+                    grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                    sql1 = "select MaTTB, TenTTB from TrangThietBi where TenTTB = N'" + TenTTB + "' and TrangThaiTrongPhong = 0";
+                    grd_TTB.DataSource = DataProvider.Instance.ExcuteQuery(sql1);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
 
             }
         }

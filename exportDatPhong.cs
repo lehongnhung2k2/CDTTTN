@@ -35,56 +35,72 @@ namespace CDTTTN
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            string sql = "select MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV from DatPhong where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
-            grd_exportDatPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            try
+            {
+                string sql = "select MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV from DatPhong where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
+                grd_exportDatPhong.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cb_GiaTri.Text == "")
+            try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True"))
+                if (cb_GiaTri.Text == "")
                 {
-                    conn.Open();
-
-                    string sql = "select MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV from DatPhong";
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+                    using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True"))
                     {
-                        DataTable dtBC = new DataTable();
-                        da.Fill(dtBC);
+                        conn.Open();
 
-                        rptDatPhong bc = new rptDatPhong();
-                        bc.SetDataSource(dtBC);
-                        //bc.DataDefinition.FormulaFields["TenTruong"].Text = "'" + cb_TenTruong.Text + "'";
-                        //bc.DataDefinition.FormulaFields["GiaTri"].Text = "'" + cb_GiaTri.Text + "'";
-                        frmrptDatPhong f = new frmrptDatPhong(bc);
-                        f.Show();
+                        string sql = "select MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV from DatPhong";
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+                        {
+                            DataTable dtBC = new DataTable();
+                            da.Fill(dtBC);
+
+                            rptDatPhong bc = new rptDatPhong();
+                            bc.SetDataSource(dtBC);
+                            //bc.DataDefinition.FormulaFields["TenTruong"].Text = "'" + cb_TenTruong.Text + "'";
+                            //bc.DataDefinition.FormulaFields["GiaTri"].Text = "'" + cb_GiaTri.Text + "'";
+                            frmrptDatPhong f = new frmrptDatPhong(bc);
+                            f.Show();
+                        }
+                    }
+                }
+                else
+                {
+                    using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True"))
+                    {
+                        conn.Open();
+
+                        string sql = "select MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV from DatPhong where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+                        {
+                            DataTable dtBC = new DataTable();
+                            da.Fill(dtBC);
+
+                            rptDatPhong bc = new rptDatPhong();
+                            bc.SetDataSource(dtBC);
+                            bc.DataDefinition.FormulaFields["TenTruong"].Text = "'" + cb_TenTruong.Text + "'";
+                            bc.DataDefinition.FormulaFields["GiaTri"].Text = "'" + cb_GiaTri.Text + "'";
+                            frmrptDatPhong f = new frmrptDatPhong(bc);
+                            f.Show();
+                        }
                     }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True"))
-                {
-                    conn.Open();
-
-                    string sql = "select MaDP, ThoiGianDat, ThoiGianMuon, ThoiGianTra, MaPhong, MaNV from DatPhong where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
-                    {
-                        DataTable dtBC = new DataTable();
-                        da.Fill(dtBC);
-
-                        rptDatPhong bc = new rptDatPhong();
-                        bc.SetDataSource(dtBC);
-                        bc.DataDefinition.FormulaFields["TenTruong"].Text = "'" + cb_TenTruong.Text + "'";
-                        bc.DataDefinition.FormulaFields["GiaTri"].Text = "'" + cb_GiaTri.Text + "'";
-                        frmrptDatPhong f = new frmrptDatPhong(bc);
-                        f.Show();
-                    }
-                }
+                MessageBox.Show("Không thành công");
             }
+            
         }
     }
 }

@@ -36,71 +36,79 @@ namespace CDTTTN
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            int dd = 0;
-            string sql = "SELECT * FROM ThanhLy where ";
-            if (txt_NguoiMua.Text != "")
+            try
             {
-                if (dd == 0)
+                int dd = 0;
+                string sql = "SELECT * FROM ThanhLy where ";
+                if (txt_NguoiMua.Text != "")
                 {
-                    sql += $"NguoiMua = '{txt_NguoiMua.Text}' ";
-                    ++dd;
+                    if (dd == 0)
+                    {
+                        sql += $"NguoiMua = N'{txt_NguoiMua.Text}' ";
+                        ++dd;
+                    }
+                    else
+                    {
+                        sql += $"and NguoiMua = N'{txt_NguoiMua.Text}' ";
+                    }
                 }
-                else
+                if (txt_MaNV.Text != "")
                 {
-                    sql += $"and NguoiMua = '{txt_NguoiMua.Text}' ";
+                    if (dd == 0)
+                    {
+                        sql += $"MaNV = '{txt_MaNV.Text}' ";
+                        ++dd;
+                    }
+                    else
+                    {
+                        sql += $"and MaNV = '{txt_MaNV.Text}' ";
+                    }
                 }
-            }
-            if (txt_MaNV.Text != "")
-            {
-                if (dd == 0)
+                if (txt_MaTL.Text != "")
                 {
-                    sql += $"MaNV = '{txt_MaNV.Text}' ";
-                    ++dd;
+                    if (dd == 0)
+                    {
+                        sql += $"MaTL = '{txt_MaTL.Text}' ";
+                        ++dd;
+                    }
+                    else
+                    {
+                        sql += $"and MaTL = '{txt_MaTL.Text}' ";
+                    }
                 }
-                else
+                if (txt_MaTTB.Text != "")
                 {
-                    sql += $"and MaNV = '{txt_MaNV.Text}' ";
+                    if (dd == 0)
+                    {
+                        sql += $"MaTTB = '{txt_MaTTB.Text}' ";
+                        ++dd;
+                    }
+                    else
+                    {
+                        sql += $"and MaTTB = '{txt_MaTTB.Text}' ";
+                    }
                 }
-            }
-            if (txt_MaTL.Text != "")
-            {
-                if (dd == 0)
+                if (txt_NgayTL.Text != "")
                 {
-                    sql += $"MaTL = '{txt_MaTL.Text}' ";
-                    ++dd;
-                }
-                else
-                {
-                    sql += $"and MaTL = '{txt_MaTL.Text}' ";
-                }
-            }
-            if (txt_MaTTB.Text != "")
-            {
-                if (dd == 0)
-                {
-                    sql += $"MaTTB = '{txt_MaTTB.Text}' ";
-                    ++dd;
-                }
-                else
-                {
-                    sql += $"and MaTTB = '{txt_MaTTB.Text}' ";
-                }
-            }
-            if (txt_NgayTL.Text != "")
-            {
-                DateTime kq = DateTime.Parse(txt_NgayTL.Text);
-                if (dd == 0)
-                {
-                    sql += $"NgayTL = '{kq}' ";
-                    ++dd;
-                }
-                else
-                {
-                    sql += $"and NgayTL = '{kq}' ";
-                }
+                    DateTime kq = DateTime.Parse(txt_NgayTL.Text);
+                    if (dd == 0)
+                    {
+                        sql += $"NgayTL = '{kq}' ";
+                        ++dd;
+                    }
+                    else
+                    {
+                        sql += $"and NgayTL = '{kq}' ";
+                    }
 
+                }
+                grdThanhLy.DataSource = DataProvider.Instance.ExcuteQuery(sql);
             }
-            grdThanhLy.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
         }
     }
 }

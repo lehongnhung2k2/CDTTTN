@@ -39,18 +39,26 @@ namespace CDTTTN
 
         private void btn_TimKiemTTB_Click(object sender, EventArgs e)
         {
-            if (txt_TenNV.Text == "")
+            try
             {
-                string sql = @"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ
+                if (txt_TenNV.Text == "")
+                {
+                    string sql = @"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ
                 FROM NhanVien NV
                 INNER JOIN TaiKhoan TK ON NV.MaNV = TK.MaNV";
-                grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                }
+                else
+                {
+                    string sql = $"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ FROM NhanVien NV INNER JOIN TaiKhoan TK ON NV.MaNV = TK.MaNV where NV.TenNV = N'{txt_TenNV.Text}'";
+                    grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                string sql = $"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ FROM NhanVien NV INNER JOIN TaiKhoan TK ON NV.MaNV = TK.MaNV where NV.TenNV = N'{txt_TenNV.Text}'";
-                grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                MessageBox.Show("Không thành công");
             }
+            
         }
 
         private void grd_TaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -65,18 +73,26 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                //string TenTK = txt_TenTK.Text;
-                //string MatKhau = txt_MatKhau.Text;
-                //string MaPQ = txt_MaPQ.Text;
-                
-                string sql = $"UPDATE TaiKhoan SET MatKhau = '{txt_MatKhau.Text}', MaPQ = '{txt_MaPQ.Text}'";
-                grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                try
+                {
+                    //string TenTK = txt_TenTK.Text;
+                    //string MatKhau = txt_MatKhau.Text;
+                    //string MaPQ = txt_MaPQ.Text;
 
-                sql = @"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ
+                    string sql = $"UPDATE TaiKhoan SET MatKhau = '{txt_MatKhau.Text}', MaPQ = '{txt_MaPQ.Text}'";
+                    grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+
+                    sql = @"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ
                 FROM NhanVien NV
                 INNER JOIN TaiKhoan TK ON NV.MaNV = TK.MaNV";
 
-                grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }
         }
 
@@ -87,15 +103,22 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
+                try
+                {
+                    string sql = $"DELETE FROM TaiKhoan WHERE TenTK = '{txt_TenTK.Text}'";
+                    grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
-                string sql = $"DELETE FROM TaiKhoan WHERE TenTK = '{txt_TenTK.Text}'";
-                grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-
-                sql = @"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ
+                    sql = @"SELECT NV.MaNV, NV.TenNV, TK.TenTK, TK.MatKhau, TK.MaPQ
                 FROM NhanVien NV
                 INNER JOIN TaiKhoan TK ON NV.MaNV = TK.MaNV";
 
-                grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    grd_TaiKhoan.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+                
             }
         }
     }

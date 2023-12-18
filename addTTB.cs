@@ -26,11 +26,19 @@ namespace CDTTTN
             // Kiểm tra xem người dùng đã chọn "Có" hay không
             if (result == DialogResult.Yes)
             {
-                
-                string sql = "INSERT INTO TrangThietBi (MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, Thue, NguyenGia, MaTT, MaNCC, MaNV, TrangThaiTrongPhong) VALUES ('"
+                try
+                {
+                    string sql = "INSERT INTO TrangThietBi (MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, Thue, NguyenGia, MaTT, MaNCC, MaNV, TrangThaiTrongPhong) VALUES ('"
                     + txt_MaTTB.Text + "', N'" + txt_TenTTB.Text + "', '" + txt_NgayNhap.Text + "', " + txt_ThoiGianTinhKhauHao.Text + ", " + txt_Thue.Text + ", " + txt_NguyenGia.Text + ", '" + cb_MaTT.Text + "', '" + txt_MaNCC.Text + "', '" + txt_MaNV.Text + "', 0)";
-                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
-                MessageBox.Show("Thêm trang thiết bị thành công");
+                    grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                    MessageBox.Show("Thêm trang thiết bị thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thành công");
+                }
+
+                
             }
         }
 

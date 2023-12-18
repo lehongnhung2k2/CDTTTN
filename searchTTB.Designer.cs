@@ -44,7 +44,6 @@ namespace CDTTTN
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdTTB = new System.Windows.Forms.DataGridView();
-            this.txt_TrangThai = new System.Windows.Forms.TextBox();
             this.MaTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +54,7 @@ namespace CDTTTN
             this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_TrangThai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdTTB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,9 +156,9 @@ namespace CDTTTN
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(91, 282);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 25);
+            this.label5.Size = new System.Drawing.Size(125, 25);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Trạng thái";
+            this.label5.Text = "Mã trạng thái";
             // 
             // label6
             // 
@@ -222,15 +222,6 @@ namespace CDTTTN
             this.grdTTB.Size = new System.Drawing.Size(1237, 309);
             this.grdTTB.TabIndex = 24;
             // 
-            // txt_TrangThai
-            // 
-            this.txt_TrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TrangThai.Location = new System.Drawing.Point(256, 272);
-            this.txt_TrangThai.Multiline = true;
-            this.txt_TrangThai.Name = "txt_TrangThai";
-            this.txt_TrangThai.Size = new System.Drawing.Size(339, 35);
-            this.txt_TrangThai.TabIndex = 20;
-            // 
             // MaTTB
             // 
             this.MaTTB.DataPropertyName = "MaTTB";
@@ -253,6 +244,7 @@ namespace CDTTTN
             this.NgayNhap.HeaderText = "Ngày nhập";
             this.NgayNhap.MinimumWidth = 8;
             this.NgayNhap.Name = "NgayNhap";
+            this.NgayNhap.Width = 150;
             // 
             // ThoiGianTinhKhauHao
             // 
@@ -309,6 +301,15 @@ namespace CDTTTN
             this.MaNV.MinimumWidth = 8;
             this.MaNV.Name = "MaNV";
             this.MaNV.Width = 60;
+            // 
+            // txt_TrangThai
+            // 
+            this.txt_TrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TrangThai.Location = new System.Drawing.Point(256, 272);
+            this.txt_TrangThai.Multiline = true;
+            this.txt_TrangThai.Name = "txt_TrangThai";
+            this.txt_TrangThai.Size = new System.Drawing.Size(339, 35);
+            this.txt_TrangThai.TabIndex = 20;
             // 
             // searchTTB
             // 

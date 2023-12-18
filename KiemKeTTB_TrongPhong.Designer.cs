@@ -53,7 +53,7 @@ namespace CDTTTN
             this.grd.Name = "grd";
             this.grd.RowHeadersWidth = 62;
             this.grd.RowTemplate.Height = 28;
-            this.grd.Size = new System.Drawing.Size(919, 314);
+            this.grd.Size = new System.Drawing.Size(1225, 314);
             this.grd.TabIndex = 0;
             // 
             // du
@@ -98,7 +98,7 @@ namespace CDTTTN
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(419, 446);
+            this.button1.Location = new System.Drawing.Point(575, 457);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 46);
             this.button1.TabIndex = 1;
@@ -110,7 +110,7 @@ namespace CDTTTN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 532);
+            this.ClientSize = new System.Drawing.Size(1326, 612);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grd);
             this.Name = "KiemKeTTB_TrongPhong";

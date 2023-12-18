@@ -31,15 +31,17 @@ namespace CDTTTN
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MK_cu = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_MK_moi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_MK_moi_1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.grd = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,15 +65,15 @@ namespace CDTTTN
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật khẩu cũ";
             // 
-            // textBox1
+            // txt_MK_cu
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(108, 300);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(472, 40);
-            this.textBox1.TabIndex = 0;
+            this.txt_MK_cu.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MK_cu.Location = new System.Drawing.Point(108, 300);
+            this.txt_MK_cu.Multiline = true;
+            this.txt_MK_cu.Name = "txt_MK_cu";
+            this.txt_MK_cu.PasswordChar = '*';
+            this.txt_MK_cu.Size = new System.Drawing.Size(472, 40);
+            this.txt_MK_cu.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -93,15 +95,15 @@ namespace CDTTTN
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu mới";
             // 
-            // textBox2
+            // txt_MK_moi
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(108, 406);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(472, 40);
-            this.textBox2.TabIndex = 1;
+            this.txt_MK_moi.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MK_moi.Location = new System.Drawing.Point(108, 406);
+            this.txt_MK_moi.Multiline = true;
+            this.txt_MK_moi.Name = "txt_MK_moi";
+            this.txt_MK_moi.PasswordChar = '*';
+            this.txt_MK_moi.Size = new System.Drawing.Size(472, 40);
+            this.txt_MK_moi.TabIndex = 1;
             // 
             // label4
             // 
@@ -113,15 +115,15 @@ namespace CDTTTN
             this.label4.TabIndex = 2;
             this.label4.Text = "Nhập lại mật khẩu mới";
             // 
-            // textBox3
+            // txt_MK_moi_1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(108, 517);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(472, 40);
-            this.textBox3.TabIndex = 2;
+            this.txt_MK_moi_1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MK_moi_1.Location = new System.Drawing.Point(108, 517);
+            this.txt_MK_moi_1.Multiline = true;
+            this.txt_MK_moi_1.Name = "txt_MK_moi_1";
+            this.txt_MK_moi_1.PasswordChar = '*';
+            this.txt_MK_moi_1.Size = new System.Drawing.Size(472, 40);
+            this.txt_MK_moi_1.TabIndex = 2;
             // 
             // button1
             // 
@@ -134,6 +136,7 @@ namespace CDTTTN
             this.button1.TabIndex = 5;
             this.button1.Text = "Đổi mật khẩu";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox1
             // 
@@ -146,19 +149,31 @@ namespace CDTTTN
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(14, 92);
+            this.grd.Name = "grd";
+            this.grd.RowHeadersWidth = 62;
+            this.grd.RowTemplate.Height = 28;
+            this.grd.Size = new System.Drawing.Size(23, 44);
+            this.grd.TabIndex = 10;
+            this.grd.Visible = false;
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(682, 712);
+            this.Controls.Add(this.grd);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_MK_moi_1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_MK_moi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_MK_cu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -166,6 +181,7 @@ namespace CDTTTN
             this.Text = "frmDoiMatKhau";
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,12 +192,13 @@ namespace CDTTTN
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MK_cu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_MK_moi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_MK_moi_1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridView grd;
     }
 }

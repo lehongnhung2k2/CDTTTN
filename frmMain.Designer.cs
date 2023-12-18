@@ -107,7 +107,6 @@ namespace CDTTTN
             this.tb_MatKhau.PasswordChar = '*';
             this.tb_MatKhau.Size = new System.Drawing.Size(416, 40);
             this.tb_MatKhau.TabIndex = 1;
-            this.tb_MatKhau.Text = "admin1";
             // 
             // tb_TaiKhoan
             // 
@@ -118,7 +117,6 @@ namespace CDTTTN
             this.tb_TaiKhoan.Name = "tb_TaiKhoan";
             this.tb_TaiKhoan.Size = new System.Drawing.Size(416, 40);
             this.tb_TaiKhoan.TabIndex = 0;
-            this.tb_TaiKhoan.Text = "lehongnhung";
             // 
             // lb_MatKhau
             // 

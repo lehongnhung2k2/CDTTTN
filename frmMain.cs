@@ -14,12 +14,6 @@ namespace CDTTTN
 {
     public partial class frmMain : Form
     {
-        //SqlConnection conn = new SqlConnection();
-        //SqlDataAdapter da = new SqlDataAdapter();
-        //SqlCommand cmd = new SqlCommand();
-        //DataTable dt = new DataTable();
-        //string sql, constr;
-        //int i, code;
 
         public frmMain()
         {
@@ -33,39 +27,75 @@ namespace CDTTTN
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            //string tk = tb_TaiKhoan.Text;
-            //string mk = tb_MatKhau.Text;
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "select count(*) from TaiKhoan "
-            //    + " where " + "TenTK" + "=N'" + tk + "'"
-            //    + " and " + " Matkhau" + "=N'" + mk + "'"
-            //    + " and " + " MaPQ =N'admin'";
-            //cmd.Connection = conn;
-            //int kq = (int)cmd.ExecuteScalar();
-            //if (kq == 1)
+            try
+            {
+                string tk = tb_TaiKhoan.Text;
+                string mk = tb_MatKhau.Text;
+                string MaPQ = "";
+
+                string connectionString = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string sqlQuery = $"select * from TaiKhoan where TenTK = '{tk}' and MatKhau = '{mk}'";
+
+                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                MaPQ = reader["MaPQ"].ToString();
+                                classMain.MA_PQ = MaPQ;
+                                if (MaPQ != "")
+                                {
+
+                                    frmTrangChu f = new frmTrangChu(tk);
+                                    this.Hide();
+                                    f.Show();
+                                }
+
+                            }
+                        }
+                        if (MaPQ == "")
+                        {
+                            MessageBox.Show("Đăng nhập không thành công");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thành công");
+            }
+            
+            //try
             //{
-            //    frmTrangChu f = new frmTrangChu(tk);
-            //    this.Hide();
-            //    f.Show();
+
             //}
-            //else
+            //catch (Exception ex)
             //{
-            //    MessageBox.Show("Đăng nhập thất bại");
+            //    Console.WriteLine("Không thành công");
             //}
 
-            string tk = tb_TaiKhoan.Text;
-            string mk = tb_MatKhau.Text;
-           if (checkDangNhap(tk, mk))
-            {
-                frmTrangChu f = new frmTrangChu(tk);
-                this.Hide();
-                f.Show();
-            }
-           else
-            {
-                MessageBox.Show("Đăng nhập không thành công");
-            }
+
+            // string sql = $"select count(*) from TaiKhoan where TenTK = '{tk}' and MatKhau = '{mk}' and MaPQ = 'admin'";
+            // DataTable result = DataProvider.Instance.ExcuteQuery(sql);
+            // Console.WriteLine(result.Rows.Count);
+
+
+            // if (checkDangNhap(tk, mk))
+            // {
+            //     frmTrangChu f = new frmTrangChu(tk);
+            //     this.Hide();
+            //     f.Show();
+            // }
+            //else
+            // {
+            //     MessageBox.Show("Đăng nhập không thành công");
+            // }
 
 
 
