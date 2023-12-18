@@ -98,6 +98,7 @@ namespace CDTTTN
             this.Controls.Add(this.menuStrip1);
             this.Name = "QuanLyPhong";
             this.Size = new System.Drawing.Size(1321, 950);
+            this.Load += new System.EventHandler(this.QuanLyPhong_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -23,7 +23,7 @@ namespace CDTTTN
         private void exportTTB_Load(object sender, EventArgs e)
         {
 
-            string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi";
+            string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, Thue, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi";
             grd_exportTTB.DataSource = DataProvider.Instance.ExcuteQuery(sql);
 
             
@@ -56,7 +56,7 @@ namespace CDTTTN
                 {
                     conn.Open();
 
-                    string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi";
+                    string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, Thue, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi";
 
                     using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
                     {
@@ -78,7 +78,7 @@ namespace CDTTTN
                 {
                     conn.Open();
 
-                    string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
+                    string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, Thue, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
 
                     using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
                     {
@@ -99,7 +99,7 @@ namespace CDTTTN
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
+            string sql = "select MaTTB, TenTTB, NgayNhap, ThoiGianTinhKhauHao, Thue, NguyenGia, MaTT, MaNCC, MaNV from TrangThietBi where " + cb_TenTruong.Text + " = '" + cb_GiaTri.Text + "'";
             grd_exportTTB.DataSource = DataProvider.Instance.ExcuteQuery(sql);
         }
     }

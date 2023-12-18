@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CDTTTN.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,15 @@ namespace CDTTTN
             addphong.Hide();
             editphong.Hide();
             exportdatphong.Show();
+        }
+
+        private void QuanLyPhong_Load(object sender, EventArgs e)
+        {
+            if (classMain.MA_PQ == "manager")
+            {
+                thêmMớiToolStripMenuItem.Visible = false;
+                chỉnhSửaToolStripMenuItem.Visible = false;
+            }
         }
     }
 }

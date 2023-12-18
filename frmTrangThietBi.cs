@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CDTTTN.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -82,6 +83,16 @@ namespace CDTTTN
             editttb.Hide();
             dieuchuyenttb.Hide();
             exportttb.Hide();
+        }
+
+        private void frmTrangThietBi_Load(object sender, EventArgs e)
+        {
+            if (classMain.MA_PQ == "manager")
+            {
+                thêmMớiToolStripMenuItem.Visible = false;
+                chỉnhSửaToolStripMenuItem.Visible = false;
+                điềuChuyểnToolStripMenuItem.Visible = false;
+            }
         }
     }
 }

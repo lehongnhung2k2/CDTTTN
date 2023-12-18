@@ -32,6 +32,7 @@ namespace CDTTTN
                 string tk = tb_TaiKhoan.Text;
                 string mk = tb_MatKhau.Text;
                 string MaPQ = "";
+                classMain.TENTAIKHOAN = tk;
 
                 string connectionString = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
 
@@ -58,6 +59,7 @@ namespace CDTTTN
                                 }
 
                             }
+                            Console.WriteLine(classMain.MA_PQ);
                         }
                         if (MaPQ == "")
                         {
@@ -130,7 +132,6 @@ namespace CDTTTN
             //conn.Open();
 
             tb_MatKhau.UseSystemPasswordChar = false;
-            classMain.TENTAIKHOAN = tb_TaiKhoan.Text;
             //Console.WriteLine(classMain.TENTAIKHOAN);
 
         }

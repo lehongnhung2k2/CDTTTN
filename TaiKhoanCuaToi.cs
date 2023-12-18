@@ -29,6 +29,7 @@ namespace CDTTTN
                            "FROM PhongBan " +
                            "JOIN NhanVien ON PhongBan.MaPB = NhanVien.MaPB " +
                            $"JOIN TaiKhoan ON NhanVien.MaNV = TaiKhoan.MaNV where TaiKhoan.TenTK = '{classMain.TENTAIKHOAN}'";
+            Console.WriteLine(classMain.TENTAIKHOAN);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

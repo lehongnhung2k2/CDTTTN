@@ -96,9 +96,13 @@ namespace CDTTTN
                 pn.Controls.Remove(pn_TL);
                 pn.Controls.Remove(pn_QLTK);
             }
-            //Console.WriteLine(classMain.TENTAIKHOAN);
+            else if (classMain.MA_PQ == "manager")
+            {
+                pn.Controls.Remove(pn_QLTK);
+            }
+                //Console.WriteLine(classMain.TENTAIKHOAN);
 
-            constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
+                constr = "Data Source=LAPTOP-UHIR1N6O\\SQLEXPRESS;Initial Catalog=MindX_School;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
 
@@ -325,6 +329,18 @@ namespace CDTTTN
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            cms.Show(pictureBox1, 0, pictureBox1.Height);
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain f = new frmMain();
+            f.Show();
+            this.Hide();
         }
 
         private void img_SuaChua_Click(object sender, EventArgs e)

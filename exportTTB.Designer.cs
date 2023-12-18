@@ -42,6 +42,7 @@ namespace CDTTTN
             this.TenTTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGianTinhKhauHao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NguyenGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -158,6 +159,7 @@ namespace CDTTTN
             this.TenTTB,
             this.NgayNhap,
             this.ThoiGianTinhKhauHao,
+            this.Thue,
             this.NguyenGia,
             this.MaTT,
             this.MaNCC,
@@ -175,7 +177,7 @@ namespace CDTTTN
             this.MaTTB.HeaderText = "Mã TTB";
             this.MaTTB.MinimumWidth = 8;
             this.MaTTB.Name = "MaTTB";
-            this.MaTTB.Width = 90;
+            this.MaTTB.Width = 80;
             // 
             // TenTTB
             // 
@@ -183,7 +185,7 @@ namespace CDTTTN
             this.TenTTB.HeaderText = "Tên TTB";
             this.TenTTB.MinimumWidth = 8;
             this.TenTTB.Name = "TenTTB";
-            this.TenTTB.Width = 140;
+            this.TenTTB.Width = 120;
             // 
             // NgayNhap
             // 
@@ -191,6 +193,7 @@ namespace CDTTTN
             this.NgayNhap.HeaderText = "Ngày nhập";
             this.NgayNhap.MinimumWidth = 8;
             this.NgayNhap.Name = "NgayNhap";
+            this.NgayNhap.Width = 110;
             // 
             // ThoiGianTinhKhauHao
             // 
@@ -198,7 +201,15 @@ namespace CDTTTN
             this.ThoiGianTinhKhauHao.HeaderText = "TG tính KH";
             this.ThoiGianTinhKhauHao.MinimumWidth = 8;
             this.ThoiGianTinhKhauHao.Name = "ThoiGianTinhKhauHao";
-            this.ThoiGianTinhKhauHao.Width = 120;
+            this.ThoiGianTinhKhauHao.Width = 110;
+            // 
+            // Thue
+            // 
+            this.Thue.DataPropertyName = "Thue";
+            this.Thue.HeaderText = "Thuế";
+            this.Thue.MinimumWidth = 8;
+            this.Thue.Name = "Thue";
+            this.Thue.Width = 50;
             // 
             // NguyenGia
             // 
@@ -206,7 +217,6 @@ namespace CDTTTN
             this.NguyenGia.HeaderText = "Nguyên giá (VNĐ)";
             this.NguyenGia.MinimumWidth = 8;
             this.NguyenGia.Name = "NguyenGia";
-            this.NguyenGia.Width = 150;
             // 
             // MaTT
             // 
@@ -262,6 +272,7 @@ namespace CDTTTN
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianTinhKhauHao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thue;
         private System.Windows.Forms.DataGridViewTextBoxColumn NguyenGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;

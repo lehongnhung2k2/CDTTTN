@@ -31,13 +31,13 @@ namespace CDTTTN
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panelTTB = new System.Windows.Forms.FlowLayoutPanel();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.điềuChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panelTTB = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,19 +56,6 @@ namespace CDTTTN
             this.menuStrip1.Size = new System.Drawing.Size(1321, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // panelTTB
-            // 
-            this.panelTTB.Location = new System.Drawing.Point(0, 51);
-            this.panelTTB.Name = "panelTTB";
-            this.panelTTB.Size = new System.Drawing.Size(1321, 880);
-            this.panelTTB.TabIndex = 9;
             // 
             // tìmKiếmToolStripMenuItem
             // 
@@ -115,6 +102,19 @@ namespace CDTTTN
             this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
             this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.xuấtBáoCáoToolStripMenuItem_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // panelTTB
+            // 
+            this.panelTTB.Location = new System.Drawing.Point(0, 51);
+            this.panelTTB.Name = "panelTTB";
+            this.panelTTB.Size = new System.Drawing.Size(1321, 880);
+            this.panelTTB.TabIndex = 9;
+            // 
             // frmTrangThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -124,6 +124,7 @@ namespace CDTTTN
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmTrangThietBi";
             this.Size = new System.Drawing.Size(1321, 950);
+            this.Load += new System.EventHandler(this.frmTrangThietBi_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

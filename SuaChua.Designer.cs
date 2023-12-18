@@ -30,10 +30,10 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSuaChua = new System.Windows.Forms.FlowLayoutPanel();
-            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,16 @@ namespace CDTTTN
             this.menuStrip1.Size = new System.Drawing.Size(1321, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tìmKiếmToolStripMenuItem
+            // 
+            this.tìmKiếmToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.tìmKiếmToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tìmKiếmToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.search;
+            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(124, 29);
+            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
             // thêmMớiToolStripMenuItem
             // 
@@ -76,16 +86,6 @@ namespace CDTTTN
             this.panelSuaChua.Size = new System.Drawing.Size(1321, 880);
             this.panelSuaChua.TabIndex = 11;
             // 
-            // tìmKiếmToolStripMenuItem
-            // 
-            this.tìmKiếmToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.tìmKiếmToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tìmKiếmToolStripMenuItem.Image = global::CDTTTN.Properties.Resources.search;
-            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(124, 29);
-            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
-            this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
-            // 
             // SuaChua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -94,6 +94,7 @@ namespace CDTTTN
             this.Controls.Add(this.menuStrip1);
             this.Name = "SuaChua";
             this.Size = new System.Drawing.Size(1321, 950);
+            this.Load += new System.EventHandler(this.SuaChua_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

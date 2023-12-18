@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CDTTTN.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,14 @@ namespace CDTTTN
             searchkiemke.Show();
             addkiemke.Hide();
             exportkiemke.Hide();
+        }
+
+        private void KiemKe_Load(object sender, EventArgs e)
+        {
+            if (classMain.MA_PQ == "manager")
+            {
+                theeToolStripMenuItem.Visible = false;
+            }
         }
     }
 }

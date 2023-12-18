@@ -199,7 +199,7 @@ namespace CDTTTN
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grd_TTB);
             this.Name = "addChietTietKiemKe";
-            this.Text = "addChietTietKiemKe";
+            this.Text = "Chi tiết kiểm kê trang thiết bị trong phòng";
             this.Load += new System.EventHandler(this.addChietTietKiemKe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd_TTB)).EndInit();
             this.ResumeLayout(false);
