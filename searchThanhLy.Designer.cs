@@ -86,7 +86,7 @@ namespace CDTTTN
             this.txt_MaTTB.Multiline = true;
             this.txt_MaTTB.Name = "txt_MaTTB";
             this.txt_MaTTB.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaTTB.TabIndex = 32;
+            this.txt_MaTTB.TabIndex = 3;
             // 
             // label4
             // 
@@ -105,7 +105,7 @@ namespace CDTTTN
             this.txt_MaNV.Multiline = true;
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaNV.TabIndex = 33;
+            this.txt_MaNV.TabIndex = 4;
             // 
             // label3
             // 
@@ -124,7 +124,7 @@ namespace CDTTTN
             this.txt_NguoiMua.Multiline = true;
             this.txt_NguoiMua.Name = "txt_NguoiMua";
             this.txt_NguoiMua.Size = new System.Drawing.Size(339, 35);
-            this.txt_NguoiMua.TabIndex = 34;
+            this.txt_NguoiMua.TabIndex = 2;
             // 
             // label5
             // 
@@ -153,7 +153,7 @@ namespace CDTTTN
             this.txt_MaTL.Multiline = true;
             this.txt_MaTL.Name = "txt_MaTL";
             this.txt_MaTL.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaTL.TabIndex = 35;
+            this.txt_MaTL.TabIndex = 0;
             // 
             // label2
             // 
@@ -183,7 +183,7 @@ namespace CDTTTN
             this.txt_NgayTL.Multiline = true;
             this.txt_NgayTL.Name = "txt_NgayTL";
             this.txt_NgayTL.Size = new System.Drawing.Size(339, 35);
-            this.txt_NgayTL.TabIndex = 35;
+            this.txt_NgayTL.TabIndex = 1;
             // 
             // grdThanhLy
             // 

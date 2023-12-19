@@ -46,6 +46,8 @@ namespace CDTTTN
                 }
                 string sql = $"INSERT INTO KiemKePhong (MaKKP, MaDP) VALUES ('{MaKKP}', '{MaDP}')";
                 grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+                MessageBox.Show("Kiểm kê trang thiết bị thành công");
+                this.Hide();
             }
             catch (Exception ex)
             {

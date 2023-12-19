@@ -106,7 +106,7 @@ namespace CDTTTN
             this.txt_GhiChu.Multiline = true;
             this.txt_GhiChu.Name = "txt_GhiChu";
             this.txt_GhiChu.Size = new System.Drawing.Size(339, 35);
-            this.txt_GhiChu.TabIndex = 50;
+            this.txt_GhiChu.TabIndex = 8;
             // 
             // txt_Thue
             // 
@@ -115,7 +115,7 @@ namespace CDTTTN
             this.txt_Thue.Multiline = true;
             this.txt_Thue.Name = "txt_Thue";
             this.txt_Thue.Size = new System.Drawing.Size(339, 35);
-            this.txt_Thue.TabIndex = 51;
+            this.txt_Thue.TabIndex = 7;
             // 
             // txt_MaNV
             // 
@@ -124,7 +124,7 @@ namespace CDTTTN
             this.txt_MaNV.Multiline = true;
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaNV.TabIndex = 52;
+            this.txt_MaNV.TabIndex = 6;
             // 
             // label11
             // 
@@ -163,7 +163,7 @@ namespace CDTTTN
             this.txt_TenTTB.Multiline = true;
             this.txt_TenTTB.Name = "txt_TenTTB";
             this.txt_TenTTB.Size = new System.Drawing.Size(339, 35);
-            this.txt_TenTTB.TabIndex = 53;
+            this.txt_TenTTB.TabIndex = 4;
             // 
             // label4
             // 
@@ -182,7 +182,7 @@ namespace CDTTTN
             this.txt_MaNCC.Multiline = true;
             this.txt_MaNCC.Name = "txt_MaNCC";
             this.txt_MaNCC.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaNCC.TabIndex = 54;
+            this.txt_MaNCC.TabIndex = 5;
             // 
             // txt_ThoiGianTinhKhauHao
             // 
@@ -191,7 +191,7 @@ namespace CDTTTN
             this.txt_ThoiGianTinhKhauHao.Multiline = true;
             this.txt_ThoiGianTinhKhauHao.Name = "txt_ThoiGianTinhKhauHao";
             this.txt_ThoiGianTinhKhauHao.Size = new System.Drawing.Size(339, 35);
-            this.txt_ThoiGianTinhKhauHao.TabIndex = 56;
+            this.txt_ThoiGianTinhKhauHao.TabIndex = 3;
             // 
             // txt_NguyenGia
             // 
@@ -200,7 +200,7 @@ namespace CDTTTN
             this.txt_NguyenGia.Multiline = true;
             this.txt_NguyenGia.Name = "txt_NguyenGia";
             this.txt_NguyenGia.Size = new System.Drawing.Size(339, 35);
-            this.txt_NguyenGia.TabIndex = 55;
+            this.txt_NguyenGia.TabIndex = 2;
             // 
             // label3
             // 
@@ -229,7 +229,7 @@ namespace CDTTTN
             this.txt_NgayNhap.Multiline = true;
             this.txt_NgayNhap.Name = "txt_NgayNhap";
             this.txt_NgayNhap.Size = new System.Drawing.Size(339, 35);
-            this.txt_NgayNhap.TabIndex = 57;
+            this.txt_NgayNhap.TabIndex = 1;
             // 
             // label8
             // 
@@ -301,7 +301,7 @@ namespace CDTTTN
             this.txt_MaTT.Multiline = true;
             this.txt_MaTT.Name = "txt_MaTT";
             this.txt_MaTT.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaTT.TabIndex = 61;
+            this.txt_MaTT.TabIndex = 0;
             // 
             // editTTB
             // 

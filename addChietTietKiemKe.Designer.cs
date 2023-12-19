@@ -29,6 +29,7 @@ namespace CDTTTN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addChietTietKiemKe));
             this.btn_add = new System.Windows.Forms.Button();
             this.cb_TenTTB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -117,7 +118,7 @@ namespace CDTTTN
             this.txt_MaTTB.Multiline = true;
             this.txt_MaTTB.Name = "txt_MaTTB";
             this.txt_MaTTB.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaTTB.TabIndex = 66;
+            this.txt_MaTTB.TabIndex = 0;
             // 
             // label3
             // 
@@ -136,7 +137,7 @@ namespace CDTTTN
             this.txt_MaTT.Multiline = true;
             this.txt_MaTT.Name = "txt_MaTT";
             this.txt_MaTT.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaTT.TabIndex = 68;
+            this.txt_MaTT.TabIndex = 1;
             // 
             // label4
             // 
@@ -155,7 +156,7 @@ namespace CDTTTN
             this.txt_GhiChu.Multiline = true;
             this.txt_GhiChu.Name = "txt_GhiChu";
             this.txt_GhiChu.Size = new System.Drawing.Size(339, 35);
-            this.txt_GhiChu.TabIndex = 70;
+            this.txt_GhiChu.TabIndex = 2;
             // 
             // label5
             // 
@@ -198,6 +199,7 @@ namespace CDTTTN
             this.Controls.Add(this.cb_TenTTB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grd_TTB);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addChietTietKiemKe";
             this.Text = "Chi tiết kiểm kê trang thiết bị trong phòng";
             this.Load += new System.EventHandler(this.addChietTietKiemKe_Load);

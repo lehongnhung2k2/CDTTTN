@@ -91,7 +91,7 @@ namespace CDTTTN
             this.txt_MaNV.Multiline = true;
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaNV.TabIndex = 16;
+            this.txt_MaNV.TabIndex = 5;
             // 
             // label7
             // 
@@ -110,7 +110,7 @@ namespace CDTTTN
             this.txt_TenTTB.Multiline = true;
             this.txt_TenTTB.Name = "txt_TenTTB";
             this.txt_TenTTB.Size = new System.Drawing.Size(339, 35);
-            this.txt_TenTTB.TabIndex = 17;
+            this.txt_TenTTB.TabIndex = 3;
             // 
             // label4
             // 
@@ -129,7 +129,7 @@ namespace CDTTTN
             this.txt_MaNCC.Multiline = true;
             this.txt_MaNCC.Name = "txt_MaNCC";
             this.txt_MaNCC.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaNCC.TabIndex = 18;
+            this.txt_MaNCC.TabIndex = 4;
             // 
             // label3
             // 
@@ -148,7 +148,7 @@ namespace CDTTTN
             this.txt_NgayNhap.Multiline = true;
             this.txt_NgayNhap.Name = "txt_NgayNhap";
             this.txt_NgayNhap.Size = new System.Drawing.Size(339, 35);
-            this.txt_NgayNhap.TabIndex = 19;
+            this.txt_NgayNhap.TabIndex = 2;
             // 
             // label5
             // 
@@ -177,7 +177,7 @@ namespace CDTTTN
             this.txt_MaTTB.Multiline = true;
             this.txt_MaTTB.Name = "txt_MaTTB";
             this.txt_MaTTB.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaTTB.TabIndex = 20;
+            this.txt_MaTTB.TabIndex = 0;
             // 
             // label2
             // 
@@ -309,7 +309,7 @@ namespace CDTTTN
             this.txt_TrangThai.Multiline = true;
             this.txt_TrangThai.Name = "txt_TrangThai";
             this.txt_TrangThai.Size = new System.Drawing.Size(339, 35);
-            this.txt_TrangThai.TabIndex = 20;
+            this.txt_TrangThai.TabIndex = 1;
             // 
             // searchTTB
             // 

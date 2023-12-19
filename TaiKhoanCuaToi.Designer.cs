@@ -38,10 +38,6 @@ namespace CDTTTN
             this.txt_TenTK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_HoTen = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_NgaySinh = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,7 +46,11 @@ namespace CDTTTN
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.btn_SuaThongTin = new System.Windows.Forms.Button();
             this.btn_DoiMK = new System.Windows.Forms.Button();
+            this.grd = new System.Windows.Forms.DataGridView();
+            this.txt_MaNV = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -121,53 +121,13 @@ namespace CDTTTN
             this.txt_HoTen.Name = "txt_HoTen";
             this.txt_HoTen.ReadOnly = true;
             this.txt_HoTen.Size = new System.Drawing.Size(466, 35);
-            this.txt_HoTen.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(75, 547);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Ngày sinh";
-            // 
-            // txt_NgaySinh
-            // 
-            this.txt_NgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_NgaySinh.Location = new System.Drawing.Point(80, 584);
-            this.txt_NgaySinh.Multiline = true;
-            this.txt_NgaySinh.Name = "txt_NgaySinh";
-            this.txt_NgaySinh.ReadOnly = true;
-            this.txt_NgaySinh.Size = new System.Drawing.Size(466, 35);
-            this.txt_NgaySinh.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(75, 648);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Giới tính";
-            // 
-            // txt_GioiTinh
-            // 
-            this.txt_GioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_GioiTinh.Location = new System.Drawing.Point(80, 685);
-            this.txt_GioiTinh.Multiline = true;
-            this.txt_GioiTinh.Name = "txt_GioiTinh";
-            this.txt_GioiTinh.ReadOnly = true;
-            this.txt_GioiTinh.Size = new System.Drawing.Size(466, 35);
-            this.txt_GioiTinh.TabIndex = 4;
+            this.txt_HoTen.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(677, 347);
+            this.label5.Location = new System.Drawing.Point(682, 449);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 25);
             this.label5.TabIndex = 3;
@@ -176,18 +136,18 @@ namespace CDTTTN
             // txt_Email
             // 
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_Email.Location = new System.Drawing.Point(682, 384);
+            this.txt_Email.Location = new System.Drawing.Point(687, 486);
             this.txt_Email.Multiline = true;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.ReadOnly = true;
             this.txt_Email.Size = new System.Drawing.Size(466, 35);
-            this.txt_Email.TabIndex = 4;
+            this.txt_Email.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(677, 444);
+            this.label6.Location = new System.Drawing.Point(682, 546);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 25);
             this.label6.TabIndex = 3;
@@ -196,18 +156,18 @@ namespace CDTTTN
             // txt_SDT
             // 
             this.txt_SDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SDT.Location = new System.Drawing.Point(682, 481);
+            this.txt_SDT.Location = new System.Drawing.Point(687, 583);
             this.txt_SDT.Multiline = true;
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.ReadOnly = true;
             this.txt_SDT.Size = new System.Drawing.Size(466, 35);
-            this.txt_SDT.TabIndex = 4;
+            this.txt_SDT.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(677, 547);
+            this.label7.Location = new System.Drawing.Point(75, 546);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 25);
             this.label7.TabIndex = 3;
@@ -216,19 +176,19 @@ namespace CDTTTN
             // txt_DiaChi
             // 
             this.txt_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_DiaChi.Location = new System.Drawing.Point(682, 584);
+            this.txt_DiaChi.Location = new System.Drawing.Point(80, 583);
             this.txt_DiaChi.Multiline = true;
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.ReadOnly = true;
             this.txt_DiaChi.Size = new System.Drawing.Size(466, 35);
-            this.txt_DiaChi.TabIndex = 4;
+            this.txt_DiaChi.TabIndex = 2;
             // 
             // btn_SuaThongTin
             // 
             this.btn_SuaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.btn_SuaThongTin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_SuaThongTin.ForeColor = System.Drawing.Color.White;
-            this.btn_SuaThongTin.Location = new System.Drawing.Point(408, 771);
+            this.btn_SuaThongTin.Location = new System.Drawing.Point(398, 708);
             this.btn_SuaThongTin.Name = "btn_SuaThongTin";
             this.btn_SuaThongTin.Size = new System.Drawing.Size(181, 50);
             this.btn_SuaThongTin.TabIndex = 6;
@@ -241,7 +201,7 @@ namespace CDTTTN
             this.btn_DoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.btn_DoiMK.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_DoiMK.ForeColor = System.Drawing.Color.White;
-            this.btn_DoiMK.Location = new System.Drawing.Point(649, 771);
+            this.btn_DoiMK.Location = new System.Drawing.Point(639, 708);
             this.btn_DoiMK.Name = "btn_DoiMK";
             this.btn_DoiMK.Size = new System.Drawing.Size(177, 50);
             this.btn_DoiMK.TabIndex = 6;
@@ -249,19 +209,49 @@ namespace CDTTTN
             this.btn_DoiMK.UseVisualStyleBackColor = false;
             this.btn_DoiMK.Click += new System.EventHandler(this.btn_DoiMK_Click);
             // 
+            // grd
+            // 
+            this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grd.Location = new System.Drawing.Point(80, 708);
+            this.grd.Name = "grd";
+            this.grd.RowHeadersWidth = 62;
+            this.grd.RowTemplate.Height = 28;
+            this.grd.Size = new System.Drawing.Size(55, 70);
+            this.grd.TabIndex = 7;
+            this.grd.Visible = false;
+            // 
+            // txt_MaNV
+            // 
+            this.txt_MaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaNV.Location = new System.Drawing.Point(687, 384);
+            this.txt_MaNV.Multiline = true;
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.ReadOnly = true;
+            this.txt_MaNV.Size = new System.Drawing.Size(466, 35);
+            this.txt_MaNV.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(682, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Mã nhân viên";
+            // 
             // TaiKhoanCuaToi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txt_MaNV);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.grd);
             this.Controls.Add(this.btn_DoiMK);
             this.Controls.Add(this.btn_SuaThongTin);
-            this.Controls.Add(this.txt_GioiTinh);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_DiaChi);
-            this.Controls.Add(this.txt_NgaySinh);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_HoTen);
@@ -277,6 +267,7 @@ namespace CDTTTN
             this.Size = new System.Drawing.Size(1321, 922);
             this.Load += new System.EventHandler(this.TaiKhoanCuaToi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,10 +282,6 @@ namespace CDTTTN
         private System.Windows.Forms.TextBox txt_TenTK;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_HoTen;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_NgaySinh;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_GioiTinh;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label label6;
@@ -303,6 +290,9 @@ namespace CDTTTN
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Button btn_SuaThongTin;
         private System.Windows.Forms.Button btn_DoiMK;
+        private System.Windows.Forms.DataGridView grd;
+        private System.Windows.Forms.TextBox txt_MaNV;
+        private System.Windows.Forms.Label label3;
 
         public EventHandler button1_Click { get; private set; }
     }

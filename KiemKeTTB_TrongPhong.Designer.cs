@@ -29,6 +29,7 @@ namespace CDTTTN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KiemKeTTB_TrongPhong));
             this.grd = new System.Windows.Forms.DataGridView();
             this.du = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.thieu = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -113,8 +114,9 @@ namespace CDTTTN
             this.ClientSize = new System.Drawing.Size(1326, 612);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KiemKeTTB_TrongPhong";
-            this.Text = "KiemKeTTB_TrongPhong";
+            this.Text = "Kiểm kê trang thiết bị trong phòng";
             this.Load += new System.EventHandler(this.KiemKeTTB_TrongPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);

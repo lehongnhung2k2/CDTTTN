@@ -61,14 +61,13 @@ namespace CDTTTN
                 }
             }
             txt_TenTK.Text = TenTK;
+            txt_MaNV.Text = classMain.MANV;
             txt_TenNV.Text = TenNV;
             txt_HoTen.Text = TenNV;
             txt_PhongBan.Text = TenPB;
             txt_Email.Text = "";
             txt_SDT.Text = SDT;
             txt_DiaChi.Text = DiaChi;
-            txt_NgaySinh.Text = "";
-            txt_GioiTinh.Text = "";
         }
 
         private void btn_SuaThongTin_Click(object sender, EventArgs e)
@@ -77,18 +76,16 @@ namespace CDTTTN
             {
                 btn_SuaThongTin.Text = "Lưu";
                 txt_HoTen.ReadOnly = false;
-                txt_GioiTinh.ReadOnly = false;
-                txt_NgaySinh.ReadOnly = false;
                 txt_Email.ReadOnly = false;
                 txt_SDT.ReadOnly = false;
                 txt_DiaChi.ReadOnly = false;
+                string sql = $"UPDATE NhanVien SET TenNV = N'{txt_HoTen.Text}', DiaChi = N'{txt_DiaChi.Text}', SDT = '{txt_SDT.Text}' WHERE MaNV = '{classMain.MANV}'";
+                grd.DataSource = DataProvider.Instance.ExcuteQuery(sql);
             }    
             else
             {
                 btn_SuaThongTin.Text = "Sửa thông tin";
                 txt_HoTen.ReadOnly = true;
-                txt_GioiTinh.ReadOnly = true;
-                txt_NgaySinh.ReadOnly = true;
                 txt_Email.ReadOnly = true;
                 txt_SDT.ReadOnly = true;
                 txt_DiaChi.ReadOnly = true;

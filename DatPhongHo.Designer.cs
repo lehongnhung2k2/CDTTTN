@@ -29,6 +29,7 @@ namespace CDTTTN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatPhongHo));
             this.button1 = new System.Windows.Forms.Button();
             this.grd = new System.Windows.Forms.DataGridView();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
@@ -90,8 +91,9 @@ namespace CDTTTN
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grd);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DatPhongHo";
-            this.Text = "DatPhongHo";
+            this.Text = "Đặt phòng hộ";
             this.Load += new System.EventHandler(this.DatPhongHo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);

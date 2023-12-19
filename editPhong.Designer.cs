@@ -30,6 +30,9 @@ namespace CDTTTN
         private void InitializeComponent()
         {
             this.grd_Phong = new System.Windows.Forms.DataGridView();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_add = new System.Windows.Forms.Button();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,9 +43,6 @@ namespace CDTTTN
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Phong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,30 @@ namespace CDTTTN
             this.grd_Phong.TabIndex = 58;
             this.grd_Phong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Phong_CellClick);
             this.grd_Phong.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Phong_CellContentDoubleClick);
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.MinimumWidth = 8;
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.Width = 150;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên phòng";
+            this.TenPhong.MinimumWidth = 8;
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.Width = 150;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 8;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 135;
             // 
             // btn_add
             // 
@@ -83,7 +107,7 @@ namespace CDTTTN
             this.txt_SoLuong.Multiline = true;
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(214, 35);
-            this.txt_SoLuong.TabIndex = 54;
+            this.txt_SoLuong.TabIndex = 2;
             // 
             // label5
             // 
@@ -102,7 +126,7 @@ namespace CDTTTN
             this.txt_TenPhong.Multiline = true;
             this.txt_TenPhong.Name = "txt_TenPhong";
             this.txt_TenPhong.Size = new System.Drawing.Size(214, 35);
-            this.txt_TenPhong.TabIndex = 55;
+            this.txt_TenPhong.TabIndex = 1;
             // 
             // label3
             // 
@@ -121,7 +145,7 @@ namespace CDTTTN
             this.txt_MaPhong.Multiline = true;
             this.txt_MaPhong.Name = "txt_MaPhong";
             this.txt_MaPhong.Size = new System.Drawing.Size(214, 35);
-            this.txt_MaPhong.TabIndex = 56;
+            this.txt_MaPhong.TabIndex = 0;
             // 
             // label2
             // 
@@ -169,30 +193,6 @@ namespace CDTTTN
             this.button2.Text = "Chỉnh sửa trang thiết bị";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // MaPhong
-            // 
-            this.MaPhong.DataPropertyName = "MaPhong";
-            this.MaPhong.HeaderText = "Mã phòng";
-            this.MaPhong.MinimumWidth = 8;
-            this.MaPhong.Name = "MaPhong";
-            this.MaPhong.Width = 150;
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.DataPropertyName = "TenPhong";
-            this.TenPhong.HeaderText = "Tên phòng";
-            this.TenPhong.MinimumWidth = 8;
-            this.TenPhong.Name = "TenPhong";
-            this.TenPhong.Width = 150;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 8;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 135;
             // 
             // editPhong
             // 

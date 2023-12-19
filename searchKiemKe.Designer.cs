@@ -81,7 +81,7 @@ namespace CDTTTN
             this.txt_MaNV.Multiline = true;
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaNV.TabIndex = 32;
+            this.txt_MaNV.TabIndex = 2;
             // 
             // label4
             // 
@@ -100,7 +100,7 @@ namespace CDTTTN
             this.txt_NgayKK.Multiline = true;
             this.txt_NgayKK.Name = "txt_NgayKK";
             this.txt_NgayKK.Size = new System.Drawing.Size(339, 35);
-            this.txt_NgayKK.TabIndex = 34;
+            this.txt_NgayKK.TabIndex = 1;
             // 
             // label6
             // 
@@ -119,7 +119,7 @@ namespace CDTTTN
             this.txt_MaKK.Multiline = true;
             this.txt_MaKK.Name = "txt_MaKK";
             this.txt_MaKK.Size = new System.Drawing.Size(339, 35);
-            this.txt_MaKK.TabIndex = 35;
+            this.txt_MaKK.TabIndex = 0;
             // 
             // label2
             // 

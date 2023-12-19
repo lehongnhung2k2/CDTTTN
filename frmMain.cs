@@ -14,6 +14,7 @@ namespace CDTTTN
 {
     public partial class frmMain : Form
     {
+        int So_Lan_Nhap = 0;
 
         public frmMain()
         {
@@ -27,6 +28,7 @@ namespace CDTTTN
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            ++So_Lan_Nhap;
             try
             {
                 string tk = tb_TaiKhoan.Text;
@@ -50,7 +52,8 @@ namespace CDTTTN
                             {
                                 MaPQ = reader["MaPQ"].ToString();
                                 classMain.MA_PQ = MaPQ;
-                                if (MaPQ != "")
+                                classMain.MANV = reader["MaNV"].ToString();
+                                if (MaPQ != "" && So_Lan_Nhap <= 5)
                                 {
 
                                     frmTrangChu f = new frmTrangChu(tk);
@@ -59,11 +62,16 @@ namespace CDTTTN
                                 }
 
                             }
-                            Console.WriteLine(classMain.MA_PQ);
+                            //Console.WriteLine(classMain.MA_PQ);
                         }
-                        if (MaPQ == "")
+                        if (So_Lan_Nhap >5)
+                        {
+                            MessageBox.Show("Bạn đã thực hiện quá số lần đăng nhập");
+                        }
+                        else if (MaPQ == "")
                         {
                             MessageBox.Show("Đăng nhập không thành công");
+
                         }
                     }
                 }
