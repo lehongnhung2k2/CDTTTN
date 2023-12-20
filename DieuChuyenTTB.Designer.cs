@@ -47,6 +47,7 @@ namespace CDTTTN
             // btn_TimKiem
             // 
             this.btn_TimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
+            this.btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TimKiem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.Location = new System.Drawing.Point(852, 201);

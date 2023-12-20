@@ -83,6 +83,7 @@ namespace CDTTTN
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.button1.Location = new System.Drawing.Point(395, 167);
@@ -107,6 +108,7 @@ namespace CDTTTN
             // btn_TimKiem
             // 
             this.btn_TimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
+            this.btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TimKiem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.Location = new System.Drawing.Point(158, 167);
@@ -217,6 +219,7 @@ namespace CDTTTN
             this.NguyenGia.HeaderText = "Nguyên giá (VNĐ)";
             this.NguyenGia.MinimumWidth = 8;
             this.NguyenGia.Name = "NguyenGia";
+            this.NguyenGia.Width = 150;
             // 
             // MaTT
             // 

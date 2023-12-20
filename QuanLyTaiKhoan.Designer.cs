@@ -33,6 +33,11 @@ namespace CDTTTN
             this.txt_TenNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.grd_TaiKhoan = new System.Windows.Forms.DataGridView();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_TimKiemTTB = new System.Windows.Forms.Button();
             this.txt_TenTK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,17 +48,11 @@ namespace CDTTTN
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd_TaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -98,9 +97,50 @@ namespace CDTTTN
             this.grd_TaiKhoan.TabIndex = 23;
             this.grd_TaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_TaiKhoan_CellClick);
             // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 80;
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên NV";
+            this.TenNV.MinimumWidth = 8;
+            this.TenNV.Name = "TenNV";
+            this.TenNV.Width = 120;
+            // 
+            // TenTK
+            // 
+            this.TenTK.DataPropertyName = "TenTK";
+            this.TenTK.HeaderText = "Tên TK";
+            this.TenTK.MinimumWidth = 8;
+            this.TenTK.Name = "TenTK";
+            this.TenTK.Width = 90;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật khẩu";
+            this.MatKhau.MinimumWidth = 8;
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.Width = 90;
+            // 
+            // MaPQ
+            // 
+            this.MaPQ.DataPropertyName = "MaPQ";
+            this.MaPQ.HeaderText = "Mã PQ";
+            this.MaPQ.MinimumWidth = 8;
+            this.MaPQ.Name = "MaPQ";
+            this.MaPQ.Width = 75;
+            // 
             // btn_TimKiemTTB
             // 
             this.btn_TimKiemTTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
+            this.btn_TimKiemTTB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TimKiemTTB.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiemTTB.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiemTTB.Location = new System.Drawing.Point(219, 225);
@@ -172,6 +212,7 @@ namespace CDTTTN
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(102, 566);
@@ -185,6 +226,7 @@ namespace CDTTTN
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
             this.button2.Location = new System.Drawing.Point(330, 566);
@@ -205,46 +247,6 @@ namespace CDTTTN
             this.label5.Size = new System.Drawing.Size(365, 36);
             this.label5.TabIndex = 33;
             this.label5.Text = "THÔNG TIN TÀI KHOẢN";
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 80;
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.HeaderText = "Tên NV";
-            this.TenNV.MinimumWidth = 8;
-            this.TenNV.Name = "TenNV";
-            this.TenNV.Width = 120;
-            // 
-            // TenTK
-            // 
-            this.TenTK.DataPropertyName = "TenTK";
-            this.TenTK.HeaderText = "Tên TK";
-            this.TenTK.MinimumWidth = 8;
-            this.TenTK.Name = "TenTK";
-            this.TenTK.Width = 90;
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.DataPropertyName = "MatKhau";
-            this.MatKhau.HeaderText = "Mật khẩu";
-            this.MatKhau.MinimumWidth = 8;
-            this.MatKhau.Name = "MatKhau";
-            this.MatKhau.Width = 90;
-            // 
-            // MaPQ
-            // 
-            this.MaPQ.DataPropertyName = "MaPQ";
-            this.MaPQ.HeaderText = "Mã PQ";
-            this.MaPQ.MinimumWidth = 8;
-            this.MaPQ.Name = "MaPQ";
-            this.MaPQ.Width = 75;
             // 
             // QuanLyTaiKhoan
             // 

@@ -186,6 +186,7 @@ namespace CDTTTN
             // btn_SuaThongTin
             // 
             this.btn_SuaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
+            this.btn_SuaThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SuaThongTin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_SuaThongTin.ForeColor = System.Drawing.Color.White;
             this.btn_SuaThongTin.Location = new System.Drawing.Point(398, 708);
@@ -199,6 +200,7 @@ namespace CDTTTN
             // btn_DoiMK
             // 
             this.btn_DoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(109)))), ((int)(((byte)(148)))));
+            this.btn_DoiMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DoiMK.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_DoiMK.ForeColor = System.Drawing.Color.White;
             this.btn_DoiMK.Location = new System.Drawing.Point(639, 708);
